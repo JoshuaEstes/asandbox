@@ -11,11 +11,13 @@
  * @property boolean $posts
  * @property boolean $events
  * @property Doctrine_Collection $Users
+ * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $BlogItems
  * @property Doctrine_Collection $Pages
  * @property Doctrine_Collection $BlogItemCategories
  * @property Doctrine_Collection $aBlogPageCategory
  * @property Doctrine_Collection $BlogCategoryUsers
+ * @property Doctrine_Collection $BlogCategoryGroups
  * 
  * @method integer             getId()                 Returns the current record's "id" value
  * @method string              getName()               Returns the current record's "name" value
@@ -23,22 +25,26 @@
  * @method boolean             getPosts()              Returns the current record's "posts" value
  * @method boolean             getEvents()             Returns the current record's "events" value
  * @method Doctrine_Collection getUsers()              Returns the current record's "Users" collection
+ * @method Doctrine_Collection getGroups()             Returns the current record's "Groups" collection
  * @method Doctrine_Collection getBlogItems()          Returns the current record's "BlogItems" collection
  * @method Doctrine_Collection getPages()              Returns the current record's "Pages" collection
  * @method Doctrine_Collection getBlogItemCategories() Returns the current record's "BlogItemCategories" collection
  * @method Doctrine_Collection getABlogPageCategory()  Returns the current record's "aBlogPageCategory" collection
  * @method Doctrine_Collection getBlogCategoryUsers()  Returns the current record's "BlogCategoryUsers" collection
+ * @method Doctrine_Collection getBlogCategoryGroups() Returns the current record's "BlogCategoryGroups" collection
  * @method aBlogCategory       setId()                 Sets the current record's "id" value
  * @method aBlogCategory       setName()               Sets the current record's "name" value
  * @method aBlogCategory       setDescription()        Sets the current record's "description" value
  * @method aBlogCategory       setPosts()              Sets the current record's "posts" value
  * @method aBlogCategory       setEvents()             Sets the current record's "events" value
  * @method aBlogCategory       setUsers()              Sets the current record's "Users" collection
+ * @method aBlogCategory       setGroups()             Sets the current record's "Groups" collection
  * @method aBlogCategory       setBlogItems()          Sets the current record's "BlogItems" collection
  * @method aBlogCategory       setPages()              Sets the current record's "Pages" collection
  * @method aBlogCategory       setBlogItemCategories() Sets the current record's "BlogItemCategories" collection
  * @method aBlogCategory       setABlogPageCategory()  Sets the current record's "aBlogPageCategory" collection
  * @method aBlogCategory       setBlogCategoryUsers()  Sets the current record's "BlogCategoryUsers" collection
+ * @method aBlogCategory       setBlogCategoryGroups() Sets the current record's "BlogCategoryGroups" collection
  * 
  * @package    asandbox
  * @subpackage model
@@ -84,6 +90,11 @@ abstract class BaseaBlogCategory extends sfDoctrineRecord
              'local' => 'blog_category_id',
              'foreign' => 'user_id'));
 
+        $this->hasMany('sfGuardGroup as Groups', array(
+             'refClass' => 'aBlogCategoryGroup',
+             'local' => 'blog_category_id',
+             'foreign' => 'group_id'));
+
         $this->hasMany('aBlogItem as BlogItems', array(
              'refClass' => 'aBlogItemCategory',
              'local' => 'blog_category_id',
@@ -103,6 +114,10 @@ abstract class BaseaBlogCategory extends sfDoctrineRecord
              'foreign' => 'blog_category_id'));
 
         $this->hasMany('aBlogCategoryUser as BlogCategoryUsers', array(
+             'local' => 'id',
+             'foreign' => 'blog_category_id'));
+
+        $this->hasMany('aBlogCategoryGroup as BlogCategoryGroups', array(
              'local' => 'id',
              'foreign' => 'blog_category_id'));
     }

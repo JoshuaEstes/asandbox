@@ -51,6 +51,9 @@ sfGuardPermission:
   sfGuardPermission_guest:
     name: guest
     description: 'Guest permission'
+  sfGuardPermission_editor:
+    name: editor
+    description: 'For groups that will be given edit permissions at some point in the site'
   sfGuardPermission_cms_admin:
     name: cms_admin
     description: 'Executive control of the CMS'

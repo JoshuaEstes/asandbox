@@ -21,6 +21,7 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
       'posts'           => new sfWidgetFormInputCheckbox(),
       'events'          => new sfWidgetFormInputCheckbox(),
       'users_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
+      'groups_list'     => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'blog_items_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem')),
       'pages_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aPage')),
     ));
@@ -32,6 +33,7 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
       'posts'           => new sfValidatorBoolean(array('required' => false)),
       'events'          => new sfValidatorBoolean(array('required' => false)),
       'users_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
+      'groups_list'     => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'blog_items_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem', 'required' => false)),
       'pages_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aPage', 'required' => false)),
     ));
@@ -63,6 +65,11 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
       $this->setDefault('users_list', $this->object->Users->getPrimaryKeys());
     }
 
+    if (isset($this->widgetSchema['groups_list']))
+    {
+      $this->setDefault('groups_list', $this->object->Groups->getPrimaryKeys());
+    }
+
     if (isset($this->widgetSchema['blog_items_list']))
     {
       $this->setDefault('blog_items_list', $this->object->BlogItems->getPrimaryKeys());
@@ -78,6 +85,7 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
   protected function doSave($con = null)
   {
     $this->saveUsersList($con);
+    $this->saveGroupsList($con);
     $this->saveBlogItemsList($con);
     $this->savePagesList($con);
 
@@ -119,6 +127,44 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('Users', array_values($link));
+    }
+  }
+
+  public function saveGroupsList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['groups_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Groups->getPrimaryKeys();
+    $values = $this->getValue('groups_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Groups', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Groups', array_values($link));
     }
   }
 

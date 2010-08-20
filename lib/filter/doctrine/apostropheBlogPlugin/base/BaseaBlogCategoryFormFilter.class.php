@@ -18,6 +18,7 @@ abstract class BaseaBlogCategoryFormFilter extends BaseFormFilterDoctrine
       'posts'           => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'events'          => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'users_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
+      'groups_list'     => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'blog_items_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem')),
       'pages_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aPage')),
     ));
@@ -28,6 +29,7 @@ abstract class BaseaBlogCategoryFormFilter extends BaseFormFilterDoctrine
       'posts'           => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'events'          => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'users_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
+      'groups_list'     => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'blog_items_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem', 'required' => false)),
       'pages_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aPage', 'required' => false)),
     ));
@@ -56,6 +58,24 @@ abstract class BaseaBlogCategoryFormFilter extends BaseFormFilterDoctrine
     $query
       ->leftJoin($query->getRootAlias().'.aBlogCategoryUser aBlogCategoryUser')
       ->andWhereIn('aBlogCategoryUser.user_id', $values)
+    ;
+  }
+
+  public function addGroupsListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.aBlogCategoryGroup aBlogCategoryGroup')
+      ->andWhereIn('aBlogCategoryGroup.group_id', $values)
     ;
   }
 
@@ -109,6 +129,7 @@ abstract class BaseaBlogCategoryFormFilter extends BaseFormFilterDoctrine
       'posts'           => 'Boolean',
       'events'          => 'Boolean',
       'users_list'      => 'ManyKey',
+      'groups_list'     => 'ManyKey',
       'blog_items_list' => 'ManyKey',
       'pages_list'      => 'ManyKey',
     );

@@ -10,7 +10,6 @@ $b->info('1 - CMS Credentials')->
   getAndCheck('a', 'show', '/')->
   with('response')->begin()->
     checkElement('li.a-header-cms', false)->
-    checkElement('ul.a-controls', false)->
   end()->
   
   info('  1.2 - An admin user (admin/demo) can see the CMS controls and the buttons in the toolbar')->
