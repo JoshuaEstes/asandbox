@@ -71,7 +71,6 @@ all:
       - aUserAdmin
       - aGroupAdmin
       - aPermissionAdmin
-      - sfGuardPermission
       - taggableComplete
       - aNavigation
       - default
