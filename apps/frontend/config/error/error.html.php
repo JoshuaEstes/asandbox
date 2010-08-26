@@ -9,7 +9,6 @@
 	<script type="text/javascript" src="/apostrophePlugin/js/aUI.js"></script>
 	<script type="text/javascript" src="/apostrophePlugin/js/aControls.js"></script>
 	<script type="text/javascript" src="/apostrophePlugin/js/a.js"></script>
-	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 </head>
