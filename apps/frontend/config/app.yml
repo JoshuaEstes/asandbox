@@ -200,7 +200,8 @@ all:
 #    host: cmstest14
 
   aEvents:
-    display_calendar: true
+    display_calendar: true # PEAR Date_Calc must be installed to use the calendar
+    
 # In the production environment, we minify CSS and JS by default.
 # We'd like to gzip them too, but a lot of people don't have the
 # zlib extension in PHP. We encourage you to turn that on and see.
