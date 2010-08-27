@@ -162,7 +162,7 @@ all:
       - 'aMediaItem'
   
   aEvents:
-    display_calendar: false # PEAR Date_Calc must be installed to use the calendar
+    display_calendar: true # PEAR Date_Calc must be installed to use the calendar
     
         
   # options for sfSyncContentPlugin, used to sync the database and also
