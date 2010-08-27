@@ -212,8 +212,11 @@ all:
 # the mainstream sandbox. We should always turn it on again when creating
 # our own client sites
 
+# WARNING: if you turn off all settings here for 'prod', COMMENT OUT the 
+# 'prod' and 'a' lines too or you will shut off ALL of your Apostrophe settings
+
 prod:
   a:
-    # minify: true
-    # minify_gzip: true
+    minify: true
+    minify_gzip: true
   
