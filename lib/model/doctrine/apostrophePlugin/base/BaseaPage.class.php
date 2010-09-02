@@ -187,7 +187,10 @@ abstract class BaseaPage extends sfDoctrineRecord
              ));
         $nestedset0 = new Doctrine_Template_NestedSet(array(
              ));
+        $taggable0 = new Taggable(array(
+             ));
         $this->actAs($timestampable0);
         $this->actAs($nestedset0);
+        $this->actAs($taggable0);
     }
 }
