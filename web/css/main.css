@@ -64,13 +64,13 @@ a:hover { text-decoration: underline; }
 /* Global Layout
 -------------------------------------*/
 
-#a-wrapper
+.a-wrapper
 {
 width: 960px;
 margin: 0 auto;
 }
 
-#a-header
+.a-header
 {
 float: left;
 display: inline;
@@ -79,7 +79,7 @@ width: 540px;
 clear: none;
 }
 
-#a-content
+.a-content
 {
 	float: left;
 	position: relative;
