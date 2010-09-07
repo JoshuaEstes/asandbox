@@ -129,7 +129,7 @@ clear: none;
 	width: 50%;
 }
 
-.a-default #a-content
+.a-default .a-content
 {
 clear: none;
 float: left;
@@ -170,14 +170,14 @@ width: 480px;
 	color: #ccc;
 }
 
-.a-blog-posts #a-content,
-.a-blog-events #a-content
+.a-blog-posts .a-content,
+.a-blog-events .a-content
 {
 	clear: none;
 	width: 720px;
 }
 
-.a-home #a-content
+.a-home .a-content
 {
 	width: 100%;
 }
@@ -203,9 +203,12 @@ width: 480px;
 	width: 118px;
 	height: 20px;
 	line-height: 20px;
-	border: 1px solid #ddd;
+	border: 1px solid #ccc;
 	border-bottom: 0;
 	border-right: 0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
 }
 
 .a-nav-main .a-nav-item.last
