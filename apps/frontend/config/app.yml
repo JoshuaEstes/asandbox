@@ -150,6 +150,8 @@ all:
       aEvent: Events
       aMedia: Media
 
+    # do_not_edit: true   # Quickly and easily display the 'Do Not Edit' message on staging sites after launch.
+      
   aAdmin:
     web_dir: /apostrophePlugin
 
