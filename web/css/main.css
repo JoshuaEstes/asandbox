@@ -507,3 +507,30 @@ background-position: 0 -30px !important;
 {
 text-transform: capitalize;
 }
+
+/* Staging - Do Not Edit Message */
+
+.a-do-not-edit {
+background: #f22;
+padding: 10px;
+}
+
+.a-do-not-edit div
+{
+overflow: hidden;
+margin: 0 auto;
+width: 960px;
+color: #fff;
+font-size: 16px;
+text-align: center;
+text-shadow:	1px 1px 1px rgba(0,0,0,0.45);
+}
+
+.a-do-not-edit a {
+color: #fff;
+text-decoration: underline;
+}
+
+.a-do-not-edit strong {
+font-weight: bold;
+}
