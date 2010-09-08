@@ -411,11 +411,8 @@ margin-bottom: 5px;
 
 
 
-/* 4. Variants
+/* ASANDBOX aSlideshow Compact Variant 
 -------------------------------------*/
-
-
-/* aSlideshow Compact Variant */
 
 .a-slot.aSlideshow.compact
 {
@@ -483,8 +480,9 @@ background-position: 0 -30px !important;
 }
 
 
-/* aSlideshow Autoplay Variant */
 
+/* ASANDBOX aSlideshow Autoplay Variant 
+------------------------------------------- */
 
 .a-slot.aSlideshow.autoplay .a-slideshow-title
 {
@@ -508,7 +506,40 @@ background-position: 0 -30px !important;
 text-transform: capitalize;
 }
 
-/* Staging - Do Not Edit Message */
+
+
+/* ASANDBOX aButton Title Over Image Variant 
+------------------------------------------- */
+
+.a-slot.aButton.useTitleAsButtonText .a-button .a-button-title
+{ 
+position: absolute;
+top: 0;
+left: 0;
+top: 50%;
+left: 0;
+line-height: 20px;
+margin-top: -10px;
+}
+
+.a-slot.aButton.useTitleAsButtonText .a-button .a-button-title a,
+.a-slot.aButton.useTitleAsButtonText .a-button .a-button-title a:hover
+{ 
+position: absolute;
+float: left;
+text-align: center;
+text-decoration: none;
+width: 100%;
+height: 100%;
+font-size: 16px;
+color: #fff;
+white-space: nowrap;
+text-shadow: 0 0 6px rgba(0,0,0,0.80);
+}
+
+
+/* ASANDBOX Staging - Do Not Edit Message
+------------------------------------------- */
 
 .a-do-not-edit {
 background: #f22;
