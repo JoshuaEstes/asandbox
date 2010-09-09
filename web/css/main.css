@@ -338,6 +338,11 @@ margin-bottom: 5px;
 	padding: 0 5px;
 }
 
+.a-admin.a-blog-admin .a-subnav-wrapper
+{
+	border: none;
+}
+
 
 /* Breadcrumb Navigation
 -------------------------------------*/
