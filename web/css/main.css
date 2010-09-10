@@ -248,11 +248,14 @@ width: 480px;
 	margin: 0 40px 20px -1px;
 	overflow: auto;
 	width: 198px;
+	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.20);
+	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.20);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.20);
 }
 
 .a-subnav-inner
 {
-	width: 178px;
+	width: 180px;
 	padding: 9px;
 }
 
