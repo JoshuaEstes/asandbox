@@ -13,6 +13,7 @@ default:
     - main.css: { position: last }
   
   javascripts:
+    - site.js: { position: last }
 
   has_layout:     true
   layout:         layout

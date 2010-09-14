@@ -1,5 +1,4 @@
-	<?php use_helper('a') ?>
-
+<?php use_helper('a') ?>
 <?php slot('body_class') ?>a-home<?php end_slot() ?>
 
 <?php $blogOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
@@ -18,55 +17,59 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
+		'aFeed', 		
 		'aImage', 
-		'aFeed', 
-		'aPDF',
-		'aBlogSingle', 
-		'aEventSingle',		
+		'aPDF', 
 		'aButton', 
-		'aText',	  
+		'aBlog',
+		'aBlogSingle', 
+		'aEvent',
+		'aEventSingle',
+		'aText',
 		'aRawHTML',
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 720, "flexHeight" => true, 'resizeType' => 's'),
-		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
+		'aSlideshow' => array("width" => 720, "flexHeight" => true),
+		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aFeed' => array(),
 		'aImage' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
+		'aPDF' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aButton' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
 		'aBlog' => $blogOptions,
 		'aBlogSingle' => $blogOptions,
 		'aEvent' => $eventOptions,
 		'aEventSingle' => $eventOptions, 
+    'aText' => array('multiline' => true),				
 	))) ?>
 
 <?php a_area('sidebar', array(
-		'allowed_types' => array(
+	'allowed_types' => array(
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
+		'aFeed', 		
 		'aImage', 
-		'aFeed', 
 		'aPDF', 
-		'aBlogSingle', 
-		'aEventSingle',
 		'aButton', 
+		'aBlog',
+		'aBlogSingle', 
+		'aEvent',
+		'aEventSingle',
 		'aText',
 		'aRawHTML',	
 	),
   'type_options' => array(
 		'aRichText' => array('tool' => 'Sidebar'),
-		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),				
+		'aFeed' => array(),		
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aFeed' => array(),
-		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aEvent' => $eventCompactOptions,
 		'aBlog' => $blogCompactOptions,
 		'aEventSingle' => $eventCompactOptions,
-		'aBlogSingle' => $blogCompactOptions		
+		'aBlogSingle' => $blogCompactOptions,
+    'aText' => array('multiline' => true),		
 	))) ?>

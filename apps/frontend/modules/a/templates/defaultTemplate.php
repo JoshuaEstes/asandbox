@@ -2,13 +2,6 @@
 <?php $page = aTools::getCurrentPage() ?>
 <?php slot('body_class') ?>a-default<?php end_slot() ?>
 
-<?php if (0): ?>
-	<?php if (!$page->hasChildren()): ?>
-		<?php slot('a-subnav','') ?>
-		<?php slot('body_class') ?>a-default no-sidebar<?php end_slot() ?>	
-	<?php endif ?>	
-<?php endif ?>
-
 <?php // Let's use variables to avoid passing the same things to two separate slots. These are ?>
 <?php // NOT global variables, just conveniences for this template ?>
 
@@ -40,30 +33,30 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
+		'aFeed', 		
 		'aImage', 
-		'aFeed', 
-		'aPDF',
-		'aBlogSingle', 
-		'aEventSingle',		
+		'aPDF', 
 		'aButton', 
-		'aText',	  
-		'aRawHTML',
+		'aBlog',
+		'aBlogSingle', 
+		'aEvent',
+		'aEventSingle',
+		'aText',
+		'aRawHTML', 		
 	),
   'type_options' => array(
-    'aText' => array('multiline' => true),
 		'aRichText' => array('tool' => 'Main'), 	
 		'aSlideshow' => array("width" => 480, "flexHeight" => true),
 		'aVideo' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
-		'aImage' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),
-		'aButton' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
+		'aImage' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aButton' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aBlog' => $blogOptions,
 		'aBlogSingle' => $blogOptions,
 		'aEvent' => $eventOptions,
 		'aEventSingle' => $eventOptions,
+    'aText' => array('multiline' => true),		
 	))) ?>
 	
 <?php // You can also just let the blog post slots display a short excerpt, ?>
@@ -76,14 +69,14 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
+		'aFeed', 		
 		'aImage', 
-		'aFeed', 
 		'aPDF', 
-		'aBlogSingle', 
-		'aEventSingle',
 		'aButton', 
+		'aBlog',
+		'aBlogSingle', 
+		'aEvent',
+		'aEventSingle',
 		'aText',
 		'aRawHTML', 		
 	),
@@ -91,12 +84,13 @@
 		'aRichText' => array('tool' => 'Sidebar'),
 		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),				
-		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),		
-		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aEvent' => $eventCompactOptions,
 		'aBlog' => $blogCompactOptions,
 		'aEventSingle' => $eventCompactOptions,
-		'aBlogSingle' => $blogCompactOptions
+		'aBlogSingle' => $blogCompactOptions,
+    'aText' => array('multiline' => true),		
 	))) ?>
