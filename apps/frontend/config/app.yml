@@ -119,8 +119,8 @@ all:
     home_as_tab: false
 
     templates:
-      home: Home Page
       default: Default Page
+      home: Home Page
 
     # Disables ALL of our bundled styles (quite a job to replace).
     # See use_bundled_stylesheets for a more selective way to do it
