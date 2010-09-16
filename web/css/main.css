@@ -291,18 +291,6 @@ width: 480px;
 	margin: 0;
 }
 
-.a-nav-subnav .a-nav-item .a-drag
-{
-	position: absolute;
-	right: 0;
-}
-
-.a-nav-subnav .a-nav-item .a-drag,
-.a-nav-subnav .a-nav-item .a-drag *
-{
-	background-color: transparent;
-}
-
 .a-nav-subnav .a-nav-item
 {
 float: left;
