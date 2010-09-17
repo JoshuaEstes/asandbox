@@ -1,4 +1,5 @@
 <?php use_helper('I18N', 'jQuery') ?>
+<?php slot('body_class') ?>sfguard-signin<?php end_slot() ?>
 
 <?php slot('a-tabs', '') ?>
 <?php slot('a-login', '') ?>
@@ -9,7 +10,7 @@
 		<div class="a-form-row a-hidden">
   		<?php echo $form->renderHiddenFields() ?>
 		</div>
-
+		
 		<div class="a-form-row">
     	<?php echo $form['username']->renderLabel() ?>
     	<?php echo $form['username']->render() ?>
@@ -21,7 +22,7 @@
     	<?php echo $form['password']->render() ?>
     	<?php echo $form['password']->renderError() ?>
 		</div>
-
+		
 		<?php if (0): ?>
 		<?php // When this thing starts working, it can get displayed. ?>
 		<div class="a-form-row">
