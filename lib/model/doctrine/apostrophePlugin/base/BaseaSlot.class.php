@@ -122,6 +122,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              array(
               'type' => 'aNewRichText',
              ),
+             'aAudioSlot' => 
+             array(
+              'type' => 'aAudio',
+             ),
              ));
     }
 
