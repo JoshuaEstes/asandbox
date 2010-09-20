@@ -283,6 +283,7 @@ margin-bottom: 5px;
 /* Basic Blog Styles ====================================== */
 
 #a-blog-main,
+.a-blog-heading,
 .a-blog-item,
 .a-blog-item-title,
 .a-blog-item-meta,
@@ -306,6 +307,19 @@ margin-bottom: 5px;
 	height: 1px;
 	border: none;
 	background: rgba(0,0,0,0.125);
+}
+
+.a-blog-heading h3
+{
+	line-height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.a-blog-heading .a-controls
+{
+	float: left;
+	clear: none;
 }
 
 .a-blog-item .a-area
