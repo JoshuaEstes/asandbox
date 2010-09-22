@@ -80,7 +80,6 @@ all:
       - default
       - aBlog
       - aBlogAdmin
-      - aBlogCategoryAdmin
       - aBlogSingleSlot
       - aBlogSlot
       - aEvent
@@ -89,6 +88,7 @@ all:
       - aEventSingleSlot
       - aEventSlot
       - aAdmin
+      - aCategoryAdmin
 
     error_404_module:       a               # To be called when a 404 error is raised
     error_404_action:       error404        # Or when the requested URL doesn't match any route

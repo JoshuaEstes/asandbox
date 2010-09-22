@@ -27,8 +27,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'             => new sfWidgetFormDateTime(),
       'groups_list'            => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'permissions_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
+      'categories_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
       'blog_editor_items_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem')),
-      'blog_categories_list'   => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
     ));
 
     $this->setValidators(array(
@@ -44,8 +44,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       'updated_at'             => new sfValidatorDateTime(),
       'groups_list'            => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'permissions_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
+      'categories_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
       'blog_editor_items_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem', 'required' => false)),
-      'blog_categories_list'   => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -80,14 +80,14 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $this->setDefault('permissions_list', $this->object->permissions->getPrimaryKeys());
     }
 
+    if (isset($this->widgetSchema['categories_list']))
+    {
+      $this->setDefault('categories_list', $this->object->Categories->getPrimaryKeys());
+    }
+
     if (isset($this->widgetSchema['blog_editor_items_list']))
     {
       $this->setDefault('blog_editor_items_list', $this->object->BlogEditorItems->getPrimaryKeys());
-    }
-
-    if (isset($this->widgetSchema['blog_categories_list']))
-    {
-      $this->setDefault('blog_categories_list', $this->object->BlogCategories->getPrimaryKeys());
     }
 
   }
@@ -96,8 +96,8 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
   {
     $this->savegroupsList($con);
     $this->savepermissionsList($con);
+    $this->saveCategoriesList($con);
     $this->saveBlogEditorItemsList($con);
-    $this->saveBlogCategoriesList($con);
 
     parent::doSave($con);
   }
@@ -178,6 +178,44 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     }
   }
 
+  public function saveCategoriesList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['categories_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Categories->getPrimaryKeys();
+    $values = $this->getValue('categories_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Categories', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Categories', array_values($link));
+    }
+  }
+
   public function saveBlogEditorItemsList($con = null)
   {
     if (!$this->isValid())
@@ -213,44 +251,6 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('BlogEditorItems', array_values($link));
-    }
-  }
-
-  public function saveBlogCategoriesList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['blog_categories_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->BlogCategories->getPrimaryKeys();
-    $values = $this->getValue('blog_categories_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('BlogCategories', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('BlogCategories', array_values($link));
     }
   }
 

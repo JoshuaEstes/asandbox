@@ -10,32 +10,32 @@
  * @property string $description
  * @property Doctrine_Collection $users
  * @property Doctrine_Collection $permissions
- * @property Doctrine_Collection $BlogCategories
- * @property Doctrine_Collection $BlogCategoryGroups
- * @property Doctrine_Collection $Accesses
  * @property Doctrine_Collection $sfGuardGroupPermission
  * @property Doctrine_Collection $sfGuardUserGroup
+ * @property Doctrine_Collection $Accesses
+ * @property Doctrine_Collection $Categories
+ * @property Doctrine_Collection $CategoryGroups
  * 
  * @method integer             getId()                     Returns the current record's "id" value
  * @method string              getName()                   Returns the current record's "name" value
  * @method string              getDescription()            Returns the current record's "description" value
  * @method Doctrine_Collection getUsers()                  Returns the current record's "users" collection
  * @method Doctrine_Collection getPermissions()            Returns the current record's "permissions" collection
- * @method Doctrine_Collection getBlogCategories()         Returns the current record's "BlogCategories" collection
- * @method Doctrine_Collection getBlogCategoryGroups()     Returns the current record's "BlogCategoryGroups" collection
- * @method Doctrine_Collection getAccesses()               Returns the current record's "Accesses" collection
  * @method Doctrine_Collection getSfGuardGroupPermission() Returns the current record's "sfGuardGroupPermission" collection
  * @method Doctrine_Collection getSfGuardUserGroup()       Returns the current record's "sfGuardUserGroup" collection
+ * @method Doctrine_Collection getAccesses()               Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection getCategories()             Returns the current record's "Categories" collection
+ * @method Doctrine_Collection getCategoryGroups()         Returns the current record's "CategoryGroups" collection
  * @method sfGuardGroup        setId()                     Sets the current record's "id" value
  * @method sfGuardGroup        setName()                   Sets the current record's "name" value
  * @method sfGuardGroup        setDescription()            Sets the current record's "description" value
  * @method sfGuardGroup        setUsers()                  Sets the current record's "users" collection
  * @method sfGuardGroup        setPermissions()            Sets the current record's "permissions" collection
- * @method sfGuardGroup        setBlogCategories()         Sets the current record's "BlogCategories" collection
- * @method sfGuardGroup        setBlogCategoryGroups()     Sets the current record's "BlogCategoryGroups" collection
- * @method sfGuardGroup        setAccesses()               Sets the current record's "Accesses" collection
  * @method sfGuardGroup        setSfGuardGroupPermission() Sets the current record's "sfGuardGroupPermission" collection
  * @method sfGuardGroup        setSfGuardUserGroup()       Sets the current record's "sfGuardUserGroup" collection
+ * @method sfGuardGroup        setAccesses()               Sets the current record's "Accesses" collection
+ * @method sfGuardGroup        setCategories()             Sets the current record's "Categories" collection
+ * @method sfGuardGroup        setCategoryGroups()         Sets the current record's "CategoryGroups" collection
  * 
  * @package    asandbox
  * @subpackage model
@@ -77,12 +77,11 @@ abstract class BasesfGuardGroup extends sfDoctrineRecord
              'local' => 'group_id',
              'foreign' => 'permission_id'));
 
-        $this->hasMany('aBlogCategory as BlogCategories', array(
-             'refClass' => 'aBlogCategoryGroup',
-             'local' => 'group_id',
-             'foreign' => 'blog_category_id'));
+        $this->hasMany('sfGuardGroupPermission', array(
+             'local' => 'id',
+             'foreign' => 'group_id'));
 
-        $this->hasMany('aBlogCategoryGroup as BlogCategoryGroups', array(
+        $this->hasMany('sfGuardUserGroup', array(
              'local' => 'id',
              'foreign' => 'group_id'));
 
@@ -90,11 +89,12 @@ abstract class BasesfGuardGroup extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'group_id'));
 
-        $this->hasMany('sfGuardGroupPermission', array(
-             'local' => 'id',
-             'foreign' => 'group_id'));
+        $this->hasMany('aCategory as Categories', array(
+             'refClass' => 'aCategoryGroup',
+             'local' => 'group_id',
+             'foreign' => 'category_id'));
 
-        $this->hasMany('sfGuardUserGroup', array(
+        $this->hasMany('aCategoryGroup as CategoryGroups', array(
              'local' => 'id',
              'foreign' => 'group_id'));
 

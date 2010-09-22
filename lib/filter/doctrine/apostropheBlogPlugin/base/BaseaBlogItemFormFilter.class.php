@@ -31,7 +31,7 @@ abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
       'updated_at'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'slug'            => new sfWidgetFormFilterInput(),
       'editors_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
-      'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
+      'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
     ));
 
     $this->setValidators(array(
@@ -53,7 +53,7 @@ abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
       'updated_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'slug'            => new sfValidatorPass(array('required' => false)),
       'editors_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
-      'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
+      'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_blog_item_filters[%s]');
@@ -96,8 +96,8 @@ abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
     }
 
     $query
-      ->leftJoin($query->getRootAlias().'.aBlogItemCategory aBlogItemCategory')
-      ->andWhereIn('aBlogItemCategory.blog_category_id', $values)
+      ->leftJoin($query->getRootAlias().'.aBlogItemToCategory aBlogItemToCategory')
+      ->andWhereIn('aBlogItemToCategory.category_id', $values)
     ;
   }
 

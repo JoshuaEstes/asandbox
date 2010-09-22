@@ -24,8 +24,8 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
       'updated_at'             => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'groups_list'            => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup')),
       'permissions_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
+      'categories_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
       'blog_editor_items_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem')),
-      'blog_categories_list'   => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
     ));
 
     $this->setValidators(array(
@@ -40,8 +40,8 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
       'updated_at'             => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'groups_list'            => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardGroup', 'required' => false)),
       'permissions_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
+      'categories_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
       'blog_editor_items_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogItem', 'required' => false)),
-      'blog_categories_list'   => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('sf_guard_user_filters[%s]');
@@ -89,6 +89,24 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     ;
   }
 
+  public function addCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.aCategoryUser aCategoryUser')
+      ->andWhereIn('aCategoryUser.category_id', $values)
+    ;
+  }
+
   public function addBlogEditorItemsListColumnQuery(Doctrine_Query $query, $field, $values)
   {
     if (!is_array($values))
@@ -104,24 +122,6 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
     $query
       ->leftJoin($query->getRootAlias().'.aBlogEditor aBlogEditor')
       ->andWhereIn('aBlogEditor.blog_item_id', $values)
-    ;
-  }
-
-  public function addBlogCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
-    }
-
-    if (!count($values))
-    {
-      return;
-    }
-
-    $query
-      ->leftJoin($query->getRootAlias().'.aBlogCategoryUser aBlogCategoryUser')
-      ->andWhereIn('aBlogCategoryUser.blog_category_id', $values)
     ;
   }
 
@@ -145,8 +145,8 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterDoctrine
       'updated_at'             => 'Date',
       'groups_list'            => 'ManyKey',
       'permissions_list'       => 'ManyKey',
+      'categories_list'        => 'ManyKey',
       'blog_editor_items_list' => 'ManyKey',
-      'blog_categories_list'   => 'ManyKey',
     );
   }
 }

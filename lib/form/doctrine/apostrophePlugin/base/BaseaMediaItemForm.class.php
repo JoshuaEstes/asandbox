@@ -15,45 +15,45 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                    => new sfWidgetFormInputHidden(),
-      'lucene_dirty'          => new sfWidgetFormInputCheckbox(),
-      'type'                  => new sfWidgetFormChoice(array('choices' => array('image' => 'image', 'video' => 'video', 'audio' => 'audio', 'pdf' => 'pdf'))),
-      'service_url'           => new sfWidgetFormInputText(),
-      'format'                => new sfWidgetFormInputText(),
-      'width'                 => new sfWidgetFormInputText(),
-      'height'                => new sfWidgetFormInputText(),
-      'embed'                 => new sfWidgetFormTextarea(),
-      'title'                 => new sfWidgetFormInputText(),
-      'description'           => new sfWidgetFormTextarea(),
-      'credit'                => new sfWidgetFormInputText(),
-      'owner_id'              => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Owner'), 'add_empty' => true)),
-      'view_is_secure'        => new sfWidgetFormInputCheckbox(),
-      'created_at'            => new sfWidgetFormDateTime(),
-      'updated_at'            => new sfWidgetFormDateTime(),
-      'slug'                  => new sfWidgetFormInputText(),
-      'slots_list'            => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aSlot')),
-      'media_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory')),
+      'id'              => new sfWidgetFormInputHidden(),
+      'lucene_dirty'    => new sfWidgetFormInputCheckbox(),
+      'type'            => new sfWidgetFormChoice(array('choices' => array('image' => 'image', 'video' => 'video', 'audio' => 'audio', 'pdf' => 'pdf'))),
+      'service_url'     => new sfWidgetFormInputText(),
+      'format'          => new sfWidgetFormInputText(),
+      'width'           => new sfWidgetFormInputText(),
+      'height'          => new sfWidgetFormInputText(),
+      'embed'           => new sfWidgetFormTextarea(),
+      'title'           => new sfWidgetFormInputText(),
+      'description'     => new sfWidgetFormTextarea(),
+      'credit'          => new sfWidgetFormInputText(),
+      'owner_id'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Owner'), 'add_empty' => true)),
+      'view_is_secure'  => new sfWidgetFormInputCheckbox(),
+      'created_at'      => new sfWidgetFormDateTime(),
+      'updated_at'      => new sfWidgetFormDateTime(),
+      'slug'            => new sfWidgetFormInputText(),
+      'slots_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aSlot')),
+      'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
     ));
 
     $this->setValidators(array(
-      'id'                    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'lucene_dirty'          => new sfValidatorBoolean(array('required' => false)),
-      'type'                  => new sfValidatorChoice(array('choices' => array(0 => 'image', 1 => 'video', 2 => 'audio', 3 => 'pdf'))),
-      'service_url'           => new sfValidatorString(array('max_length' => 200, 'required' => false)),
-      'format'                => new sfValidatorString(array('max_length' => 10, 'required' => false)),
-      'width'                 => new sfValidatorInteger(array('required' => false)),
-      'height'                => new sfValidatorInteger(array('required' => false)),
-      'embed'                 => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
-      'title'                 => new sfValidatorString(array('max_length' => 200)),
-      'description'           => new sfValidatorString(array('required' => false)),
-      'credit'                => new sfValidatorString(array('max_length' => 200, 'required' => false)),
-      'owner_id'              => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Owner'), 'required' => false)),
-      'view_is_secure'        => new sfValidatorBoolean(array('required' => false)),
-      'created_at'            => new sfValidatorDateTime(),
-      'updated_at'            => new sfValidatorDateTime(),
-      'slug'                  => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'slots_list'            => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aSlot', 'required' => false)),
-      'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
+      'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'lucene_dirty'    => new sfValidatorBoolean(array('required' => false)),
+      'type'            => new sfValidatorChoice(array('choices' => array(0 => 'image', 1 => 'video', 2 => 'audio', 3 => 'pdf'))),
+      'service_url'     => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'format'          => new sfValidatorString(array('max_length' => 10, 'required' => false)),
+      'width'           => new sfValidatorInteger(array('required' => false)),
+      'height'          => new sfValidatorInteger(array('required' => false)),
+      'embed'           => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
+      'title'           => new sfValidatorString(array('max_length' => 200)),
+      'description'     => new sfValidatorString(array('required' => false)),
+      'credit'          => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'owner_id'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Owner'), 'required' => false)),
+      'view_is_secure'  => new sfValidatorBoolean(array('required' => false)),
+      'created_at'      => new sfValidatorDateTime(),
+      'updated_at'      => new sfValidatorDateTime(),
+      'slug'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'slots_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aSlot', 'required' => false)),
+      'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -83,9 +83,9 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
       $this->setDefault('slots_list', $this->object->Slots->getPrimaryKeys());
     }
 
-    if (isset($this->widgetSchema['media_categories_list']))
+    if (isset($this->widgetSchema['categories_list']))
     {
-      $this->setDefault('media_categories_list', $this->object->MediaCategories->getPrimaryKeys());
+      $this->setDefault('categories_list', $this->object->Categories->getPrimaryKeys());
     }
 
   }
@@ -93,7 +93,7 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
   protected function doSave($con = null)
   {
     $this->saveSlotsList($con);
-    $this->saveMediaCategoriesList($con);
+    $this->saveCategoriesList($con);
 
     parent::doSave($con);
   }
@@ -136,14 +136,14 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
     }
   }
 
-  public function saveMediaCategoriesList($con = null)
+  public function saveCategoriesList($con = null)
   {
     if (!$this->isValid())
     {
       throw $this->getErrorSchema();
     }
 
-    if (!isset($this->widgetSchema['media_categories_list']))
+    if (!isset($this->widgetSchema['categories_list']))
     {
       // somebody has unset this widget
       return;
@@ -154,8 +154,8 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
       $con = $this->getConnection();
     }
 
-    $existing = $this->object->MediaCategories->getPrimaryKeys();
-    $values = $this->getValue('media_categories_list');
+    $existing = $this->object->Categories->getPrimaryKeys();
+    $values = $this->getValue('categories_list');
     if (!is_array($values))
     {
       $values = array();
@@ -164,13 +164,13 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
-      $this->object->unlink('MediaCategories', array_values($unlink));
+      $this->object->unlink('Categories', array_values($unlink));
     }
 
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      $this->object->link('MediaCategories', array_values($link));
+      $this->object->link('Categories', array_values($link));
     }
   }
 

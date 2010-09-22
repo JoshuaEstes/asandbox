@@ -179,16 +179,16 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $this->hasMany('aBlogCategory as Categories', array(
-             'refClass' => 'aBlogItemCategory',
+        $this->hasMany('aCategory as Categories', array(
+             'refClass' => 'aBlogItemToCategory',
              'local' => 'blog_item_id',
-             'foreign' => 'blog_category_id'));
+             'foreign' => 'category_id'));
 
         $this->hasMany('aBlogEditor as BlogItemEditors', array(
              'local' => 'id',
              'foreign' => 'blog_item_id'));
 
-        $this->hasMany('aBlogItemCategory as BlogItemCategories', array(
+        $this->hasMany('aBlogItemToCategory as BlogItemCategories', array(
              'local' => 'id',
              'foreign' => 'blog_item_id'));
 

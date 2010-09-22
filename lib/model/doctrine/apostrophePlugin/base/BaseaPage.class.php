@@ -16,56 +16,50 @@
  * @property string $engine
  * @property sfGuardUser $Author
  * @property sfGuardUser $Deleter
- * @property Doctrine_Collection $aBlogItem
- * @property Doctrine_Collection $BlogCategories
- * @property Doctrine_Collection $aBlogPageCategory
  * @property Doctrine_Collection $Areas
  * @property Doctrine_Collection $Accesses
  * @property Doctrine_Collection $aLuceneUpdate
- * @property Doctrine_Collection $MediaCategories
- * @property Doctrine_Collection $aMediaPageCategory
+ * @property Doctrine_Collection $Categories
+ * @property Doctrine_Collection $aPageToCategory
  * @property Doctrine_Collection $aRedirect
+ * @property Doctrine_Collection $aBlogItem
  * 
- * @method integer             getId()                 Returns the current record's "id" value
- * @method string              getSlug()               Returns the current record's "slug" value
- * @method string              getTemplate()           Returns the current record's "template" value
- * @method boolean             getViewIsSecure()       Returns the current record's "view_is_secure" value
- * @method boolean             getArchived()           Returns the current record's "archived" value
- * @method boolean             getAdmin()              Returns the current record's "admin" value
- * @method integer             getAuthorId()           Returns the current record's "author_id" value
- * @method integer             getDeleterId()          Returns the current record's "deleter_id" value
- * @method string              getEngine()             Returns the current record's "engine" value
- * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
- * @method sfGuardUser         getDeleter()            Returns the current record's "Deleter" value
- * @method Doctrine_Collection getABlogItem()          Returns the current record's "aBlogItem" collection
- * @method Doctrine_Collection getBlogCategories()     Returns the current record's "BlogCategories" collection
- * @method Doctrine_Collection getABlogPageCategory()  Returns the current record's "aBlogPageCategory" collection
- * @method Doctrine_Collection getAreas()              Returns the current record's "Areas" collection
- * @method Doctrine_Collection getAccesses()           Returns the current record's "Accesses" collection
- * @method Doctrine_Collection getALuceneUpdate()      Returns the current record's "aLuceneUpdate" collection
- * @method Doctrine_Collection getMediaCategories()    Returns the current record's "MediaCategories" collection
- * @method Doctrine_Collection getAMediaPageCategory() Returns the current record's "aMediaPageCategory" collection
- * @method Doctrine_Collection getARedirect()          Returns the current record's "aRedirect" collection
- * @method aPage               setId()                 Sets the current record's "id" value
- * @method aPage               setSlug()               Sets the current record's "slug" value
- * @method aPage               setTemplate()           Sets the current record's "template" value
- * @method aPage               setViewIsSecure()       Sets the current record's "view_is_secure" value
- * @method aPage               setArchived()           Sets the current record's "archived" value
- * @method aPage               setAdmin()              Sets the current record's "admin" value
- * @method aPage               setAuthorId()           Sets the current record's "author_id" value
- * @method aPage               setDeleterId()          Sets the current record's "deleter_id" value
- * @method aPage               setEngine()             Sets the current record's "engine" value
- * @method aPage               setAuthor()             Sets the current record's "Author" value
- * @method aPage               setDeleter()            Sets the current record's "Deleter" value
- * @method aPage               setABlogItem()          Sets the current record's "aBlogItem" collection
- * @method aPage               setBlogCategories()     Sets the current record's "BlogCategories" collection
- * @method aPage               setABlogPageCategory()  Sets the current record's "aBlogPageCategory" collection
- * @method aPage               setAreas()              Sets the current record's "Areas" collection
- * @method aPage               setAccesses()           Sets the current record's "Accesses" collection
- * @method aPage               setALuceneUpdate()      Sets the current record's "aLuceneUpdate" collection
- * @method aPage               setMediaCategories()    Sets the current record's "MediaCategories" collection
- * @method aPage               setAMediaPageCategory() Sets the current record's "aMediaPageCategory" collection
- * @method aPage               setARedirect()          Sets the current record's "aRedirect" collection
+ * @method integer             getId()              Returns the current record's "id" value
+ * @method string              getSlug()            Returns the current record's "slug" value
+ * @method string              getTemplate()        Returns the current record's "template" value
+ * @method boolean             getViewIsSecure()    Returns the current record's "view_is_secure" value
+ * @method boolean             getArchived()        Returns the current record's "archived" value
+ * @method boolean             getAdmin()           Returns the current record's "admin" value
+ * @method integer             getAuthorId()        Returns the current record's "author_id" value
+ * @method integer             getDeleterId()       Returns the current record's "deleter_id" value
+ * @method string              getEngine()          Returns the current record's "engine" value
+ * @method sfGuardUser         getAuthor()          Returns the current record's "Author" value
+ * @method sfGuardUser         getDeleter()         Returns the current record's "Deleter" value
+ * @method Doctrine_Collection getAreas()           Returns the current record's "Areas" collection
+ * @method Doctrine_Collection getAccesses()        Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection getALuceneUpdate()   Returns the current record's "aLuceneUpdate" collection
+ * @method Doctrine_Collection getCategories()      Returns the current record's "Categories" collection
+ * @method Doctrine_Collection getAPageToCategory() Returns the current record's "aPageToCategory" collection
+ * @method Doctrine_Collection getARedirect()       Returns the current record's "aRedirect" collection
+ * @method Doctrine_Collection getABlogItem()       Returns the current record's "aBlogItem" collection
+ * @method aPage               setId()              Sets the current record's "id" value
+ * @method aPage               setSlug()            Sets the current record's "slug" value
+ * @method aPage               setTemplate()        Sets the current record's "template" value
+ * @method aPage               setViewIsSecure()    Sets the current record's "view_is_secure" value
+ * @method aPage               setArchived()        Sets the current record's "archived" value
+ * @method aPage               setAdmin()           Sets the current record's "admin" value
+ * @method aPage               setAuthorId()        Sets the current record's "author_id" value
+ * @method aPage               setDeleterId()       Sets the current record's "deleter_id" value
+ * @method aPage               setEngine()          Sets the current record's "engine" value
+ * @method aPage               setAuthor()          Sets the current record's "Author" value
+ * @method aPage               setDeleter()         Sets the current record's "Deleter" value
+ * @method aPage               setAreas()           Sets the current record's "Areas" collection
+ * @method aPage               setAccesses()        Sets the current record's "Accesses" collection
+ * @method aPage               setALuceneUpdate()   Sets the current record's "aLuceneUpdate" collection
+ * @method aPage               setCategories()      Sets the current record's "Categories" collection
+ * @method aPage               setAPageToCategory() Sets the current record's "aPageToCategory" collection
+ * @method aPage               setARedirect()       Sets the current record's "aRedirect" collection
+ * @method aPage               setABlogItem()       Sets the current record's "aBlogItem" collection
  * 
  * @package    asandbox
  * @subpackage model
@@ -145,19 +139,6 @@ abstract class BaseaPage extends sfDoctrineRecord
              'local' => 'author_id',
              'foreign' => 'id'));
 
-        $this->hasMany('aBlogItem', array(
-             'local' => 'id',
-             'foreign' => 'page_id'));
-
-        $this->hasMany('aBlogCategory as BlogCategories', array(
-             'refClass' => 'aBlogPageCategory',
-             'local' => 'page_id',
-             'foreign' => 'blog_category_id'));
-
-        $this->hasMany('aBlogPageCategory', array(
-             'local' => 'id',
-             'foreign' => 'page_id'));
-
         $this->hasMany('aArea as Areas', array(
              'local' => 'id',
              'foreign' => 'page_id'));
@@ -170,16 +151,20 @@ abstract class BaseaPage extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'page_id'));
 
-        $this->hasMany('aMediaCategory as MediaCategories', array(
-             'refClass' => 'aMediaPageCategory',
+        $this->hasMany('aCategory as Categories', array(
+             'refClass' => 'aPageToCategory',
              'local' => 'page_id',
-             'foreign' => 'media_category_id'));
+             'foreign' => 'category_id'));
 
-        $this->hasMany('aMediaPageCategory', array(
+        $this->hasMany('aPageToCategory', array(
              'local' => 'id',
              'foreign' => 'page_id'));
 
         $this->hasMany('aRedirect', array(
+             'local' => 'id',
+             'foreign' => 'page_id'));
+
+        $this->hasMany('aBlogItem', array(
              'local' => 'id',
              'foreign' => 'page_id'));
 

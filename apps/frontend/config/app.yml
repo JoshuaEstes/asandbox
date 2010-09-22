@@ -9,6 +9,7 @@ all:
       - blog
       - events
       - media
+      - categories
       - users 
       - reorganize
     # If true, there will be a language switcher next to the login/logout button

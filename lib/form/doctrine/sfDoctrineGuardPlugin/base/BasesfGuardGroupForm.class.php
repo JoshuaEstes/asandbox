@@ -15,25 +15,25 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                   => new sfWidgetFormInputHidden(),
-      'name'                 => new sfWidgetFormInputText(),
-      'description'          => new sfWidgetFormTextarea(),
-      'created_at'           => new sfWidgetFormDateTime(),
-      'updated_at'           => new sfWidgetFormDateTime(),
-      'users_list'           => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
-      'permissions_list'     => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
-      'blog_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
+      'id'               => new sfWidgetFormInputHidden(),
+      'name'             => new sfWidgetFormInputText(),
+      'description'      => new sfWidgetFormTextarea(),
+      'created_at'       => new sfWidgetFormDateTime(),
+      'updated_at'       => new sfWidgetFormDateTime(),
+      'users_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
+      'permissions_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission')),
+      'categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
     ));
 
     $this->setValidators(array(
-      'id'                   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'                 => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'description'          => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
-      'created_at'           => new sfValidatorDateTime(),
-      'updated_at'           => new sfValidatorDateTime(),
-      'users_list'           => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
-      'permissions_list'     => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
-      'blog_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
+      'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'description'      => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
+      'created_at'       => new sfValidatorDateTime(),
+      'updated_at'       => new sfValidatorDateTime(),
+      'users_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
+      'permissions_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardPermission', 'required' => false)),
+      'categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -68,9 +68,9 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
       $this->setDefault('permissions_list', $this->object->permissions->getPrimaryKeys());
     }
 
-    if (isset($this->widgetSchema['blog_categories_list']))
+    if (isset($this->widgetSchema['categories_list']))
     {
-      $this->setDefault('blog_categories_list', $this->object->BlogCategories->getPrimaryKeys());
+      $this->setDefault('categories_list', $this->object->Categories->getPrimaryKeys());
     }
 
   }
@@ -79,7 +79,7 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
   {
     $this->saveusersList($con);
     $this->savepermissionsList($con);
-    $this->saveBlogCategoriesList($con);
+    $this->saveCategoriesList($con);
 
     parent::doSave($con);
   }
@@ -160,14 +160,14 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
     }
   }
 
-  public function saveBlogCategoriesList($con = null)
+  public function saveCategoriesList($con = null)
   {
     if (!$this->isValid())
     {
       throw $this->getErrorSchema();
     }
 
-    if (!isset($this->widgetSchema['blog_categories_list']))
+    if (!isset($this->widgetSchema['categories_list']))
     {
       // somebody has unset this widget
       return;
@@ -178,8 +178,8 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
       $con = $this->getConnection();
     }
 
-    $existing = $this->object->BlogCategories->getPrimaryKeys();
-    $values = $this->getValue('blog_categories_list');
+    $existing = $this->object->Categories->getPrimaryKeys();
+    $values = $this->getValue('categories_list');
     if (!is_array($values))
     {
       $values = array();
@@ -188,13 +188,13 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
-      $this->object->unlink('BlogCategories', array_values($unlink));
+      $this->object->unlink('Categories', array_values($unlink));
     }
 
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      $this->object->link('BlogCategories', array_values($link));
+      $this->object->link('Categories', array_values($link));
     }
   }
 

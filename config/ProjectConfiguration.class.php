@@ -26,7 +26,18 @@ class ProjectConfiguration extends sfProjectConfiguration
     set_include_path(
       sfConfig::get('sf_lib_dir') .
         '/vendor' . PATH_SEPARATOR . get_include_path());
-    // for compatibility / remove and enable only the plugins you want
-    $this->enableAllPluginsExcept(array('sfPropelPlugin'));
+    // ORDER IS SIGNIFICANT. sfDoctrinePlugin logically comes first followed by sfDoctrineGuardPlugin.
+    // apostrophePlugin must precede apostropheBlogPlugin. 
+    $this->enablePlugins(array(
+      'sfDoctrinePlugin',
+      'sfDoctrineGuardPlugin',
+      'sfDoctrineActAsTaggablePlugin',
+      'sfTaskExtraPlugin',
+      'sfJqueryReloadedPlugin',
+      'sfWebBrowserPlugin',
+      'sfFeed2Plugin',
+      'sfSyncContentPlugin',
+      'apostrophePlugin',
+      'apostropheBlogPlugin'));
   }
 }

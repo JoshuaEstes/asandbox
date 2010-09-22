@@ -34,7 +34,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'updated_at'      => new sfWidgetFormDateTime(),
       'slug'            => new sfWidgetFormInputText(),
       'editors_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
-      'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
+      'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
     ));
 
     $this->setValidators(array(
@@ -57,7 +57,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'updated_at'      => new sfValidatorDateTime(),
       'slug'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'editors_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
-      'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
+      'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
