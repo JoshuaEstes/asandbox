@@ -1,11 +1,12 @@
-// aOverrides is called from aUI()
-// This helps for things like Cufon that need to be setup again after an AJAX call
-function aOverrides()
+// apostropheReady is called at domReady
+// it hooks into the a_js javascript framework
+// it can be used for progressive enhancements at runtime
+// such as Cufon text replacement
+
+function apostropheReady()
 {
 
-}
-
-$(document).ready(function() {
+	// top navigation enhancements 
 	$(".a-nav-main .a-nav-item").hover(function(e){
 		e.preventDefault();
 		$(this).stop().animate({ 
@@ -17,4 +18,6 @@ $(document).ready(function() {
 	    backgroundColor: "#efefef"
 	  }, 250 );		
 	});
-});
+
+}
+
