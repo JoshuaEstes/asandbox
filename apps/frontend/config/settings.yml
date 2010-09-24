@@ -69,6 +69,7 @@ all:
       - aImageSlot
       - aButtonSlot
       - aPDFSlot
+      - aFileSlot
       - aFeedSlot
       - aAudioSlot
       - sfGuardAuth

@@ -98,6 +98,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              array(
               'type' => 'aPDF',
              ),
+             'aFileSlot' => 
+             array(
+              'type' => 'aFile',
+             ),
              'aFeedSlot' => 
              array(
               'type' => 'aFeed',
