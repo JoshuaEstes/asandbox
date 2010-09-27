@@ -5,7 +5,7 @@
  *
  * @method aPage getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    content
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
@@ -22,7 +22,7 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'archived'              => new sfWidgetFormInputCheckbox(),
       'admin'                 => new sfWidgetFormInputCheckbox(),
       'author_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'add_empty' => true)),
-      'deleter_id'            => new sfWidgetFormInputText(),
+      'deleter_id'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Deleter'), 'add_empty' => true)),
       'engine'                => new sfWidgetFormInputText(),
       'created_at'            => new sfWidgetFormDateTime(),
       'updated_at'            => new sfWidgetFormDateTime(),
@@ -41,7 +41,7 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'archived'              => new sfValidatorBoolean(array('required' => false)),
       'admin'                 => new sfValidatorBoolean(array('required' => false)),
       'author_id'             => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'required' => false)),
-      'deleter_id'            => new sfValidatorInteger(array('required' => false)),
+      'deleter_id'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Deleter'), 'required' => false)),
       'engine'                => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'            => new sfValidatorDateTime(),
       'updated_at'            => new sfValidatorDateTime(),

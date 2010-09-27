@@ -142,7 +142,7 @@ abstract class BaseaPage extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasOne('sfGuardUser as Deleter', array(
-             'local' => 'author_id',
+             'local' => 'deleter_id',
              'foreign' => 'id'));
 
         $this->hasMany('aArea as Areas', array(

@@ -35,6 +35,8 @@ all:
     # this is a useful way to avoid giving them access to locked pages until they
     # are deemed worthy of membership in the guest group. If you comment out
     # this line, any authenticated user will be able to view locked pages
+    
+    # This also applies to media if you have a public media engine page
     view_locked_sufficient_credentials: view_locked
     
     # Sets the level of CMS Pages allowed to be created by the client 
