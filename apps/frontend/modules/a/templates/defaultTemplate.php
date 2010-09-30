@@ -48,6 +48,7 @@
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
 		'aSlideshow' => array("width" => 480, "flexHeight" => true),
+		'aAudio' => array('width' => 480),
 		'aVideo' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aFeed' => array(),
 		'aImage' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
