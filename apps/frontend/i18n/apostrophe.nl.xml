@@ -16,7 +16,7 @@
 </trans-unit>
 <trans-unit id="4">
 <source>Photo Credit: %credit%</source>
-<target>Foto Credit: %credit%</target>
+<target>Fotograaf: %credit%</target>
 </trans-unit>
 <trans-unit id="5">
 <source>Previous</source>
@@ -108,7 +108,7 @@
 </trans-unit>
 <trans-unit id="30">
 <source>&lt;span&gt;Credit:&lt;/span&gt; %credit%</source>
-<target>&lt;span&gt;Credit:&lt;/span&gt; %credit%</target>
+<target>&lt;span&gt;Auteur:&lt;/span&gt; %credit%</target>
 </trans-unit>
 <trans-unit id="31">
 <source>&lt;span&gt;Categories:&lt;/span&gt; %categories%</source>
@@ -116,7 +116,7 @@
 </trans-unit>
 <trans-unit id="32">
 <source>&lt;span&gt;Tags:&lt;/span&gt; %tags%</source>
-<target>&lt;span&gt;Tags:&lt;/span&gt; %tags%</target>
+<target>&lt;span&gt;Labels:&lt;/span&gt; %tags%</target>
 </trans-unit>
 <trans-unit id="33">
 <source>&lt;span&gt;URL:&lt;/span&gt; %urlfield%</source>
@@ -149,8 +149,7 @@
 </trans-unit>
 <trans-unit id="40">
 <source>Tags should be separated by commas. Example: student life, chemistry, laboratory</source>
-<target>Tags moeten gescheiden worden door komma's. Voorbeeld: studenten, scheikunde, laboratorium</target>
-
+<target>Labels moeten gescheiden worden door komma's. Voorbeeld: studenten, scheikunde, laboratorium</target>
 </trans-unit>
 <trans-unit id="41">
 <source>Save</source>
@@ -198,7 +197,7 @@
 </trans-unit>
 <trans-unit id="52">
 <source>That is not a valid PDF.</source>
-<target>Dat is geen geldige PDF</target>
+<target>Dat is geen geldig PDF bestand</target>
 </trans-unit>
 <trans-unit id="53">
 <source>remove this item</source>
@@ -234,7 +233,7 @@
 </trans-unit>
 <trans-unit id="61">
 <source>Credit:</source>
-<target>Eerbetoon:</target>
+<target>Auteur:</target>
 </trans-unit>
 <trans-unit id="62">
 <source>Categories:</source>
@@ -250,7 +249,7 @@
 </trans-unit>
 <trans-unit id="65">
 <source>Select one or more %typeplural% by clicking on them below. Drag and drop %typeplural%  to reorder them within the list of selected items. Remove %typeplural% by clicking on the trashcan.</source>
-<target>Selecteer één of meerdere %typeplural% door er hieronder op te klikken. Drag and drop %typeplural% om ze binnen de selectie te sorteren. Verwijderen %typeplural% door te klikken op de prullebak.</target>
+<target>Selecteer één of meerdere %typeplural% door er hieronder op te klikken. Sleep en zet neer %typeplural% om ze binnen de selectie te sorteren. Verwijderen %typeplural% door te klikken op de prullebak.</target>
 
 </trans-unit>
 <trans-unit id="66">
@@ -344,11 +343,11 @@
 </trans-unit>
 <trans-unit id="89">
 <source>Permissions Dashboard</source>
-<target>Overzicht Permissies</target>
+<target>Overzicht van Rechten</target>
 </trans-unit>
 <trans-unit id="90">
 <source>Add Permission</source>
-<target>Permissie Toevoegen</target>
+<target>Recht Toevoegen</target>
 </trans-unit>
 <trans-unit id="91">
 <source>Use this slot to add raw HTML markup, such as embed codes.</source>
@@ -424,8 +423,8 @@
 <target>Ga naar Home</target>
 </trans-unit>
 <trans-unit id="109">
-<source>You are browsing past revisions for this area.</source>
-<target>U bladert door oude versies van deze zone.</target>
+<source>You are browsing past  for this area.</source>
+<target>U bladert door oude versies van dit gebied.</target>
 
 </trans-unit>
 <trans-unit id="110">
@@ -526,15 +525,15 @@
 </trans-unit>
 <trans-unit id="134">
 <source>Page Slug</source>
-<target>Paginaslug</target>
+<target>Pagina slug</target>
 </trans-unit>
 <trans-unit id="135">
 <source>Page Status</source>
-<target>Paginastatus</target>
+<target>Status van pagina</target>
 </trans-unit>
 <trans-unit id="136">
 <source>Cascade status changes to children</source>
-<target>Statuswijzigingen doorvoeren op subpagina's.</target>
+<target>Statuswijzigingen doorvoeren op onderliggende pagina's.</target>
 
 </trans-unit>
 <trans-unit id="137">
@@ -543,16 +542,16 @@
 </trans-unit>
 <trans-unit id="138">
 <source>Cascade privacy changes to children</source>
-<target>Weergavewijzigingen doorvoeren op subpagina's.</target>
+<target>Weergavewijzigingen doorvoeren op onderliggende pagina's.</target>
 
 </trans-unit>
 <trans-unit id="139">
 <source>Page Permissions</source>
-<target>Paginapermissies</target>
+<target>Rechten voor pagina</target>
 </trans-unit>
 <trans-unit id="140">
 <source>Page Template</source>
-<target>Paginatemplate</target>
+<target>Pagina sjabloon</target>
 </trans-unit>
 <trans-unit id="141">
 <source>Page Engine</source>
@@ -560,7 +559,7 @@
 </trans-unit>
 <trans-unit id="142">
 <source>This page has children that will also be deleted. </source>
-<target>Deze pagina heeft subpagina's die ook verwijderd zullen worden.</target>
+<target>Deze pagina heeft onderliggende pagina's die ook verwijderd zullen worden.</target>
 
 </trans-unit>
 <trans-unit id="143">
@@ -569,7 +568,7 @@
 </trans-unit>
 <trans-unit id="144">
 <source>Are you sure? This operation can not be undone. Consider unpublishing the page instead.</source>
-<target>Bent u zeker?  Deze actie kan niet ongedaan gemaakt worden.  Opteer eerder om publicatie van de pagina uit te schakelen.</target>
+<target>Bent u zeker?  Deze actie kan niet ongedaan gemaakt worden.  Kies eerder om publicatie van de pagina uit te schakelen.</target>
 
 </trans-unit>
 <trans-unit id="145">
@@ -860,7 +859,7 @@
 </trans-unit>
 <trans-unit id="275">
 <source>Area version</source>
-<target>Gebiedversie</target>
+<target>Gebied versie</target>
 </trans-unit>
 <trans-unit id="276">
 <source>Permid</source>
@@ -912,7 +911,7 @@
 </trans-unit>
 <trans-unit id="288">
 <source>Credit</source>
-<target>Credit</target>
+<target>Auteur</target>
 </trans-unit>
 <trans-unit id="289">
 <source>Tags</source>
@@ -928,7 +927,7 @@
 </trans-unit>
 <trans-unit id="292">
 <source>Editors</source>
-<target>Editors</target>
+<target>Redacteurs</target>
 </trans-unit>
 <trans-unit id="293">
 <source>Managers</source>
@@ -944,7 +943,7 @@
 </trans-unit>
 <trans-unit id="296">
 <source>Credits</source>
-<target>Credits</target>
+<target>Auteurs</target>
 </trans-unit>
 <trans-unit id="297">
 <source>Thumbnail</source>
@@ -1065,7 +1064,7 @@
 </trans-unit>
 <trans-unit id="326">
 <source>Reorganize</source>
-<target>Sorteren</target>
+<target>Herorganiseer</target>
 </trans-unit>
 <trans-unit id="327">
 <source>Users</source>
@@ -1321,7 +1320,7 @@
 </trans-unit>
 <trans-unit id="404">
 <source>allow others to edit this post</source>
-<target>zijn anderen bevoegd dit bericht te wijzigen</target>
+<target>laat anderen toe dit bericht te wijzigen</target>
 </trans-unit>
 <trans-unit id="405">
 <source>Click to disable comments</source>
@@ -1461,59 +1460,59 @@
 </trans-unit>
 <trans-unit id="439">
 <source>Blog categories list</source>
-<target>Blog categories list</target>
+<target>Lijst van categorieën voor nieuwsberichten</target>
 </trans-unit>
 <trans-unit id="440">
 <source>The slug cannot be empty.</source>
-<target>The slug cannot be empty.</target>
+<target>De slug kan niet leeg zijn.</target>
 </trans-unit>
 <trans-unit id="442">
 <source>Blog editor items list</source>
-<target>Blog editor items list</target>
+<target>Nieuwsbericht editor items list</target>
 </trans-unit>
 <trans-unit id="443">
 <source>You are using IE6! That is just awful! Apostrophe does not support editing using Internet Explorer 6. Why don't you try upgrading? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;</source>
-<target>You are using IE6! That is just awful! Apostrophe does not support editing using Internet Explorer 6. Why don't you try upgrading? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;</target>
+<target>U gebruikt Internet Explorer 6! Dat is jammer! Apostrophe laat helaas niet toe om wijzigingen aan te maken met Internet Explorer 6. Waarom niet gratis upgraden? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;</target>
 </trans-unit>
 <trans-unit id="444">
 <source>Secure Area &amp;mdash; The page you are looking for requires certain credentials to access it.</source>
-<target>Secure Area &amp;mdash; The page you are looking for requires certain credentials to access it.</target>
+<target>Beveiligde Zone &amp;mdash; Deze pagina heeft extra rechten nodig om weergegeven te worden.</target>
 </trans-unit>
 <trans-unit id="445">
 <source>Create a Button</source>
-<target>Create a Button</target>
+<target>Knop Aanmaken</target>
 </trans-unit>
 <trans-unit id="446">
 <source>Add an Image</source>
-<target>Add an Image</target>
+<target>Afbeelding Toevoegen</target>
 </trans-unit>
 <trans-unit id="447">
 <source>Permissions: Hidden Photos can be used in photo slots, but are not displayed in the Media section.</source>
-<target>Permissions: Hidden Photos can be used in photo slots, but are not displayed in the Media section.</target>
+<target>Rechten: Verborgen foto's kunnen in foto slots gebruikt worden, maar worden niet in de Media sectie weergegeven.</target>
 </trans-unit>
 <trans-unit id="448">
 <source>Add a Video</source>
-<target>Add a Video</target>
+<target>Video Toevoegen</target>
 </trans-unit>
 <trans-unit id="449">
 <source>View All Posts</source>
-<target>View All Posts</target>
+<target>Toon alle nieuwsberichten</target>
 </trans-unit>
 <trans-unit id="450">
 <source>You are creating a new post.</source>
-<target>You are creating a new post.</target>
+<target>U bent nu een nieuw nieuwsbericht aan het maken.</target>
 </trans-unit>
 <trans-unit id="451">
 <source>You are working on a draft post.</source>
-<target>You are working on a draft post.</target>
+<target>U wijzigt nu een ontwerp nieuwsbericht.</target>
 </trans-unit>
 <trans-unit id="452">
 <source>You are editing a published post.</source>
-<target>You are editing a published post.</target>
+<target>U wijzigt nu een gepubliceerd nieuwsbericht</target>
 </trans-unit>
 <trans-unit id="453">
 <source>Post Saved at</source>
-<target>Nieuwsbericht Opgeslagen op</target>
+<target>Nieuwsbericht Aangepast op</target>
 </trans-unit>
 <trans-unit id="454">
 <source>Choose Users</source>
@@ -1525,7 +1524,7 @@
 </trans-unit>
 <trans-unit id="456">
 <source>You are creating a new event.</source>
-<target>U maakt nu een nieuw evenement.</target>
+<target>U bent nu een nieuw evenement aan het maken.</target>
 </trans-unit>
 <trans-unit id="457">
 <source>You are working on a draft event.</source>
@@ -1537,11 +1536,11 @@
 </trans-unit>
 <trans-unit id="459">
 <source>Event Saved at</source>
-<target>Evenement Opgeslaan op</target>
+<target>Evenement Aangepast op</target>
 </trans-unit>
 <trans-unit id="460">
 <source>The slug must contain only slashes, letters, digits, dashes and underscores. There must be a leading slash. Also, you cannot change a slug to conflict with an existing slug.</source>
-<target>The slug must contain only slashes, letters, digits, dashes and underscores. There must be a leading slash. Also, you cannot change a slug to conflict with an existing slug.</target>
+<target>Er mogen in de slug enkel slashes, letters, getallen, dashes en underscores gebruikt worden voorafgegaan door slash. Het is niet mogelijk om een reeds bestaande slug opnieuw te gebruiken.</target>
 </trans-unit>
 <trans-unit id="461">
 <source>Profile</source>
