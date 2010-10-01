@@ -129,27 +129,10 @@ clear: none;
 	width: 50%;
 }
 
-.a-default .a-content
-{
-clear: none;
-float: left;
-width: auto;
-}
-
-.a-default .a-area-body
-{
-width: 480px;
-}
-
 .a-area-body
 {
 	width:480px;
 	float:left;
-}
-
-.a-home .a-area-body
-{
-	width: 720px;
 }
 
 .a-area-sidebar
@@ -175,11 +158,6 @@ width: 480px;
 {
 	clear: none;
 	width: 720px;
-}
-
-.a-home .a-content
-{
-	width: 100%;
 }
 
 
@@ -435,6 +413,52 @@ margin-bottom: 5px;
 }
 
 
+/* ASANDBOX Default Template
+-------------------------------------*/
+.a-default .a-content
+{
+clear: none;
+float: left;
+width: auto;
+}
+
+.a-default .a-area-body
+{
+width: 480px;
+}
+
+.a-default .a-area-body .a-slot,
+.a-default .a-area-sidebar .a-slot
+{
+margin-bottom: 20px;
+}
+
+
+/* ASANDBOX Home Template
+-------------------------------------*/
+.a-home .a-content
+{
+width: 100%;
+}
+
+.a-home .a-area-body
+{
+width: 720px;
+}
+
+.a-home .a-area-body .a-slot,
+.a-home .a-area-sidebar .a-slot
+{
+margin-bottom: 20px;
+}
+
+
+/* ASANDBOX aSlideshow Compact Variant 
+-------------------------------------*/
+.a-slot.aRichText .a-slot-content p
+{
+	margin-bottom: 10px;
+}
 
 
 /* ASANDBOX aSlideshow Compact Variant 
