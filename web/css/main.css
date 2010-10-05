@@ -146,11 +146,11 @@ clear: none;
 
 .a-area-footer
 {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #ddd;
 	padding-top: 10px;
 	margin-top: 20px;
 	font-size: 11px;
-	color: #ccc;
+	color: #999;
 }
 
 .a-blog-posts .a-content,
@@ -355,7 +355,9 @@ margin-bottom: 5px;
 /* Blog Templates
 -------------------------------------*/
 
-
+.a-blog-item-meta { font-size: 11px; color: #888; margin: 0 0 5px 0; list-style-position: outside; float: left; width: 100%;}
+.a-blog-item-meta li { float: left; padding-right: 5px; margin-right: 5px; border-right: 1px solid #ddd; }
+.a-blog-item-meta li:last-child { border-right: none; }
 
 
 /* Events Calendar
@@ -409,7 +411,7 @@ margin-bottom: 5px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
-	background-color: #ccc;	
+	background-color: #ddd;	
 }
 
 
@@ -488,6 +490,7 @@ margin-bottom: 20px;
 	height: 30px;
 	width: 30px;
 	margin: 0 5px;	
+	background-position: 0 0;
 }
 
 .a-slot.aSlideshow.compact ul.a-slideshow-controls .a-arrow-left
