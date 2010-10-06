@@ -207,6 +207,11 @@ all:
     path: /opt/local/bin
     # To force use of gd shut off netpbm
     # netpbm: false
+    # To force use of netpbm set it to 'always'
+    # netpbm: always
+    # Default is to use gd for images under 1024x768 for performance reasons,
+    # and because most (though not all) images with alpha channels (preserved by gd) are
+    # that small or smaller
     
   # You need to set this to your site's hostname to use a:refresh to update
   # URLs in media slots etc

@@ -9,6 +9,8 @@
  * @property string $slug
  * @property string $template
  * @property boolean $view_is_secure
+ * @property boolean $edit_admin_lock
+ * @property boolean $view_admin_lock
  * @property boolean $archived
  * @property boolean $admin
  * @property integer $author_id
@@ -18,6 +20,7 @@
  * @property sfGuardUser $Deleter
  * @property Doctrine_Collection $Areas
  * @property Doctrine_Collection $Accesses
+ * @property Doctrine_Collection $GroupAccesses
  * @property Doctrine_Collection $aLuceneUpdate
  * @property Doctrine_Collection $Categories
  * @property Doctrine_Collection $aPageToCategory
@@ -28,6 +31,8 @@
  * @method string              getSlug()            Returns the current record's "slug" value
  * @method string              getTemplate()        Returns the current record's "template" value
  * @method boolean             getViewIsSecure()    Returns the current record's "view_is_secure" value
+ * @method boolean             getEditAdminLock()   Returns the current record's "edit_admin_lock" value
+ * @method boolean             getViewAdminLock()   Returns the current record's "view_admin_lock" value
  * @method boolean             getArchived()        Returns the current record's "archived" value
  * @method boolean             getAdmin()           Returns the current record's "admin" value
  * @method integer             getAuthorId()        Returns the current record's "author_id" value
@@ -37,6 +42,7 @@
  * @method sfGuardUser         getDeleter()         Returns the current record's "Deleter" value
  * @method Doctrine_Collection getAreas()           Returns the current record's "Areas" collection
  * @method Doctrine_Collection getAccesses()        Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection getGroupAccesses()   Returns the current record's "GroupAccesses" collection
  * @method Doctrine_Collection getALuceneUpdate()   Returns the current record's "aLuceneUpdate" collection
  * @method Doctrine_Collection getCategories()      Returns the current record's "Categories" collection
  * @method Doctrine_Collection getAPageToCategory() Returns the current record's "aPageToCategory" collection
@@ -46,6 +52,8 @@
  * @method aPage               setSlug()            Sets the current record's "slug" value
  * @method aPage               setTemplate()        Sets the current record's "template" value
  * @method aPage               setViewIsSecure()    Sets the current record's "view_is_secure" value
+ * @method aPage               setEditAdminLock()   Sets the current record's "edit_admin_lock" value
+ * @method aPage               setViewAdminLock()   Sets the current record's "view_admin_lock" value
  * @method aPage               setArchived()        Sets the current record's "archived" value
  * @method aPage               setAdmin()           Sets the current record's "admin" value
  * @method aPage               setAuthorId()        Sets the current record's "author_id" value
@@ -55,6 +63,7 @@
  * @method aPage               setDeleter()         Sets the current record's "Deleter" value
  * @method aPage               setAreas()           Sets the current record's "Areas" collection
  * @method aPage               setAccesses()        Sets the current record's "Accesses" collection
+ * @method aPage               setGroupAccesses()   Sets the current record's "GroupAccesses" collection
  * @method aPage               setALuceneUpdate()   Sets the current record's "aLuceneUpdate" collection
  * @method aPage               setCategories()      Sets the current record's "Categories" collection
  * @method aPage               setAPageToCategory() Sets the current record's "aPageToCategory" collection
@@ -87,6 +96,14 @@ abstract class BaseaPage extends sfDoctrineRecord
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',
+             ));
+        $this->hasColumn('edit_admin_lock', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
+             ));
+        $this->hasColumn('view_admin_lock', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
              ));
         $this->hasColumn('archived', 'boolean', null, array(
              'type' => 'boolean',
@@ -144,6 +161,10 @@ abstract class BaseaPage extends sfDoctrineRecord
              'foreign' => 'page_id'));
 
         $this->hasMany('aAccess as Accesses', array(
+             'local' => 'id',
+             'foreign' => 'page_id'));
+
+        $this->hasMany('aGroupAccess as GroupAccesses', array(
              'local' => 'id',
              'foreign' => 'page_id'));
 
