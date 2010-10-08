@@ -15,11 +15,11 @@ generator:
 
       list:
         title: Tags Admin
-        display: [ =name, tag_aBlog, tag_aEvent, tag_aMediaItem, tag_aPage ]
+        display: [ =name, tag_aBlogPost, tag_aEvent, tag_aMediaItem, tag_aPage ]
         fields:
           name:
             label: Tag
-          tag_aBlog:
+          tag_aBlogPost:
             label: Blog
           tab_aEvent:
             label: aEvent
