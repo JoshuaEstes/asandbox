@@ -9,6 +9,7 @@
  * @property string $slug
  * @property string $template
  * @property boolean $view_is_secure
+ * @property boolean $view_guest
  * @property boolean $edit_admin_lock
  * @property boolean $view_admin_lock
  * @property boolean $archived
@@ -31,6 +32,7 @@
  * @method string              getSlug()            Returns the current record's "slug" value
  * @method string              getTemplate()        Returns the current record's "template" value
  * @method boolean             getViewIsSecure()    Returns the current record's "view_is_secure" value
+ * @method boolean             getViewGuest()       Returns the current record's "view_guest" value
  * @method boolean             getEditAdminLock()   Returns the current record's "edit_admin_lock" value
  * @method boolean             getViewAdminLock()   Returns the current record's "view_admin_lock" value
  * @method boolean             getArchived()        Returns the current record's "archived" value
@@ -52,6 +54,7 @@
  * @method aPage               setSlug()            Sets the current record's "slug" value
  * @method aPage               setTemplate()        Sets the current record's "template" value
  * @method aPage               setViewIsSecure()    Sets the current record's "view_is_secure" value
+ * @method aPage               setViewGuest()       Sets the current record's "view_guest" value
  * @method aPage               setEditAdminLock()   Sets the current record's "edit_admin_lock" value
  * @method aPage               setViewAdminLock()   Sets the current record's "view_admin_lock" value
  * @method aPage               setArchived()        Sets the current record's "archived" value
@@ -96,6 +99,11 @@ abstract class BaseaPage extends sfDoctrineRecord
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',
+             'default' => false,
+             ));
+        $this->hasColumn('view_guest', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => true,
              ));
         $this->hasColumn('edit_admin_lock', 'boolean', null, array(
              'type' => 'boolean',
