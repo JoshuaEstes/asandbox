@@ -71,11 +71,10 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_media_item');
-        $this->hasColumn('id', 'integer', 4, array(
+        $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => 4,
              ));
         $this->hasColumn('lucene_dirty', 'boolean', null, array(
              'type' => 'boolean',
@@ -100,13 +99,11 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
              'type' => 'string',
              'length' => 10,
              ));
-        $this->hasColumn('width', 'integer', 4, array(
+        $this->hasColumn('width', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('height', 'integer', 4, array(
+        $this->hasColumn('height', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('embed', 'string', 1000, array(
              'type' => 'string',
@@ -124,9 +121,8 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
              'type' => 'string',
              'length' => 200,
              ));
-        $this->hasColumn('owner_id', 'integer', 4, array(
+        $this->hasColumn('owner_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',

@@ -83,11 +83,10 @@ abstract class BaseaPage extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_page');
-        $this->hasColumn('id', 'integer', 4, array(
+        $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => 4,
              ));
         $this->hasColumn('slug', 'string', 1000, array(
              'type' => 'string',
@@ -120,13 +119,11 @@ abstract class BaseaPage extends sfDoctrineRecord
              'type' => 'boolean',
              'default' => false,
              ));
-        $this->hasColumn('author_id', 'integer', 4, array(
+        $this->hasColumn('author_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('deleter_id', 'integer', 4, array(
+        $this->hasColumn('deleter_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('engine', 'string', 255, array(
              'type' => 'string',

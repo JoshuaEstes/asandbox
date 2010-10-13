@@ -41,23 +41,19 @@ abstract class BaseaAreaVersion extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_area_version');
-        $this->hasColumn('id', 'integer', 4, array(
+        $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('area_id', 'integer', 4, array(
+        $this->hasColumn('area_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('version', 'integer', 4, array(
+        $this->hasColumn('version', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('author_id', 'integer', 4, array(
+        $this->hasColumn('author_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('diff', 'string', 200, array(
              'type' => 'string',

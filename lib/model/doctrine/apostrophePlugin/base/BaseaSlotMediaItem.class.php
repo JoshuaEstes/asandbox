@@ -29,15 +29,13 @@ abstract class BaseaSlotMediaItem extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_slot_media_item');
-        $this->hasColumn('media_item_id', 'integer', 4, array(
+        $this->hasColumn('media_item_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('slot_id', 'integer', 4, array(
+        $this->hasColumn('slot_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
 
         $this->option('symfony', array(

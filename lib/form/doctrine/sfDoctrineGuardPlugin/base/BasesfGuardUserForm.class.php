@@ -16,6 +16,9 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                     => new sfWidgetFormInputHidden(),
+      'first_name'             => new sfWidgetFormInputText(),
+      'last_name'              => new sfWidgetFormInputText(),
+      'email_address'          => new sfWidgetFormInputText(),
       'username'               => new sfWidgetFormInputText(),
       'algorithm'              => new sfWidgetFormInputText(),
       'salt'                   => new sfWidgetFormInputText(),
@@ -33,6 +36,9 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'first_name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'last_name'              => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'email_address'          => new sfValidatorString(array('max_length' => 255)),
       'username'               => new sfValidatorString(array('max_length' => 128)),
       'algorithm'              => new sfValidatorString(array('max_length' => 128, 'required' => false)),
       'salt'                   => new sfValidatorString(array('max_length' => 128, 'required' => false)),
@@ -49,7 +55,10 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username')))
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('email_address'))),
+        new sfValidatorDoctrineUnique(array('model' => 'sfGuardUser', 'column' => array('username'))),
+      ))
     );
 
     $this->widgetSchema->setNameFormat('sf_guard_user[%s]');
@@ -72,12 +81,12 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
 
     if (isset($this->widgetSchema['groups_list']))
     {
-      $this->setDefault('groups_list', $this->object->groups->getPrimaryKeys());
+      $this->setDefault('groups_list', $this->object->Groups->getPrimaryKeys());
     }
 
     if (isset($this->widgetSchema['permissions_list']))
     {
-      $this->setDefault('permissions_list', $this->object->permissions->getPrimaryKeys());
+      $this->setDefault('permissions_list', $this->object->Permissions->getPrimaryKeys());
     }
 
     if (isset($this->widgetSchema['categories_list']))
@@ -94,15 +103,15 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
 
   protected function doSave($con = null)
   {
-    $this->savegroupsList($con);
-    $this->savepermissionsList($con);
+    $this->saveGroupsList($con);
+    $this->savePermissionsList($con);
     $this->saveCategoriesList($con);
     $this->saveBlogEditorItemsList($con);
 
     parent::doSave($con);
   }
 
-  public function savegroupsList($con = null)
+  public function saveGroupsList($con = null)
   {
     if (!$this->isValid())
     {
@@ -120,7 +129,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $con = $this->getConnection();
     }
 
-    $existing = $this->object->groups->getPrimaryKeys();
+    $existing = $this->object->Groups->getPrimaryKeys();
     $values = $this->getValue('groups_list');
     if (!is_array($values))
     {
@@ -130,17 +139,17 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
-      $this->object->unlink('groups', array_values($unlink));
+      $this->object->unlink('Groups', array_values($unlink));
     }
 
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      $this->object->link('groups', array_values($link));
+      $this->object->link('Groups', array_values($link));
     }
   }
 
-  public function savepermissionsList($con = null)
+  public function savePermissionsList($con = null)
   {
     if (!$this->isValid())
     {
@@ -158,7 +167,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
       $con = $this->getConnection();
     }
 
-    $existing = $this->object->permissions->getPrimaryKeys();
+    $existing = $this->object->Permissions->getPrimaryKeys();
     $values = $this->getValue('permissions_list');
     if (!is_array($values))
     {
@@ -168,13 +177,13 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
-      $this->object->unlink('permissions', array_values($unlink));
+      $this->object->unlink('Permissions', array_values($unlink));
     }
 
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      $this->object->link('permissions', array_values($link));
+      $this->object->link('Permissions', array_values($link));
     }
   }
 

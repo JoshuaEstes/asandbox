@@ -29,15 +29,13 @@ abstract class BaseaPageToCategory extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_page_to_category');
-        $this->hasColumn('page_id', 'integer', 4, array(
+        $this->hasColumn('page_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('category_id', 'integer', 4, array(
+        $this->hasColumn('category_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
 
         $this->option('symfony', array(

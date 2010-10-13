@@ -12,38 +12,38 @@ sfGuardGroup:
     description: 'Editors can edit CMS pages, provided that they have been granted control over that particular part of the site by an administrator. Editors can also upload media, and manage media that they personally uploaded.'
 sfGuardGroupPermission:
   sfGuardGroupPermission_admin_admin:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_admin
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_admin
   sfGuardGroupPermission_admin_cms_admin:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_cms_admin
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_cms_admin
   sfGuardGroupPermission_admin_media_admin:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_media_admin
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_media_admin
   sfGuardGroupPermission_admin_media_upload:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_media_upload
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_media_upload
   sfGuardGroupPermission_admin_blog_admin:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_blog_admin
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_blog_admin
   sfGuardGroupPermission_guest_guest:
-    sfGuardGroup: sfGuardGroup_guest
-    sfGuardPermission: sfGuardPermission_guest
+    Group: sfGuardGroup_guest
+    Permission: sfGuardPermission_guest
   sfGuardGroupPermission_editor_media_upload:
-    sfGuardGroup: sfGuardGroup_editor
-    sfGuardPermission: sfGuardPermission_media_upload
+    Group: sfGuardGroup_editor
+    Permission: sfGuardPermission_media_upload
   sfGuardGroupPermission_editor_blog_author:
-    sfGuardGroup: sfGuardGroup_editor
-    sfGuardPermission: sfGuardPermission_blog_author
+    Group: sfGuardGroup_editor
+    Permission: sfGuardPermission_blog_author
   sfGuardGroupPermission_guest_view_locked:
-    sfGuardGroup: sfGuardGroup_guest
-    sfGuardPermission: sfGuardPermission_view_locked
+    Group: sfGuardGroup_guest
+    Permission: sfGuardPermission_view_locked
   sfGuardGroupPermission_admin_view_locked:
-    sfGuardGroup: sfGuardGroup_admin
-    sfGuardPermission: sfGuardPermission_view_locked
+    Group: sfGuardGroup_admin
+    Permission: sfGuardPermission_view_locked
   sfGuardGroupPermission_editor_view_locked:
-    sfGuardGroup: sfGuardGroup_editor
-    sfGuardPermission: sfGuardPermission_view_locked
+    Group: sfGuardGroup_editor
+    Permission: sfGuardPermission_view_locked
 sfGuardPermission:
   sfGuardPermission_admin:
     name: admin

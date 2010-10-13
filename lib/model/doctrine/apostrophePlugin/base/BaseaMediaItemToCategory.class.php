@@ -29,15 +29,13 @@ abstract class BaseaMediaItemToCategory extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_media_item_to_category');
-        $this->hasColumn('media_item_id', 'integer', 4, array(
+        $this->hasColumn('media_item_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('category_id', 'integer', 4, array(
+        $this->hasColumn('category_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
 
         $this->option('symfony', array(

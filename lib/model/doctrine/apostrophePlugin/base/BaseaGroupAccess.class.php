@@ -32,17 +32,15 @@ abstract class BaseaGroupAccess extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_group_access');
-        $this->hasColumn('page_id', 'integer', 4, array(
+        $this->hasColumn('page_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('privilege', 'string', 100, array(
              'type' => 'string',
              'length' => 100,
              ));
-        $this->hasColumn('group_id', 'integer', 4, array(
+        $this->hasColumn('group_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
 
 

@@ -35,23 +35,19 @@ abstract class BaseaAreaVersionSlot extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_area_version_slot');
-        $this->hasColumn('slot_id', 'integer', 4, array(
+        $this->hasColumn('slot_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('area_version_id', 'integer', 4, array(
+        $this->hasColumn('area_version_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
-        $this->hasColumn('permid', 'integer', 4, array(
+        $this->hasColumn('permid', 'integer', null, array(
              'type' => 'integer',
              'default' => 1,
-             'length' => 4,
              ));
-        $this->hasColumn('rank', 'integer', 4, array(
+        $this->hasColumn('rank', 'integer', null, array(
              'type' => 'integer',
              'default' => 1,
-             'length' => 4,
              ));
 
 

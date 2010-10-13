@@ -26,9 +26,8 @@ abstract class BaseaLuceneUpdate extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_lucene_update');
-        $this->hasColumn('page_id', 'integer', 4, array(
+        $this->hasColumn('page_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('culture', 'string', 7, array(
              'type' => 'string',

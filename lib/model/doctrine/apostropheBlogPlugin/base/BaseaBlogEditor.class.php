@@ -29,15 +29,13 @@ abstract class BaseaBlogEditor extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_blog_editor');
-        $this->hasColumn('blog_item_id', 'integer', 4, array(
+        $this->hasColumn('blog_item_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('user_id', 'integer', 4, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
 
         $this->option('type', 'INNODB');

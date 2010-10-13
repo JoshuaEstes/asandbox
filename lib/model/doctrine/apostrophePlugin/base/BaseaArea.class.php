@@ -38,15 +38,13 @@ abstract class BaseaArea extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_area');
-        $this->hasColumn('id', 'integer', 4, array(
+        $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('page_id', 'integer', 4, array(
+        $this->hasColumn('page_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
         $this->hasColumn('name', 'string', 100, array(
              'type' => 'string',
@@ -56,9 +54,8 @@ abstract class BaseaArea extends sfDoctrineRecord
              'type' => 'string',
              'length' => 7,
              ));
-        $this->hasColumn('latest_version', 'integer', 4, array(
+        $this->hasColumn('latest_version', 'integer', null, array(
              'type' => 'integer',
-             'length' => 4,
              ));
 
 

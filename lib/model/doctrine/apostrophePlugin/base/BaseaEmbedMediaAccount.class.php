@@ -26,11 +26,10 @@ abstract class BaseaEmbedMediaAccount extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_embed_media_account');
-        $this->hasColumn('id', 'integer', 4, array(
+        $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => 4,
              ));
         $this->hasColumn('service', 'string', 100, array(
              'type' => 'string',

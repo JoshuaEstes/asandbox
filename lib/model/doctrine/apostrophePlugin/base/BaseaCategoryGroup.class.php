@@ -29,15 +29,13 @@ abstract class BaseaCategoryGroup extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('a_category_group');
-        $this->hasColumn('category_id', 'integer', 4, array(
+        $this->hasColumn('category_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
-        $this->hasColumn('group_id', 'integer', 4, array(
+        $this->hasColumn('group_id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => 4,
              ));
 
         $this->option('type', 'INNODB');
