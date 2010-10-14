@@ -95,12 +95,14 @@ clear: none;
 	clear: both;
 }
 
-#a-search
+.a-search.global
 {
 	width: auto;
 	clear: none;
 	float: right;
 }
+
+.a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1);}
 
 .a-area-logo
 {
@@ -589,6 +591,26 @@ color: #fff;
 white-space: nowrap;
 text-shadow: 0 0 6px rgba(0,0,0,0.80);
 }
+
+
+/* ASANDBOX Search Results
+------------------------------------------- */
+
+.a-search-results-container,
+.a-search-results-count,
+.a-search-results,
+.result-title,
+.result-url,
+.result-summary
+{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
+.a-search-results-count { margin: 10px 0; }
+.result-title { font-size: 14px; margin-bottom: 5px; }
+.result-url { font-size: 11px; margin-top: 5px; margin-bottom: 15px; color: #666; }
 
 
 /* ASANDBOX Staging - Do Not Edit Message
