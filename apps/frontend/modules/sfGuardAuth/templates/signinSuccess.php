@@ -1,10 +1,10 @@
-<?php use_helper('I18N', 'jQuery') ?>
+<?php use_helper('a') ?>
 <?php slot('body_class') ?>sfguard-signin<?php end_slot() ?>
 
 <?php slot('a-tabs', '') ?>
 <?php slot('a-login', '') ?>
 
-<div class="a-ui a-signin" id="a-signin">
+<div class="a-ui a-signin page" id="a-signin">
   <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post" id="a-signin-form" <?php echo ($form->hasErrors())? 'class="has-errors"':''; ?>>
 
 		<div class="a-form-row a-hidden">
@@ -34,9 +34,11 @@
 			
 		<ul class="a-form-row submit">
     	<li>
-				<input type="submit" class="a-btn a-submit" value="<?php echo __('Sign In', null, 'apostrophe') ?>" />
+				<input type="submit" class="a-btn big a-submit" value="<?php echo __('Sign In', null, 'apostrophe') ?>" />
 			</li>
 		</ul>
 		
   </form>
 </div>
+
+<?php a_js_call('$("#signin_username").focus();') ?>
