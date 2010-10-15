@@ -13,13 +13,17 @@
 		
 		<div class="a-form-row">
     	<?php echo $form['username']->renderLabel() ?>
-    	<?php echo $form['username']->render() ?>
+			<div class="a-form-field">
+    		<?php echo $form['username']->render() ?>
+			</div>
     	<?php echo $form['username']->renderError() ?>
 		</div>
 		
 		<div class="a-form-row">		
     	<?php echo $form['password']->renderLabel() ?>
-    	<?php echo $form['password']->render() ?>
+			<div class="a-form-field">
+    		<?php echo $form['password']->render() ?>
+			</div>
     	<?php echo $form['password']->renderError() ?>
 		</div>
 		
@@ -27,7 +31,9 @@
 		<?php // When this thing starts working, it can get displayed. ?>
 		<div class="a-form-row">
     	<?php echo $form['remember']->renderLabel() ?>
-			<?php echo $form['remember']->render() ?>
+			<div class="a-form-field">
+				<?php echo $form['remember']->render() ?>
+			</div>				
 			<?php echo $form['remember']->renderError() ?>
 		</div>
 		<?php endif ?>
@@ -40,11 +46,11 @@
 		
 		<?php $routes = $sf_context->getRouting()->getRoutes() ?>
     <?php if (isset($routes['sf_guard_forgot_password'])): ?>
-      <a href="<?php echo url_for('@sf_guard_forgot_password') ?>"><?php echo __('Forgot your password?', null, 'sf_guard') ?></a>
+      <a href="<?php echo url_for('@sf_guard_forgot_password') ?>" class="a-forgot-password"><?php echo __('Forgot your password?', null, 'sf_guard') ?></a>
     <?php endif; ?>
 
     <?php if (isset($routes['sf_guard_register'])): ?>
-      &nbsp; <a href="<?php echo url_for('@sf_guard_register') ?>"><?php echo __('Want to register?', null, 'sf_guard') ?></a>
+      <a href="<?php echo url_for('@sf_guard_register') ?>" class="a-register-password"><?php echo __('Want to register?', null, 'sf_guard') ?></a>
     <?php endif; ?>
     
   </form>

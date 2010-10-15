@@ -76,6 +76,7 @@ float: left;
 display: inline;
 position: relative;
 width: 540px;
+margin: 20px 0;
 clear: none;
 }
 
@@ -100,6 +101,7 @@ clear: none;
 	width: auto;
 	clear: none;
 	float: right;
+	margin: 20px 0;
 }
 
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1);}
@@ -649,7 +651,11 @@ margin: 20px auto;
 
 .a-signin .a-form-row.submit { margin: 30px 20px 20px; }
 
+.a-signin .a-forgot-password { display: block; font-size: 11px; margin: -10px 20px 10px; float: left; color: #999; }
 
+.a-signin.forgot .message { width: 440px; }
+
+.a-signin.forgot .help { margin: 5px 0 0;}
 
 /* ASANDBOX Staging - Do Not Edit Message
 ------------------------------------------- */
