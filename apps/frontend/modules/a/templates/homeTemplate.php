@@ -16,6 +16,7 @@
 	'allowed_types' => array(
 		'aRichText', 
 		'aSlideshow', 
+		'aSmartSlideshow', 
 		'aAudio',
 		'aVideo',
 		'aFeed', 		
@@ -32,6 +33,7 @@
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
 		'aSlideshow' => array("width" => 720, "flexHeight" => true),
+		'aSmartSlideshow' => array("width" => 720, "flexHeight" => true),
 		'aAudio' => array('width' => 720),
 		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aFeed' => array(),
@@ -48,6 +50,7 @@
 	'allowed_types' => array(
 		'aRichText', 
 		'aSlideshow', 
+		'aSmartSlideshow', 
 		'aAudio',
 		'aVideo',
 		'aFeed', 		
@@ -64,6 +67,7 @@
   'type_options' => array(
 		'aRichText' => array('tool' => 'Sidebar'),
 		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aSmartSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),				
 		'aFeed' => array(),		
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),

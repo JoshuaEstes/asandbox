@@ -1,5 +1,10 @@
 # default values
 all:
+  sf_guard_plugin:
+    # We register our own URLs that we like better.
+    # Also we don't use the default admin gen modules
+    # (Apostrophe comes with a more convenient set)
+    routes_register: false
   a:
     vimeo:
       # We use this to bring in our own vimeo key, you need to go get your own:
@@ -108,6 +113,27 @@ all:
         useTitleAsButtonText:
           label: Text Over
       aSlideshow:
+        normal:
+          label: Normal
+          options:
+            interval: 0
+            title: false
+            arrows: true
+        compact:
+          label: Compact
+          options:
+            interval: 0
+            title: true
+            arrows: true
+            itemTemplate: slideshowItemCompact
+        autoplay:
+          label: Auto Play
+          options:
+            interval: 4
+            title: true
+            arrows: false         
+            itemTemplate: slideshowItemCompact            
+      aSmartSlideshow:
         normal:
           label: Normal
           options:

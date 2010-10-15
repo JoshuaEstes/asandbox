@@ -1,3 +1,29 @@
+# The new sfDoctrineGuardPlugin changed the default URLs for these,
+# we and our clients like the old ones. Change at will
+
+sf_guard_signin:
+  url: /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url: /logout
+  param: { module: sfGuardAuth, action: signout }
+
+# These are new in sfDoctrineGuardPlugin. Since we don't use their
+# default routes we need to spell these out
+
+sf_guard_forgot_password:
+  url: /forgot_password
+  param: { module: sfGuardForgotPassword, action: index }
+
+sf_guard_forgot_password_change:
+  url: /forgot_password/:unique_key
+  class: sfDoctrineRoute
+  param: { module: sfGuardForgotPassword, action: change }
+  options: { model: sfGuardForgotPassword, type: object }
+  requirements:
+    sf_method: [get, post]
+
 # A default rule that gets us to actions outside of the CMS.
 # Note that you can't have pages with a slug beginning with /admin
 # on a site that uses this particular rule. You could use a 

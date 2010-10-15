@@ -65,6 +65,7 @@ all:
       - aTextSlot
       - aRawHTMLSlot
       - aSlideshowSlot
+      - aSmartSlideshowSlot
       - aVideoSlot
       - aImageSlot
       - aButtonSlot
@@ -73,6 +74,7 @@ all:
       - aFeedSlot
       - aAudioSlot
       - sfGuardAuth
+      - sfGuardForgotPassword
       - aUserAdmin
       - aGroupAdmin
       - aPermissionAdmin

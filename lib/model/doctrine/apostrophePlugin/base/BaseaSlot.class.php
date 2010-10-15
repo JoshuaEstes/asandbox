@@ -85,6 +85,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              array(
               'type' => 'aSlideshow',
              ),
+             'aSmartSlideshowSlot' => 
+             array(
+              'type' => 'aSmartSlideshow',
+             ),
              'aVideoSlot' => 
              array(
               'type' => 'aVideo',

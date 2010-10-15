@@ -31,13 +31,22 @@
 			<?php echo $form['remember']->renderError() ?>
 		</div>
 		<?php endif ?>
-			
+		
 		<ul class="a-form-row submit">
     	<li>
 				<input type="submit" class="a-btn big a-submit" value="<?php echo __('Sign In', null, 'apostrophe') ?>" />
 			</li>
 		</ul>
 		
+		<?php $routes = $sf_context->getRouting()->getRoutes() ?>
+    <?php if (isset($routes['sf_guard_forgot_password'])): ?>
+      <a href="<?php echo url_for('@sf_guard_forgot_password') ?>"><?php echo __('Forgot your password?', null, 'sf_guard') ?></a>
+    <?php endif; ?>
+
+    <?php if (isset($routes['sf_guard_register'])): ?>
+      &nbsp; <a href="<?php echo url_for('@sf_guard_register') ?>"><?php echo __('Want to register?', null, 'sf_guard') ?></a>
+    <?php endif; ?>
+    
   </form>
 </div>
 
