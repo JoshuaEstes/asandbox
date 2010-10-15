@@ -23,6 +23,7 @@ all:
       - events
       - media
       - categories
+      - tags
       - users 
       - reorganize
     
