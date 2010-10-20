@@ -1,42 +1,15 @@
 <?php use_helper('a') ?>
-<?php $page = aTools::getCurrentPage() ?>
 <?php slot('body_class') ?>a-default<?php end_slot() ?>
-
-<?php // Let's use variables to avoid passing the same things to two separate slots. These are ?>
-<?php // NOT global variables, just conveniences for this template ?>
-
-<?php // By default (no options) blog posts and events display nice little excerpts you can click on to see more ?>
-<?php $blogOptions = array('slideshowOptions' => array('width' => 480, 'height' => 320,  )) ?>
-<?php $eventOptions = array('slideshowOptions' => array('width' => 340, 'height' => 220,  )) ?>
-<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130, 'resizeType' => 'c'))  ?>
-<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'flexHeight' => true,  )) ?>
-
-<?php // You can use a custom subtemplate to display blog posts and events differently. ?>
-<?php // With tis setting we render _singleColumnTemplate_inDefaultPageBody.php, etc. (the blog post template ?>
-<?php // plus the subtemplate creates the full partial name). These go in your app level overrides of aBlog/templates and ?>
-<?php // aEvent/templates ?>
-
-<?php // $blogOptions = array('subtemplate' => 'inDefaultPageBody') ?>
-<?php // $eventOptions = array('subtemplate' => 'inDefaultPageSidebar') ?>
-
-<?php // You can also specify separate subtemplates for every blog post template individually ?>
-<?php // $blogOptions = array('template_options' => array('singleColumnTemplate' => array('subtemplate' => 'inDefautlPageBody'))) ?>
-
-<?php // And you can just force the use of a different blog post template (only makes sense if ?>
-<?php // you purposely design one to be the superset of another with the same area names). Usually you ?>
-<?php // don't mix this with subtemplate, but you can ?>
-
-<?php // $blogOptions = array('template' => 'myOwnTemplate') ?>
 
 <?php a_area('body', array(
 	'allowed_types' => array(
 		'aRichText', 
+		'aVideo',		
 		'aSlideshow', 
-		'aSmartSlideshow', 
-		'aAudio',
-		'aVideo',
+		'aSmartSlideshow', 	
+		'aFile',
+		'aAudio',		
 		'aFeed', 		
-		'aFile', 
 		'aButton', 
 		'aBlog',
 		'aBlogSingle', 
@@ -46,52 +19,221 @@
 		'aRawHTML', 		
 	),
   'type_options' => array(
-		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 480, "flexHeight" => true, array('constraints' => array('minimum-width' => 480))),
-		'aSmartSlideshow' => array("width" => 480, "flexHeight" => true, array('constraints' => array('minimum-width' => 480))),
-		'aAudio' => array('width' => 480),
-		'aVideo' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
-		'aFeed' => array(),
-		'aButton' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
-		'aBlog' => $blogOptions,
-		'aBlogSingle' => $blogOptions,
-		'aEvent' => $eventOptions,
-		'aEventSingle' => $eventOptions,
-    'aText' => array('multiline' => true),		
+		'aRichText' => array('
+			tool' => 'Main',
+			// 'allowed-tags' => array(),
+			// 'allowed-attributes' => array('a' => array('href', 'name', 'target'),'img' => array('src')),
+			// 'allowed-styles' => array('color','font-weight','font-style'), 
+		), 	
+		'aVideo' => array(
+			'width' => 480, 
+			'height' => false, 
+			'resizeType' => 's',
+			'flexHeight' => true, 
+			'title' => false,
+			'description' => false,			
+		),		
+		'aSlideshow' => array(
+			'width' => 480, 
+			'height' => false,
+			'resizeType' => 's',  
+			'flexHeight' => true, 
+			'constraints' => array('minimum-width' => 480),
+			'arrows' => true,
+			'interval' => false,			
+			'random' => false, 
+			'title' => false,
+			'description' => false,
+			'credit' => false,
+			'position' => false,
+			'itemTemplate' => 'slideshowItem',       			
+		),
+		'aSmartSlideshow' => array(
+			'width' => 480, 
+			'height' => false,
+			'resizeType' => 's',  
+			'flexHeight' => true, 
+			'constraints' => array('minimum-width' => 480),
+			'arrows' => true,
+			'interval' => false,			
+			'random' => false, 
+			'title' => false,
+			'description' => false,
+			'credit' => false,
+			'position' => false,
+			'itemTemplate' => 'slideshowItem',       			
+		),
+		'aFile' => array(
+		), 
+		'aAudio' => array(
+			'width' => 480,
+			'title' => true,
+			'description' => true,
+			'download' => true,
+			'playerTemplate' => 'default',
+		),
+		'aFeed' => array(
+			'posts' => 5,
+			'links' => true,
+			'dateFormat' => false,
+			'itemTemplate' => 'aFeedItem',
+			// 'markup' => '<strong><em><p><br><ul><li><a>',
+			// 'attributes' => false,
+			// 'styles' => false,
+		),
+		'aButton' => array(
+			'width' => 480, 
+			'flexHeight' => true, 
+			'resizeType' => 's', 
+			'constraints' => array('minimum-width' => 480),  
+			'rollover' => true, 
+			'title' => true, 
+			'description' => false
+		),		
+		'aBlog' => array(
+			'slideshowOptions' => array(
+				'width' => 480, 
+				'height' => 320
+			),
+		),
+		'aBlogSingle' => array(
+			'slideshowOptions' => array(
+				'width' => 480, 
+				'height' => 320
+			),
+		),
+		'aEvent' => array(
+			'slideshowOptions' => array(
+				'width' => 340, 
+				'height' => 220
+			),
+		),
+		'aEventSingle' => array(
+			'slideshowOptions' => array(
+				'width' => 340, 
+				'height' => 220
+			),
+		),
+    'aText' => array(
+			'multiline' => true
+		),
+		'aRawHTML' => array(
+		), 
 	))) ?>
 	
-<?php // You can also just let the blog post slots display a short excerpt, ?>
-<?php // which is the default behavior. The first image, if any are present, ?>
-<?php // is shown above the excerpt. A "Read More" link is provided to get to ?>
-<?php // the full blog post. ?>
-
 <?php a_area('sidebar', array(
 	'allowed_types' => array(
 		'aRichText', 
+		'aVideo',		
 		'aSlideshow', 
-		'aSmartSlideshow', 
-		'aAudio',
-		'aVideo',
+		'aSmartSlideshow', 	
+		'aFile',
+		'aAudio',		
 		'aFeed', 		
-		'aFile', 
 		'aButton', 
 		'aBlog',
 		'aBlogSingle', 
 		'aEvent',
 		'aEventSingle',
 		'aText',
-		'aRawHTML', 		
+		'aRawHTML',	
 	),
   'type_options' => array(
-		'aRichText' => array('tool' => 'Sidebar'),
-		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's', array('constraints' => array('minimum-width' => 200))),		
-		'aSmartSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's', array('constraints' => array('minimum-width' => 200))),		
-		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),				
-		'aFeed' => array(),		
-		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aEvent' => $eventCompactOptions,
-		'aBlog' => $blogCompactOptions,
-		'aEventSingle' => $eventCompactOptions,
-		'aBlogSingle' => $blogCompactOptions,
-    'aText' => array('multiline' => true),		
+		'aRichText' => array(
+			'tool' => 'Sidebar'
+		),
+		'aSlideshow' => array(
+			'width' => 200, 
+			'height' => false,
+			'resizeType' => 's',  
+			'flexHeight' => true, 
+			'constraints' => array('minimum-width' => 200),
+			'arrows' => true,
+			'interval' => false,			
+			'random' => false, 
+			'title' => false,
+			'description' => false,
+			'credit' => false,
+			'position' => false,
+			'itemTemplate' => 'slideshowItem',
+		),		
+		'aSmartSlideshow' => array(
+			'width' => 200, 
+			'height' => false,
+			'resizeType' => 's',  
+			'flexHeight' => true, 
+			'constraints' => array('minimum-width' => 200),
+			'arrows' => true,
+			'interval' => false,
+			'random' => false, 						
+			'title' => false,
+			'description' => false,
+			'credit' => false,
+			'position' => false,
+			'itemTemplate' => 'slideshowItem',
+		),		
+		'aVideo' => array(
+			'width' => 200, 
+			'flexHeight' => true, 
+			'resizeType' => 's'
+		),
+		'aFeed' => array(
+			'posts' => 5,
+			'links' => true,
+			'dateFormat' => false,
+			'itemTemplate' => 'aFeedItem',
+			// 'markup' => '<strong><em><p><br><ul><li><a>',
+			// 'attributes' => false,
+			// 'styles' => false,
+		),
+		'aAudio' => array(
+			'width' => 200,
+			'title' => true,
+			'description' => true,
+			'download' => true,
+			'playerTemplate' => 'default',
+		),		
+		'aButton' => array(
+			'width' => 200, 
+			'flexHeight' => true, 
+			'resizeType' => 's', 
+			'constraints' => array('minimum-width' => 200),
+			'rollover' => true, 
+			'title' => true, 
+			'description' => false),		
+		'aEvent' => array(
+			'excerptLength' => 40, 
+			'slideshowOptions' => array(
+				'width' => 200, 
+				'flexHeight' => true,
+			)
+		),
+		'aBlog' => array(
+			'excerptLength' => 40, 
+			'slideshowOptions' => array(
+				'width' => 200, 
+				'height' => 130, 
+				'resizeType' => 'c',
+			)
+		),
+		'aEventSingle' => array(
+			'excerptLength' => 40, 
+			'slideshowOptions' => array(
+				'width' => 200, 
+				'flexHeight' => true,
+			)
+		),
+		'aBlogSingle' => array(
+			'excerptLength' => 40, 
+			'slideshowOptions' => array(
+				'width' => 200, 
+				'height' => 130, 
+				'resizeType' => 'c',
+			)
+		),
+    'aText' => array(
+			'multiline' => true
+		),
+		'aRawHTML' => array(
+		), 
 	))) ?>

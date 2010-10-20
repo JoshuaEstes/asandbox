@@ -18,7 +18,4 @@
   <?php if ($options['description']): ?>
     <li class="a-slideshow-meta a-slideshow-description"><div class="a-slideshow-description-wrapper"><?php echo $item->description ?></div></li>
   <?php endif ?>
-  <?php if ($options['credit'] && $item->credit): ?>
-    <li class="a-slideshow-meta a-slideshow-credit"><?php echo __('Photo Credit: %credit%', array('%credit%' => $item->credit), 'apostrophe') ?></li>
-  <?php endif ?>
 </ul>
