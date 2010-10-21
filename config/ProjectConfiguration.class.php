@@ -33,7 +33,6 @@ class ProjectConfiguration extends sfProjectConfiguration
       'sfDoctrineGuardPlugin',
       'sfDoctrineActAsTaggablePlugin',
       'sfTaskExtraPlugin',
-      'sfJqueryReloadedPlugin',
       'sfWebBrowserPlugin',
       'sfFeed2Plugin',
       'sfSyncContentPlugin',
