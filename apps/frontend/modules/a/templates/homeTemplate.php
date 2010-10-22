@@ -223,13 +223,14 @@
 			'constraints' => array('minimum-width' => 200),
 			'rollover' => true, 
 			'title' => true, 
-			'description' => false),		
+			'description' => false,
+		),		
 		'aEvent' => array(
 			'excerptLength' => 40, 
 			'slideshowOptions' => array(
 				'width' => 200, 
 				'flexHeight' => true,
-			)
+			),
 		),
 		'aBlog' => array(
 			'excerptLength' => 40, 
@@ -237,14 +238,14 @@
 				'width' => 200, 
 				'height' => 130, 
 				'resizeType' => 'c',
-			)
+			),
 		),
 		'aEventSingle' => array(
 			'excerptLength' => 40, 
 			'slideshowOptions' => array(
 				'width' => 200, 
 				'flexHeight' => true,
-			)
+			),
 		),
 		'aBlogSingle' => array(
 			'excerptLength' => 40, 
@@ -252,7 +253,7 @@
 				'width' => 200, 
 				'height' => 130, 
 				'resizeType' => 'c',
-			)
+			),
 		),
     'aText' => array(
 			'multiline' => true
