@@ -240,7 +240,7 @@ all:
   
   # aBlog:
   #   disqus_enabled: true
-  #   disqus_shortname: apostrophenowdemosite
+  #   disqus_shortname: yourshortnamehere
     
 # In the production environment, we minify CSS and JS by default.
 # We'd like to gzip them too, but a lot of people don't have the
