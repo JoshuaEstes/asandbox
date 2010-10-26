@@ -12,6 +12,7 @@
  * @property boolean $view_guest
  * @property boolean $edit_admin_lock
  * @property boolean $view_admin_lock
+ * @property timestamp $published_at
  * @property boolean $archived
  * @property boolean $admin
  * @property integer $author_id
@@ -35,6 +36,7 @@
  * @method boolean             getViewGuest()       Returns the current record's "view_guest" value
  * @method boolean             getEditAdminLock()   Returns the current record's "edit_admin_lock" value
  * @method boolean             getViewAdminLock()   Returns the current record's "view_admin_lock" value
+ * @method timestamp           getPublishedAt()     Returns the current record's "published_at" value
  * @method boolean             getArchived()        Returns the current record's "archived" value
  * @method boolean             getAdmin()           Returns the current record's "admin" value
  * @method integer             getAuthorId()        Returns the current record's "author_id" value
@@ -57,6 +59,7 @@
  * @method aPage               setViewGuest()       Sets the current record's "view_guest" value
  * @method aPage               setEditAdminLock()   Sets the current record's "edit_admin_lock" value
  * @method aPage               setViewAdminLock()   Sets the current record's "view_admin_lock" value
+ * @method aPage               setPublishedAt()     Sets the current record's "published_at" value
  * @method aPage               setArchived()        Sets the current record's "archived" value
  * @method aPage               setAdmin()           Sets the current record's "admin" value
  * @method aPage               setAuthorId()        Sets the current record's "author_id" value
@@ -111,6 +114,9 @@ abstract class BaseaPage extends sfDoctrineRecord
         $this->hasColumn('view_admin_lock', 'boolean', null, array(
              'type' => 'boolean',
              'default' => false,
+             ));
+        $this->hasColumn('published_at', 'timestamp', null, array(
+             'type' => 'timestamp',
              ));
         $this->hasColumn('archived', 'boolean', null, array(
              'type' => 'boolean',

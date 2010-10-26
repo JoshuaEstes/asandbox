@@ -33,7 +33,7 @@ sf_guard_forgot_password_change:
 default:
   url:   /admin/:module/:action/*
 
-# A homepage rule is expected by a and various other plugins,
+# A homepage rule is expected by Apostrophe and various other plugins,
 # so be sure to have one
 
 homepage:
