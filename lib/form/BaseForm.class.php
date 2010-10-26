@@ -10,4 +10,25 @@
  */
 class BaseForm extends sfFormSymfony
 {
+  public function useFields(array $fields = array(), $ordered = true, $hidden = true)
+  {
+    $hidden = array();
+
+    foreach ($this as $name => $field)
+    {
+      if ($field->isHidden() && $hidden)
+      {
+        $hidden[] = $name;
+      }
+      else if (!in_array($name, $fields))
+      {
+        unset($this[$name]);
+      }
+    }
+
+    if ($ordered)
+    {
+      $this->widgetSchema->setPositions(array_merge($fields, $hidden));
+    }
+  }
 }
