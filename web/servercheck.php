@@ -45,12 +45,16 @@ EOF
 }
 
 // mandatory
+$dir = dirname(__FILE__);
 echo_title("Mandatory requirements");
 check(version_compare(phpversion(), '5.2.4', '>='), sprintf('Checking that PHP version is at least 5.2.4 (%s installed)', phpversion()), 'Install PHP 5.3.1 or newer (current version is '.phpversion(), true);
 check(ini_get('date.timezone'), 'Checking that the "date.timezone" setting is set', 'Set the "date.timezone" setting in php.ini (like Europe/Paris)', true);
-check(is_writable(__DIR__.'/../cache'), sprintf('Checking that cache/ directory is writable'), 'Change the permissions of the cache/ directory so that the web server can write in it', true);
-check(is_writable(__DIR__.'/../log'), sprintf('Checking that the logs/ directory is writable'), 'Change the permissions of the logs/ directory so that the web server can write in it', true);
-check(is_writable(__DIR__.'/../data/a_writable'), sprintf('Checking that the data/a_writable/ directory is writable'), 'Change the permissions of the data/a-writable directory so that the web server can write in it', true);
+$cachedir = $dir.'/../cache';
+check(is_writable($cachedir), sprintf('Checking that cache/ directory is writable'), "Change the permissions of the cache/ directory ($cachedir) so that the web server can write in it", true);
+$logdir = $dir.'/../log';
+check(is_writable($logdir), sprintf('Checking that the logs/ directory is writable'), "Change the permissions of the logs/ directory ($logdir) so that the web server can write in it", true);
+$data_writable_dir = $dir.'/../data/a_writable';
+check(is_writable($data_writable_dir), sprintf('Checking that the data/a_writable/ directory is writable'), "Change the permissions of the data/a_writable directory ($data_writable_dir) so that the web server can write in it", true);
 check(class_exists('PDO'), 'Checking that PDO is installed', 'Install PDO (mandatory for Propel and Doctrine)', false);
 if (class_exists('PDO')) {
     $drivers = PDO::getAvailableDrivers();
