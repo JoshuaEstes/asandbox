@@ -49,18 +49,18 @@ a:hover { text-decoration: underline; }
 /* Global Layout
 -------------------------------------*/
 
-.a-wrapper { width: 960px; margin: 0 auto; }
+.a-wrapper { width: 960px; margin: 0 auto; position: relative; clear: both; }
 
-.a-header { float: left; display: inline; position: relative; width: 540px; margin: 20px 0; clear: none; }
+.a-header { clear: both; position: relative; min-height: 150px;}
 
 .a-content { float: left; position: relative; display: inline; clear: none; width: 720px; }
 
-.a-search.global { width: auto; clear: none; float: right; margin: 20px 0; }
+.a-search.global { width: auto; clear: none; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1);}
 
-.a-area-logo { float: left; display: inline; position: relative; width: 100%; clear: both; }
+.a-area-logo { float: left; position: relative; z-index: 2; }
 .a-area-logo .a-slot { margin: 0; }
-.a-area-logo .aImage a { float: left; display: inline; position: relative; }
+.a-area-logo .a-button-image img { float: left; }
 
 .a-area-header { float: left; width: 50%; }
 
@@ -73,6 +73,25 @@ a:hover { text-decoration: underline; }
 .a-blog-posts .a-content,
 .a-blog-events .a-content { clear: none; width: 720px; }
 
+
+/* ASANDBOX Default Template
+-------------------------------------*/
+.a-default .a-content { clear: none; float: left; width: auto; }
+.a-default .a-area-body { width: 480px; }
+.a-default .a-area-body .a-slot,
+.a-default .a-area-sidebar .a-slot { margin-bottom: 20px; }
+
+.a-default .a-header { background: #888; }
+
+/* ASANDBOX Home Template
+-------------------------------------*/
+.a-home .a-content { width: 100%; }
+.a-home .a-area-body { width: 720px; }
+.a-home .a-area-body .a-slot,
+.a-home .a-area-sidebar .a-slot { margin-bottom: 20px; }
+
+.a-area-home-banner .a-slideshow-controls { position: absolute; right: 0; bottom: 0; top: auto; width: 920px; padding: 10px 20px !important; background: rgba(0,0,0,0.25); }
+.a-area-home-banner .a-slideshow-controls li { float: right; clear: none; line-height: 20px; color: #fff; }
 
 /* Top Navigation
 -------------------------------------*/
@@ -212,21 +231,6 @@ a:hover { text-decoration: underline; }
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 }
-
-/* ASANDBOX Default Template
--------------------------------------*/
-.a-default .a-content { clear: none; float: left; width: auto; }
-.a-default .a-area-body { width: 480px; }
-.a-default .a-area-body .a-slot,
-.a-default .a-area-sidebar .a-slot { margin-bottom: 20px; }
-
-/* ASANDBOX Home Template
--------------------------------------*/
-.a-home .a-content { width: 100%; }
-.a-home .a-area-body { width: 720px; }
-.a-home .a-area-body .a-slot,
-.a-home .a-area-sidebar .a-slot { margin-bottom: 20px; }
-
 
 /* ASANDBOX aRichtext Slot
 -------------------------------------*/

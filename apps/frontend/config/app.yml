@@ -105,7 +105,6 @@ all:
           options:
             interval: 0
             title: false
-            arrows: true
         compact:
           label: Compact
           options:
