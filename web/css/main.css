@@ -51,11 +51,11 @@ a:hover { text-decoration: underline; }
 
 .a-wrapper { width: 960px; margin: 0 auto; position: relative; clear: both; }
 
-.a-header { clear: both; position: relative; min-height: 150px;}
+.a-header { clear: both; position: relative; margin: 20px 0;}
 
 .a-content { float: left; position: relative; display: inline; clear: none; width: 720px; }
 
-.a-search.global { width: auto; clear: none; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
+.a-search.global { width: auto; clear: both; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1);}
 
 .a-area-logo { float: left; position: relative; z-index: 2; }
@@ -80,8 +80,6 @@ a:hover { text-decoration: underline; }
 .a-default .a-area-body { width: 480px; }
 .a-default .a-area-body .a-slot,
 .a-default .a-area-sidebar .a-slot { margin-bottom: 20px; }
-
-.a-default .a-header { background: #888; }
 
 /* ASANDBOX Home Template
 -------------------------------------*/
