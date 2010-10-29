@@ -17,7 +17,7 @@
  * @subpackage Channel
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: HttpHeaders.php 23067 2010-10-09 23:56:38Z cadorn $
+ * @version    $Id: HttpHeaders.php 23097 2010-10-12 20:40:19Z cadorn $
  */
 
 /** Zend_Wildfire_Channel_Interface */
@@ -270,8 +270,7 @@ class Zend_Wildfire_Channel_HttpHeaders extends Zend_Controller_Plugin_Abstract 
             return true;
         }
 
-        // use is_a() instead of 'instanceof' to avoid having to load the class
-        if (!is_a($this->getRequest(), 'Zend_Controller_Request_Http')) {
+        if (!($this->getRequest() instanceof Zend_Controller_Request_Http)) {
             return false;
         }
 
