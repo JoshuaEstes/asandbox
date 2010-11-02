@@ -43,6 +43,7 @@ br.c { background: none; border: 0; clear: both; display: block; float: none; fo
 
 a { text-decoration: none; }
 
+a:focus,
 a:hover { text-decoration: underline; }
 
 
