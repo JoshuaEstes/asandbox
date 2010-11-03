@@ -5,6 +5,23 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="title" content="Home" />
 	<title>500 Error</title>
+	<!-- 
+
+	Odds are, you might want -some- of these in your error500 Page
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-reset.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-admin.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-area-slots.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-audio.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-buttons.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-colors.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-components.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-engines.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-forms.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-navigation.css" />	
+	<link rel="stylesheet" type="text/css" media="screen" href="/apostrophePlugin/css/a-utility.css" />	
+ 	-->
+	
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 </head>
