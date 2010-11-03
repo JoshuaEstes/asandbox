@@ -12,7 +12,6 @@
 		'aFeed', 		
 		'aButton', 
 		'aBlog',
-		'aBlogSingle', 
 		'aEvent',
 		'aEventSingle',
 		'aText',
@@ -96,12 +95,6 @@
 				'height' => 320
 			),
 		),
-		'aBlogSingle' => array(
-			'slideshowOptions' => array(
-				'width' => 480, 
-				'height' => 320
-			),
-		),
 		'aEvent' => array(
 			'slideshowOptions' => array(
 				'width' => 340, 
@@ -132,7 +125,6 @@
 		'aFeed', 		
 		'aButton', 
 		'aBlog',
-		'aBlogSingle', 
 		'aEvent',
 		'aEventSingle',
 		'aText',
@@ -221,14 +213,6 @@
 			'slideshowOptions' => array(
 				'width' => 200, 
 				'flexHeight' => true,
-			)
-		),
-		'aBlogSingle' => array(
-			'excerptLength' => 40, 
-			'slideshowOptions' => array(
-				'width' => 200, 
-				'height' => 130, 
-				'resizeType' => 'c',
 			)
 		),
     'aText' => array(
