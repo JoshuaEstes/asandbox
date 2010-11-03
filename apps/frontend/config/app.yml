@@ -257,5 +257,8 @@ all:
 prod:
   a:
     minify: true
-    minify_gzip: true
+    # Disabled gzip for now to avoid problems for people who
+    # don't have the zlib extension or haven't set up Apache to
+    # know what to do with the gzipped files
+    minify_gzip: false
   
