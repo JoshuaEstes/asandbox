@@ -75,7 +75,6 @@ all:
       - aBlogSlot
       - aEvent
       - aEventAdmin
-      - aEventCategoryAdmin
       - aEventSingleSlot
       - aEventSlot
       - aAdmin
