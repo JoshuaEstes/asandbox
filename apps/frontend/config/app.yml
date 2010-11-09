@@ -7,8 +7,7 @@ all:
     routes_register: false
   a:
     
-    pager:
-      nb_links: 5
+    pager_nb_links: 5
     
     vimeo:
       # We use this to bring in our own vimeo key, you need to go get your own:
