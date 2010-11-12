@@ -113,21 +113,28 @@
 			'description' => false
 		),		
 		'aBlog' => array(
+			'maxImages' => 3, 
 			'slideshowOptions' => array(
 				'width' => 720, 
-				'height' => 320
+				'height' => 320,
+				'transition' => 'crossfade',
+				// 'position' => true, 
 			),
 		),
 		'aEvent' => array(
 			'slideshowOptions' => array(
-				'width' => 340, 
-				'height' => 220
+				'width' => 720, 
+				'height' => 220,
+				'transition' => 'crossfade',
+				// 'position' => true, 						
 			),
 		),
 		'aEventSingle' => array(
 			'slideshowOptions' => array(
-				'width' => 340, 
-				'height' => 220
+				'width' => 720, 
+				'height' => 220,
+				'transition' => 'crossfade',
+				// 'position' => true, 				
 			),
 		),
     'aText' => array(
@@ -148,7 +155,6 @@
 		'aFeed', 		
 		'aButton', 
 		'aBlog',
-		'aBlogSingle', 
 		'aEvent',
 		'aEventSingle',
 		'aText',
@@ -227,10 +233,11 @@
 		),
 		'aBlog' => array(
 			'excerptLength' => 40, 
+			'maxImages' => 3, 
 			'slideshowOptions' => array(
 				'width' => 200, 
-				'height' => 130, 
-				'resizeType' => 'c',
+				'height' => false, 
+				'resizeType' => 's',
 			),
 		),
 		'aEventSingle' => array(
