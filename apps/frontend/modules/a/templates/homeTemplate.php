@@ -21,6 +21,7 @@
 		'description' => false,
 		'credit' => false,
 		'position' => true,
+		'transition' => 'crossfade', 
 		'itemTemplate' => 'homeBannerItem',
 	)) ?>
 
