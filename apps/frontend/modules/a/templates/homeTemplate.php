@@ -41,8 +41,8 @@
 		'aRawHTML', 		
 	),
   'type_options' => array(
-		'aRichText' => array('
-			tool' => 'Main',
+		'aRichText' => array(
+		  'tool' => 'Main',
 			// 'allowed-tags' => array(),
 			// 'allowed-attributes' => array('a' => array('href', 'name', 'target'),'img' => array('src')),
 			// 'allowed-styles' => array('color','font-weight','font-style'), 
