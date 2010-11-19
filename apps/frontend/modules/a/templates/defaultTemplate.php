@@ -192,7 +192,8 @@
 			'constraints' => array('minimum-width' => 200),
 			'rollover' => true, 
 			'title' => true, 
-			'description' => false),		
+			'description' => false
+		),		
 		'aEvent' => array(
 			'excerptLength' => 40, 
 			'slideshowOptions' => array(
