@@ -16,7 +16,7 @@
 </trans-unit>
 <trans-unit id="4">
 <source>Photo Credit: %credit%</source>
-<target>Foto Credit: %credit%</target>
+<target>Fotograaf: %credit%</target>
 </trans-unit>
 <trans-unit id="5">
 <source>Previous</source>
@@ -36,7 +36,7 @@
 </trans-unit>
 <trans-unit id="9">
 <source>Select an Image</source>
-<target>Beeld Selecteren</target>
+<target>Afbeeldingen Selecteren</target>
 </trans-unit>
 <trans-unit id="10">
 <source>Select to Add</source>
@@ -68,15 +68,15 @@
 </trans-unit>
 <trans-unit id="20">
 <source>Selected Tag</source>
-<target>Geselecteerde Tag</target>
+<target>Geselecteerde Label</target>
 </trans-unit>
 <trans-unit id="21">
 <source>Popular Tags</source>
-<target>Meest bekeken Tags</target>
+<target>Meest bekeken labels</target>
 </trans-unit>
 <trans-unit id="22">
 <source>All Tags</source>
-<target>Alle Tags</target>
+<target>Alle labels</target>
 </trans-unit>
 <trans-unit id="23">
 <source>add</source>
@@ -108,7 +108,7 @@
 </trans-unit>
 <trans-unit id="30">
 <source>&lt;span&gt;Credit:&lt;/span&gt; %credit%</source>
-<target>&lt;span&gt;Credit:&lt;/span&gt; %credit%</target>
+<target>&lt;span&gt;Auteur:&lt;/span&gt; %credit%</target>
 </trans-unit>
 <trans-unit id="31">
 <source>&lt;span&gt;Categories:&lt;/span&gt; %categories%</source>
@@ -116,7 +116,7 @@
 </trans-unit>
 <trans-unit id="32">
 <source>&lt;span&gt;Tags:&lt;/span&gt; %tags%</source>
-<target>&lt;span&gt;Tags:&lt;/span&gt; %tags%</target>
+<target>&lt;span&gt;Labels:&lt;/span&gt; %tags%</target>
 </trans-unit>
 <trans-unit id="33">
 <source>&lt;span&gt;URL:&lt;/span&gt; %urlfield%</source>
@@ -129,6 +129,7 @@
 <trans-unit id="35">
 <source>No matching videos were found. Try being less specific.</source>
 <target>Geen video's gevonden.  Probeer een bredere zoekterm.</target>
+
 </trans-unit>
 <trans-unit id="36">
 <source>Select%buttonspan%</source>
@@ -148,7 +149,7 @@
 </trans-unit>
 <trans-unit id="40">
 <source>Tags should be separated by commas. Example: student life, chemistry, laboratory</source>
-<target>Tags moeten gescheiden worden door komma's. Voorbeeld: studenten, scheikunde, laboratorium</target>
+<target>Labels moeten gescheiden worden door komma's. Voorbeeld: studenten, scheikunde, laboratorium</target>
 </trans-unit>
 <trans-unit id="41">
 <source>Save</source>
@@ -196,7 +197,7 @@
 </trans-unit>
 <trans-unit id="52">
 <source>That is not a valid PDF.</source>
-<target>Dat is geen geldige PDF</target>
+<target>Dat is geen geldig PDF bestand</target>
 </trans-unit>
 <trans-unit id="53">
 <source>remove this item</source>
@@ -204,7 +205,7 @@
 </trans-unit>
 <trans-unit id="54">
 <source>Drag &amp;amp; Drop to Order</source>
-<target>Drag &amp;amp; Drop om te Sorteren</target>
+<target>Sleep &amp;amp; zet Neer om te Sorteren</target>
 </trans-unit>
 <trans-unit id="55">
 <source>cancel</source>
@@ -212,7 +213,7 @@
 </trans-unit>
 <trans-unit id="56">
 <source>Add Images</source>
-<target>Beelden Toevoegen</target>
+<target>Afbeeldingenen Toevoegen</target>
 </trans-unit>
 <trans-unit id="57">
 <source>Media Library</source>
@@ -224,7 +225,7 @@
 </trans-unit>
 <trans-unit id="59">
 <source>%width%x%height%</source>
-<target>%width%x%height%</target>
+<target>%breedte%x%hoogte%</target>
 </trans-unit>
 <trans-unit id="60">
 <source>Uploaded:</source>
@@ -232,7 +233,7 @@
 </trans-unit>
 <trans-unit id="61">
 <source>Credit:</source>
-<target>Credit:</target>
+<target>Auteur:</target>
 </trans-unit>
 <trans-unit id="62">
 <source>Categories:</source>
@@ -240,7 +241,7 @@
 </trans-unit>
 <trans-unit id="63">
 <source>Tags:</source>
-<target>Tags:</target>
+<target>Labels:</target>
 </trans-unit>
 <trans-unit id="64">
 <source>Download Original%buttonspan%</source>
@@ -248,7 +249,8 @@
 </trans-unit>
 <trans-unit id="65">
 <source>Select one or more %typeplural% by clicking on them below. Drag and drop %typeplural%  to reorder them within the list of selected items. Remove %typeplural% by clicking on the trashcan.</source>
-<target>Selecteer één of meerdere %typeplural% door er hieronder op te klikken. Drag and drop %typeplural% om ze binnen de selectie te sorteren. Verwijderen %typeplural% door te klikken op de prullebak.</target>
+<target>Selecteer één of meerdere %typeplural% door er hieronder op te klikken. Sleep en zet neer %typeplural% om ze binnen de selectie te sorteren. Verwijderen %typeplural% door te klikken op de prullebak.</target>
+
 </trans-unit>
 <trans-unit id="66">
 <source>Only appropriately sized %typeplural% are shown.</source>
@@ -260,23 +262,24 @@
 </trans-unit>
 <trans-unit id="68">
 <source>Upload Images</source>
-<target>Beelden uploaden</target>
+<target>Afbeeldingen opladen</target>
 </trans-unit>
 <trans-unit id="69">
 <source>Add Another Photo</source>
-<target>Extra Foto Toevoegen</target>
+<target>Extra Afbeelding Toevoegen</target>
 </trans-unit>
 <trans-unit id="70">
 <source>You are editing: %title%</source>
 <target>U bewerkt: %title%</target>
 </trans-unit>
-<trans-unit id="72">
-<source>Hidden Photos can be used in photo slots, but are not displayed in the Media section.</source>
-<target>Verborgen Foto's kunnen in fotoslots gebruikt worden maar worden niet weergegeven in de Media sectie.</target>
-</trans-unit>
+
+
+
+
 <trans-unit id="73">
 <source>Use the browsing and searching features to locate the %type% you want, then click on that %type% to select it.</source>
 <target>Gebruik de blader- en zoekfuncties om het/de gewenste %type% te vinden, klik er daarna op om het te selecteren.</target>
+
 </trans-unit>
 <trans-unit id="74">
 <source>Edit</source>
@@ -340,11 +343,11 @@
 </trans-unit>
 <trans-unit id="89">
 <source>Permissions Dashboard</source>
-<target>Overzicht Permissies</target>
+<target>Overzicht van Rechten</target>
 </trans-unit>
 <trans-unit id="90">
 <source>Add Permission</source>
-<target>Permissie Toevoegen</target>
+<target>Recht Toevoegen</target>
 </trans-unit>
 <trans-unit id="91">
 <source>Use this slot to add raw HTML markup, such as embed codes.</source>
@@ -353,6 +356,7 @@
 <trans-unit id="92">
 <source>Use this slot with caution. If bad markup causes the page to become uneditable, add ?safemode=1 to the URL and edit the slot to correct the markup.</source>
 <target>Opgelet bij het gebruik van dit slot.  Indien de pagina onbewerkbaar blijkt door gebruik van slechte code, voeg dan ?safemode=1 toe aan de URL en corrigeer de code.</target>
+
 </trans-unit>
 <trans-unit id="93">
 <source>Click edit to add raw HTML markup, such as embed codes.</source>
@@ -393,10 +397,10 @@
 <trans-unit id="102">
 <source>Title: %t%</source>
 <target>Titel: %t%</target>
-</trans-unit>
-<trans-unit id="103">
-<source>sign in</source>
-<target>aanmelden</target>
+
+
+
+
 </trans-unit>
 <trans-unit id="104">
 <source>Options</source>
@@ -419,17 +423,18 @@
 <target>Ga naar Home</target>
 </trans-unit>
 <trans-unit id="109">
-<source>You are browsing past revisions for this area.</source>
-<target>U bladert door oude versies van deze zone.</target>
+<source>You are browsing past  for this area.</source>
+<target>U bladert door oude versies van dit gebied.</target>
+
 </trans-unit>
 <trans-unit id="110">
 <source>Choose a revision.</source>
 <target>Kies een versie.</target>
 </trans-unit>
-<trans-unit id="111">
-<source>ID</source>
-<target>ID</target>
-</trans-unit>
+
+
+
+
 <trans-unit id="112">
 <source>Date</source>
 <target>Datum</target>
@@ -445,10 +450,10 @@
 <trans-unit id="115">
 <source>View More Revisions</source>
 <target>Meer Versies Weergeven</target>
-</trans-unit>
-<trans-unit id="116">
-<source>You are previewing another version of this material. This will not become the current version unless you click &quot;Save As Current Revision.&quot; If you change your mind, click &quot;Cancel.&quot;</source>
-<target>U bekijkt een andere versie van dit element.  Deze wordt enkel de huidige versie indien u klikt op &quot;Opslaan als Huidige Versie.&quot;.  Indien u dit niet wenst, klik &quot;Annuleren&quot;.</target>
+
+
+
+
 </trans-unit>
 <trans-unit id="117">
 <source>Double-click to edit.</source>
@@ -470,10 +475,10 @@
 <source>Save as Current Revision</source>
 <target>Opslaan als Huidige Versie</target>
 </trans-unit>
-<trans-unit id="122">
-<source>Add Slot</source>
-<target>Slot Toevoegen</target>
-</trans-unit>
+
+
+
+
 <trans-unit id="123">
 <source>Move</source>
 <target>Verplaatsen</target>
@@ -504,7 +509,7 @@
 </trans-unit>
 <trans-unit id="130">
 <source>Drag and drop pages to reorganize the site.</source>
-<target>Drag and drop pagina's om de website te ordenen.</target>
+<target>Sleep en zet pagina's neer om de website te ordenen.</target>
 </trans-unit>
 <trans-unit id="131">
 <source>edit</source>
@@ -520,15 +525,16 @@
 </trans-unit>
 <trans-unit id="134">
 <source>Page Slug</source>
-<target>Paginaslug</target>
+<target>Pagina slug</target>
 </trans-unit>
 <trans-unit id="135">
 <source>Page Status</source>
-<target>Paginastatus</target>
+<target>Status van pagina</target>
 </trans-unit>
 <trans-unit id="136">
 <source>Cascade status changes to children</source>
-<target>Statuswijzigingen doorvoeren op subpagina's.</target>
+<target>Statuswijzigingen doorvoeren op onderliggende pagina's.</target>
+
 </trans-unit>
 <trans-unit id="137">
 <source>Page Privacy</source>
@@ -536,15 +542,16 @@
 </trans-unit>
 <trans-unit id="138">
 <source>Cascade privacy changes to children</source>
-<target>Weergavewijzigingen doorvoeren op subpagina's.</target>
+<target>Weergavewijzigingen doorvoeren op onderliggende pagina's.</target>
+
 </trans-unit>
 <trans-unit id="139">
 <source>Page Permissions</source>
-<target>Paginapermissies</target>
+<target>Rechten voor pagina</target>
 </trans-unit>
 <trans-unit id="140">
 <source>Page Template</source>
-<target>Paginatemplate</target>
+<target>Pagina sjabloon</target>
 </trans-unit>
 <trans-unit id="141">
 <source>Page Engine</source>
@@ -552,7 +559,8 @@
 </trans-unit>
 <trans-unit id="142">
 <source>This page has children that will also be deleted. </source>
-<target>Deze pagina heeft subpagina's die ook verwijderd zullen worden.</target>
+<target>Deze pagina heeft onderliggende pagina's die ook verwijderd zullen worden.</target>
+
 </trans-unit>
 <trans-unit id="143">
 <source>Delete This Page</source>
@@ -560,7 +568,8 @@
 </trans-unit>
 <trans-unit id="144">
 <source>Are you sure? This operation can not be undone. Consider unpublishing the page instead.</source>
-<target>Bent u zeker?  Deze actie kan niet ongedaan gemaakt worden.  Opteer eerder om publicatie van de pagina uit te schakelen.</target>
+<target>Bent u zeker?  Deze actie kan niet ongedaan gemaakt worden.  Kies eerder om publicatie van de pagina uit te schakelen.</target>
+
 </trans-unit>
 <trans-unit id="145">
 <source>Add Page</source>
@@ -582,10 +591,10 @@
 <source>Admin</source>
 <target>Beheerder</target>
 </trans-unit>
-<trans-unit id="150">
-<source>You are using IE6! That is just awful! Apostrophe does not support editing using Internet Explorer 6. Why don't you try upgrading? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;</source>
-<target>U gebruikt IE6!  Wat een schandaal!  Apostrope biedt geen ondersteuning voor IE6 bij het bewerken.  Download een recente browser: &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; &lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;</target>
-</trans-unit>
+
+
+
+
 <trans-unit id="151">
 <source>ID#</source>
 <target>ID#</target>
@@ -636,7 +645,7 @@
 </trans-unit>
 <trans-unit id="209">
 <source>Permissions</source>
-<target>Permissies</target>
+<target>Rechten</target>
 </trans-unit>
 <trans-unit id="211">
 <source>Media Categories</source>
@@ -705,10 +714,11 @@
 <trans-unit id="239">
 <source>The uploaded file was only partially uploaded.</source>
 <target>Het bestand werd slechts gedeeltelijk verzonden.</target>
+
 </trans-unit>
 <trans-unit id="240">
 <source>Missing a temporary folder.</source>
-<target>Tijdelijke folder ontbreekt.</target>
+<target>Tijdelijke map ontbreekt.</target>
 </trans-unit>
 <trans-unit id="241">
 <source>Failed to write file to disk.</source>
@@ -757,6 +767,7 @@
 <trans-unit id="252">
 <source>The form submission cannot be processed. It probably means that you have uploaded a file that is too big.</source>
 <target>Het formulier kan niet verwerkt worden.  Waarschijnlijk is bestand dat u wilt verzenden te groot.</target>
+
 </trans-unit>
 <trans-unit id="253">
 <source>Your field contains unsupported HTML tags.</source>
@@ -800,7 +811,7 @@
 </trans-unit>
 <trans-unit id="263">
 <source>View is secure</source>
-<target>View is secure</target>
+<target>Weergave is beveiligd</target>
 </trans-unit>
 <trans-unit id="264">
 <source>Archived</source>
@@ -812,7 +823,7 @@
 </trans-unit>
 <trans-unit id="266">
 <source>Deleter</source>
-<target>Verwijderaar</target>
+<target>Verwijderd door</target>
 </trans-unit>
 <trans-unit id="267">
 <source>Engine</source>
@@ -848,11 +859,11 @@
 </trans-unit>
 <trans-unit id="275">
 <source>Area version</source>
-<target>Gebiedversie</target>
+<target>Gebied versie</target>
 </trans-unit>
 <trans-unit id="276">
 <source>Permid</source>
-<target>Permid</target>
+<target>Machtigings nr</target>
 </trans-unit>
 <trans-unit id="277">
 <source>Rank</source>
@@ -868,7 +879,7 @@
 </trans-unit>
 <trans-unit id="280">
 <source>Diff</source>
-<target>Diff</target>
+<target>Verschillen</target>
 </trans-unit>
 <trans-unit id="281">
 <source>Service url</source>
@@ -888,7 +899,7 @@
 </trans-unit>
 <trans-unit id="285">
 <source>Embed</source>
-<target>Embed</target>
+<target>Insluiten</target>
 </trans-unit>
 <trans-unit id="286">
 <source>Title</source>
@@ -900,15 +911,15 @@
 </trans-unit>
 <trans-unit id="288">
 <source>Credit</source>
-<target>Credit</target>
+<target>Auteur</target>
 </trans-unit>
 <trans-unit id="289">
 <source>Tags</source>
-<target>Tags</target>
+<target>Labels</target>
 </trans-unit>
 <trans-unit id="290">
 <source>Privilege</source>
-<target>Privilege</target>
+<target>Machtiging</target>
 </trans-unit>
 <trans-unit id="291">
 <source>User</source>
@@ -916,11 +927,11 @@
 </trans-unit>
 <trans-unit id="292">
 <source>Editors</source>
-<target>Editors</target>
+<target>Redacteurs</target>
 </trans-unit>
 <trans-unit id="293">
 <source>Managers</source>
-<target>Managers</target>
+<target>Beheerders</target>
 </trans-unit>
 <trans-unit id="294">
 <source>File</source>
@@ -932,11 +943,11 @@
 </trans-unit>
 <trans-unit id="296">
 <source>Credits</source>
-<target>Credits</target>
+<target>Auteurs</target>
 </trans-unit>
 <trans-unit id="297">
 <source>Thumbnail</source>
-<target>Thumbnail</target>
+<target>Miniatuurweergave</target>
 </trans-unit>
 <trans-unit id="298">
 <source>Url</source>
@@ -968,11 +979,11 @@
 </trans-unit>
 <trans-unit id="305">
 <source>Parent</source>
-<target>Parent</target>
+<target>Bovenliggend</target>
 </trans-unit>
 <trans-unit id="306">
 <source>Tag</source>
-<target>Tag</target>
+<target>Label</target>
 </trans-unit>
 <trans-unit id="307">
 <source>Item-0</source>
@@ -1000,7 +1011,8 @@
 </trans-unit>
 <trans-unit id="313">
 <source>Tags should be separated by commas. Example: teachers, kittens, buildings</source>
-<target>Tags moeten gescheiden worden door komma's. Voorbeeld: leerkrachten, poezen, gebouwen</target>
+<target>Labels moeten gescheiden worden door komma's. Voorbeeld: leerkrachten, poezen, gebouwen</target>
+
 </trans-unit>
 <trans-unit id="314">
 <source>This Page</source>
@@ -1040,7 +1052,7 @@
 </trans-unit>
 <trans-unit id="323">
 <source>Image</source>
-<target>Beeld</target>
+<target>Afbeelding</target>
 </trans-unit>
 <trans-unit id="324">
 <source>Video</source>
@@ -1052,7 +1064,7 @@
 </trans-unit>
 <trans-unit id="326">
 <source>Reorganize</source>
-<target>Sorteren</target>
+<target>Herorganiseer</target>
 </trans-unit>
 <trans-unit id="327">
 <source>Users</source>
@@ -1100,11 +1112,11 @@
 </trans-unit>
 <trans-unit id="355">
 <source>Editing Permission &quot;%%name%%&quot;</source>
-<target>Bewerk Permissie &quot;%%name%%&quot;</target>
+<target>Bewerk rechten &quot;%%name%%&quot;</target>
 </trans-unit>
 <trans-unit id="356">
 <source>Permission list</source>
-<target>Permissielijst</target>
+<target>Lijst van rechten</target>
 </trans-unit>
 <trans-unit id="357">
 <source>%%name%% - %%description%% - %%created_at%% - %%updated_at%%</source>
@@ -1112,7 +1124,7 @@
 </trans-unit>
 <trans-unit id="358">
 <source>New Permission</source>
-<target>Nieuwe Permissie</target>
+<target>Nieuwe recht toevoegen</target>
 </trans-unit>
 <trans-unit id="359">
 <source>Editing Group &quot;%%name%%&quot;</source>
@@ -1132,11 +1144,11 @@
 </trans-unit>
 <trans-unit id="364">
 <source>Plain Text</source>
-<target>Gewone Tekst</target>
+<target>Eenvoudige Tekst</target>
 </trans-unit>
 <trans-unit id="365">
 <source>Rich Text</source>
-<target>Rich Text</target>
+<target>Geavanceerde Tekst</target>
 </trans-unit>
 <trans-unit id="366">
 <source>RSS Feed</source>
@@ -1167,24 +1179,30 @@
 <target>Taal</target>
 </trans-unit>
 <trans-unit id="373">
-<source>Published</source>
-<target>Gepubliceerd</target>
-</trans-unit>
-<trans-unit id="374">
-<source>Unpublished</source>
-<target>Niet gepubliceerd</target>
-</trans-unit>
-<trans-unit id="375">
-<source>results</source>
-<target>Resultaten</target>
-</trans-unit>
-<trans-unit id="376">
-<source>Login Required</source>
-<target>Login vereist</target>
-</trans-unit>
-<trans-unit id="377">
 <source>The username and/or password is invalid.</source>
 <target>Gebruikersnaam en/of wachtwoord zijn niet correct.</target>
+
+
+</trans-unit>
+<trans-unit id="374">
+<source>Published</source>
+
+<target>Gepubliceerd</target>
+</trans-unit>
+<trans-unit id="375">
+<source>Unpublished</source>
+
+<target>Ongepubliceerd</target>
+</trans-unit>
+<trans-unit id="376">
+<source>results</source>
+
+<target>resultaten</target>
+</trans-unit>
+<trans-unit id="377">
+<source>Login Required</source>
+
+<target>Inloggen vereist</target>
 </trans-unit>
 <trans-unit id="378">
 <source>Create Page</source>
@@ -1193,54 +1211,340 @@
 <trans-unit id="379">
 <source>&lt;p&gt;If you want to grant a user the ability to edit a portion of the site, first add them to the &lt;b&gt;editor&lt;/b&gt; group.&lt;/p&gt;&lt;p&gt;Then browse to that area of the site and click the gear to add them to the list of users who can edit in that particular area.&lt;/p&gt;&lt;p&gt;If you want a user to have full control over the entire site, add them to the &lt;b&gt;admin&lt;/b&gt; group.&lt;/p&gt;</source>
 <target>&lt;p&gt;Als je een gebruiker de mogelijkheid wilt geven een deel van de site te bewerken, voeg deze dan eerst toe aan de &lt;b&gt;editor&lt;/b&gt; groep.&lt;/p&gt;&lt;p&gt;Blader daarna naar het gewenste deel van de site en klik op het tandwieltje om de gebruiker toe te voegen tot de lijst van gebruikers die dat specifieke deel van de site mogen bewerken.&lt;/p&gt;&lt;p&gt;Als je een gebruiker volledige controle over de site wenst te geven, voeg deze dan toe aan de &lt;b&gt;admin&lt;/b&gt; groep.&lt;/p&gt;</target>
+
+
 </trans-unit>
 <trans-unit id="380">
 <source>New</source>
+
+
+
+
+
+
+
+
 <target>Nieuw</target>
-</trans-unit>
-<trans-unit id="381">
-<source>Back to list</source>
-<target>Terug naar lijst</target>
-</trans-unit>
-<trans-unit id="382">
-<source>Save and add</source>
-<target>Opslaan en toevoegen</target>
 </trans-unit>
 <trans-unit id="383">
 <source>Filters</source>
 <target>Filters</target>
 </trans-unit>
 <trans-unit id="384">
-<source>Password (again)</source>
-<target>Herhaal wachtwoord</target>
+<source>Save and add</source>
+
+<target>Opslaan en toevoegen</target>
 </trans-unit>
 <trans-unit id="385">
-<source>There are no categories that contain media.</source>
-<target>Er zijn geen categorieën met media.</target>
+<source>Password (again)</source>
+
+<target>Herhaal wachtwoord</target>
 </trans-unit>
 <trans-unit id="386">
-<source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
-<target>[0] geen resultaten|[1] 1 resultaat|(1,+Inf] %1% resultaten</target>
+<source>There are no categories that contain media.</source>
+<target>Er zijn geen categorieën met media.</target>
+
+
 </trans-unit>
 <trans-unit id="387">
+<source>Back to list</source>
+<target>Terug naar lijst</target>
+</trans-unit>
+<trans-unit id="388">
 <source>The item was created successfully.</source>
 <target>Het item werd correct aangemaakt</target>
 </trans-unit>
-<trans-unit id="388">
+<trans-unit id="389">
+
 <source>The item was updated successfully.</source>
 <target>Het item werd correct gewijzigd</target>
 </trans-unit>
-<trans-unit id="389">
+<trans-unit id="390">
+
 <source>You can add another one below.</source>
 <target>Je kan er onderaan nog één toevoegen.</target>
 </trans-unit>
-<trans-unit id="390">
+<trans-unit id="391">
+
 <source>The item has not been saved due to some errors.</source>
 <target>Dit item kon door fouten niet bewaard worden.</target>
 </trans-unit>
-<trans-unit id="391">
+<trans-unit id="392">
+<source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
+<target>[0] geen resultaten|[1] 1 resultaat|(1,+Inf] %1% resultaten</target>
+</trans-unit>
+<trans-unit id="393">
+
 <source>Upload Photos</source>
 <target>Fotos Uploaden</target>
+</trans-unit>
+<trans-unit id="394">
+<source>Add Content</source>
+<target>Inhoud Toevoegen</target>
+</trans-unit>
+<trans-unit id="395">
+<source>Close History Browser</source>
+<target>Sluit Geschiedenis Weergave</target>
+</trans-unit>
+<trans-unit id="396">
+<source>You are previewing another version of this content area. This will not become the current version unless you click &quot;Save As Current Revision.&quot; If you change your mind, click &quot;Cancel.&quot;</source>
+<target>U bent een andere versie aan het bekijken van deze inhoud.  Deze aangepaste versie wordt pas de zichtbare versie indien u &quot;Bewaar als Actuele Versie.&quot; aanklikt.  Indien u van gedachte verandert, klik op &quot;Annuleer.&quot;</target>
+</trans-unit>
+<trans-unit id="397">
+<source>Sign In</source>
+<target>Inloggen</target>
+</trans-unit>
+<trans-unit id="398">
+<source>Are you sure you want to delete this post?</source>
+<target>Wilt u deze nieuwsbericht verwijderen?</target>
+</trans-unit>
+<trans-unit id="399">
+<source>Posted By:</source>
+<target>Door:</target>
+</trans-unit>
+<trans-unit id="400">
+<source>Publish</source>
+<target>Publiceer</target>
+</trans-unit>
+<trans-unit id="401">
+<source>Unpublish</source>
+<target>Publicering ongedaan maken</target>
+</trans-unit>
+<trans-unit id="402">
+<source>Publish now or</source>
+<target>Publiceer nu of</target>
+</trans-unit>
+<trans-unit id="403">
+<source>set a date</source>
+<target>geef een datum op</target>
+</trans-unit>
+<trans-unit id="404">
+<source>allow others to edit this post</source>
+<target>laat anderen toe dit bericht te wijzigen</target>
+</trans-unit>
+<trans-unit id="405">
+<source>Click to disable comments</source>
+<target>Klik om reacties uit te schakelen</target>
+</trans-unit>
+<trans-unit id="406">
+<source>Comments are enabled</source>
+<target>Reacties zijn ingeschakeld</target>
+</trans-unit>
+<trans-unit id="407">
+<source>Click to enable comments</source>
+<target>Klik om reacties toe te laten</target>
+</trans-unit>
+<trans-unit id="408">
+<source>Comments are disabled</source>
+<target>Reacties zijn uitgeschakeld</target>
+</trans-unit>
+<trans-unit id="409">
+<source>Choose Categories</source>
+<target>Kies categorieën</target>
+</trans-unit>
+<trans-unit id="410">
+<source>+ New Category</source>
+<target>+ Nieuwe categorie</target>
+</trans-unit>
+<trans-unit id="411">
+<source>Choose Editors</source>
+<target>Kies Editors</target>
+</trans-unit>
+<trans-unit id="412">
+<source>Blog Post Admin</source>
+<target>Nieuwsberichten beheer</target>
+</trans-unit>
+<trans-unit id="413">
+<source>Blog Admin</source>
+<target>Nieuwsberichten beheer</target>
+</trans-unit>
+<trans-unit id="414">
+<source>Title your post...</source>
+<target>Geef dit bericht een titel...</target>
+</trans-unit>
+<trans-unit id="415">
+<source>You are managing categories for blog posts and events.</source>
+<target>U beheert nu de categorieën voor nieuwsberichten en evenementen.</target>
+</trans-unit>
+<trans-unit id="416">
+<source>Search by Title</source>
+<target>Zoek aan de hand van een titel</target>
+</trans-unit>
+<trans-unit id="417">
+<source>Posts</source>
+<target>Nieuwsberichten</target>
+</trans-unit>
+<trans-unit id="418">
+<source>Category</source>
+<target>Categorie</target>
+</trans-unit>
+<trans-unit id="419">
+<source>Are you sure you want to delete this event?</source>
+<target>Wilt u dit evenement verwijderen?</target>
+</trans-unit>
+<trans-unit id="420">
+<source>Event Admin</source>
+<target>Evenementen beheer</target>
+</trans-unit>
+<trans-unit id="421">
+<source>New Post</source>
+<target>Nieuw Nieuwsbericht</target>
+</trans-unit>
+<trans-unit id="422">
+<source>%%title%% - %%author_id%% - %%editors_list%% - %%tags_list%% - %%categories_list%% - %%status%% - %%published_at%%</source>
+<target>%%title%% - %%author_id%% - %%editors_list%% - %%tags_list%% - %%categories_list%% - %%status%% - %%published_at%%</target>
+</trans-unit>
+<trans-unit id="423">
+<source>Descending</source>
+<target>Oplopend</target>
+</trans-unit>
+<trans-unit id="424">
+<source>Ascending</source>
+<target>Afdalend</target>
+</trans-unit>
+<trans-unit id="425">
+<source>Status</source>
+<target>Status</target>
+</trans-unit>
+<trans-unit id="426">
+<source>Edit ABlogAdmin</source>
+<target>Edit ABlogAdmin</target>
+</trans-unit>
+<trans-unit id="427">
+<source>New ABlogAdmin</source>
+<target>New ABlogAdmin</target>
+</trans-unit>
+<trans-unit id="428">
+<source>Categories Admin</source>
+<target>Categoriebeheer</target>
+</trans-unit>
+<trans-unit id="429">
+<source>%%name%% - %%numBlogPosts%% - %%numEvents%% - %%users%%</source>
+<target>%%name%% - %%numBlogPosts%% - %%numEvents%% - %%users%%</target>
+</trans-unit>
+<trans-unit id="430">
+<source>Number of Posts</source>
+<target>Aantal Nieuwsberichten</target>
+</trans-unit>
+<trans-unit id="431">
+<source>Number of Events</source>
+<target>Aantal evenementen</target>
+</trans-unit>
+<trans-unit id="432">
+<source>Active Users</source>
+<target>Actieve Gebruikers</target>
+</trans-unit>
+<trans-unit id="433">
+<source>Edit Category</source>
+<target>Wijzig Categorie</target>
+</trans-unit>
+<trans-unit id="434">
+<source>New ABlogCategoryAdmin</source>
+<target>New ABlogCategoryAdmin</target>
+</trans-unit>
+<trans-unit id="435">
+<source>New Event</source>
+<target>Nieuw Evenement</target>
+</trans-unit>
+<trans-unit id="436">
+<source>%%title%% - %%author_id%% - %%editors_list%% - %%tags_list%% - %%categories_list%% - %%status%% - %%start_date%%</source>
+<target>%%title%% - %%author_id%% - %%editors_list%% - %%tags_list%% - %%categories_list%% - %%status%% - %%start_date%%</target>
+</trans-unit>
+<trans-unit id="437">
+<source>Edit AEventAdmin</source>
+<target>Edit AEventAdmin</target>
+</trans-unit>
+<trans-unit id="438">
+<source>New AEventAdmin</source>
+<target>New AEventAdmin</target>
+</trans-unit>
+<trans-unit id="439">
+<source>Blog categories list</source>
+<target>Lijst van categorieën voor nieuwsberichten</target>
+</trans-unit>
+<trans-unit id="440">
+<source>The slug cannot be empty.</source>
+<target>De slug kan niet leeg zijn.</target>
+</trans-unit>
+<trans-unit id="442">
+<source>Blog editor items list</source>
+<target>Nieuwsbericht editor items list</target>
+</trans-unit>
+<trans-unit id="443">
+<source>You are using IE6! That is just awful! Apostrophe does not support editing using Internet Explorer 6. Why don't you try upgrading? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;</source>
+<target>U gebruikt Internet Explorer 6! Dat is jammer! Apostrophe laat helaas niet toe om wijzigingen aan te maken met Internet Explorer 6. Waarom niet gratis upgraden? &lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt; &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; 	&lt;a href=&quot;http://www.apple.com/safari/download/&quot;&gt;Safari&lt;/a&gt; &lt;a href=&quot;http://www.microsoft.com/windows/internet-explorer/worldwide-sites.aspx&quot;&gt;IE8&lt;/a&gt;</target>
+</trans-unit>
+<trans-unit id="444">
+<source>Secure Area &amp;mdash; The page you are looking for requires certain credentials to access it.</source>
+<target>Beveiligde Zone &amp;mdash; Deze pagina heeft extra rechten nodig om weergegeven te worden.</target>
+</trans-unit>
+<trans-unit id="445">
+<source>Create a Button</source>
+<target>Knop Aanmaken</target>
+</trans-unit>
+<trans-unit id="446">
+<source>Add an Image</source>
+<target>Afbeelding Toevoegen</target>
+</trans-unit>
+<trans-unit id="447">
+<source>Permissions: Hidden Photos can be used in photo slots, but are not displayed in the Media section.</source>
+<target>Rechten: Verborgen foto's kunnen in foto slots gebruikt worden, maar worden niet in de Media sectie weergegeven.</target>
+</trans-unit>
+<trans-unit id="448">
+<source>Add a Video</source>
+<target>Video Toevoegen</target>
+</trans-unit>
+<trans-unit id="449">
+<source>View All Posts</source>
+<target>Toon alle nieuwsberichten</target>
+</trans-unit>
+<trans-unit id="450">
+<source>You are creating a new post.</source>
+<target>U bent nu een nieuw nieuwsbericht aan het maken.</target>
+</trans-unit>
+<trans-unit id="451">
+<source>You are working on a draft post.</source>
+<target>U wijzigt nu een ontwerp nieuwsbericht.</target>
+</trans-unit>
+<trans-unit id="452">
+<source>You are editing a published post.</source>
+<target>U wijzigt nu een gepubliceerd nieuwsbericht</target>
+</trans-unit>
+<trans-unit id="453">
+<source>Post Saved at</source>
+<target>Nieuwsbericht Aangepast op</target>
+</trans-unit>
+<trans-unit id="454">
+<source>Choose Users</source>
+<target>Kies Gebruiker</target>
+</trans-unit>
+<trans-unit id="455">
+<source>View All Events</source>
+<target>Toon alle evenementen</target>
+</trans-unit>
+<trans-unit id="456">
+<source>You are creating a new event.</source>
+<target>U bent nu een nieuw evenement aan het maken.</target>
+</trans-unit>
+<trans-unit id="457">
+<source>You are working on a draft event.</source>
+<target>U wijzigt nu een ontwerp evenement.</target>
+</trans-unit>
+<trans-unit id="458">
+<source>You are editing a published event.</source>
+<target>U wijzigt nu een gepubliceerd evenement.</target>
+</trans-unit>
+<trans-unit id="459">
+<source>Event Saved at</source>
+<target>Evenement Aangepast op</target>
+</trans-unit>
+<trans-unit id="460">
+<source>The slug must contain only slashes, letters, digits, dashes and underscores. There must be a leading slash. Also, you cannot change a slug to conflict with an existing slug.</source>
+<target>Er mogen in de slug enkel slashes, letters, getallen, dashes en underscores gebruikt worden voorafgegaan door slash. Het is niet mogelijk om een reeds bestaande slug opnieuw te gebruiken.</target>
+</trans-unit>
+<trans-unit id="461">
+<source>Profile</source>
+<target>Profiel</target>
 </trans-unit>
 </body>
 </file>
