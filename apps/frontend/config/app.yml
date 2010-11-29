@@ -147,15 +147,17 @@ all:
       default: Default Page
       home: Home Page
 
-    # Disables ALL of our bundled styles (quite a job to replace).
-    # See use_bundled_stylesheets for a more selective way to do it
+    # Disable ALL bundled CSS and JavaScript. Not recommended.
+    # See below for a more selective approach
     
-    # use_bundled_stylesheet: false
+    # use_bundled_stylesheets: false
+    # use_bundled_javascripts: false
     
-    # Selectively disables some or all of our bundled styles.
-    # Everything you don't set to false loads by default
+    # Selectively disable or override various bundled styles and javascripts.
+    # Everything you leave alone or set to true loads by default
     
-   ## Uncomment below to disable the styles for that section
+    # Uncomment below to disable the styles for that section
+    
     # use_bundled_stylesheets:
        # admin: false
        # forms: false
@@ -166,7 +168,29 @@ all:
        # buttons: false
        # colors: false
        # utility: false       
-      
+       
+       # OR, to override a specific stylesheet with a different one:
+       # engines: /foo/bar.css
+
+    
+    # Uncomment below to disable the Javascripts for that section
+    # (not recommended) or override them with a different release
+    # (probably OK for a new jquery release for instance)
+
+    # use_bundled_javascripts:
+      # To turn one off uncomment it...
+      # jquery: false
+      # main: false
+      # controls: false
+      # json2: false
+      # jquery-autogrow: false
+      # jquery-hover-intent: false
+      # jquery-ui: false
+      # tagahead: false
+       
+      # To override one set a different path instead of false
+      # jquery: /js/myjquery.js
+           
     # We're using it as the sitewide layout instead (see view.yml)
     use_bundled_layout: false   
     engines:
