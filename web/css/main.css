@@ -50,9 +50,9 @@ a:hover { text-decoration: underline; }
 /* Global Layout
 -------------------------------------*/
 
-.a-wrapper { width: 960px; margin: 0 auto; position: relative; clear: both; }
+.a-wrapper { width: 960px; margin: 20px auto; position: relative; clear: both; }
 
-.a-header { clear: both; position: relative; margin: 20px 0;}
+.a-header { clear: both; position: relative; margin: 20px 0; float: left; width: 100%;}
 
 .a-content { float: left; position: relative; display: inline; clear: none; width: 720px; }
 

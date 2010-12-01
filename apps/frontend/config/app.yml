@@ -6,6 +6,9 @@ all:
     # (Apostrophe comes with a more convenient set)
     routes_register: false
   a:
+    
+    pager_nb_links: 5
+    
     vimeo:
       # We use this to bring in our own vimeo key, you need to go get your own:
       # http://vimeo.com/api/applications/new
@@ -14,7 +17,8 @@ all:
       # Uncomment these and plug in your information after you get your key from vimeo
       # oauthConsumerKey: your_key_from_vimeo
       # oauthConsumerSecret: your_secret_from_vimeo
-    # includes a.css into the project
+
+    # includes apostrophe css into the project
     use_bundled_stylesheet: true
     
     # default button order for P'unk Projects
@@ -32,9 +36,10 @@ all:
     # If true, there will be a language switcher next to the login/logout button
     i18n_switch: true
     i18n_languages: [en, fr, de, es, ru]
+
     # By default new slots in an area go to the top, you can change that here
     # new_slots_top: false
-    routes_register: false 
+    routes_register: false
     default_on: true
     pretty_english_dates: true
 
@@ -47,6 +52,7 @@ all:
     manage_sufficient_group: admin
     edit_candidate_group: editor
     edit_sufficient_group: admin
+
     # Permission to view locked pages. In our recommended fixtures,
     # the guest, editor and admin groups have this. Users that have no
     # group membership do not. If you want to give people "off the street" accounts,
@@ -217,44 +223,6 @@ all:
     use_bundled_layout: false
     embed_codes: true        
     
-  aToolkit:
-    indexes:
-      - 'aPage'
-      - 'aMediaItem'
-        
-  # options for sfSyncContentPlugin, used to sync the database and also
-  # data files such as the media plugin's images and the search indexes. 
-  # You can extend this if you have more data file folders
-  
-  sfSyncContent:
-    # The database is content, of course, but what else?
-    content:
-      # Almost always
-      - "web/uploads"
-      # If you use P'unk Avenue stuff
-      - "data/a_writable"
-        
-  # For us this is the right place to find the netpbm utilities and ghostscript 
-  # (pnmtopng, gs, etc). Change it if your environment differs. Note that the
-  # default PATH is still searched too, so on most production servers you can 
-  # leave this setting alone and not break it out separately for prod
-      
-  aimageconverter:
-    path: /opt/local/bin
-    # To force use of gd shut off netpbm
-    # netpbm: false
-    # To force use of netpbm set it to 'always'
-    # netpbm: always
-    # Default is to use gd for images under 1024x768 for performance reasons,
-    # and because most (though not all) images with alpha channels (preserved by gd) are
-    # that small or smaller
-    
-  # You need to set this to your site's hostname to use a:refresh to update
-  # URLs in media slots etc
-  
-#  cli:
-#    host: cmstest14
-
   aEvents:
     display_calendar: true 
   
@@ -264,7 +232,45 @@ all:
   # aBlog:
   #   disqus_enabled: true
   #   disqus_shortname: yourshortnamehere
-    
+      
+  aToolkit:
+    indexes:
+      - 'aPage'
+      - 'aMediaItem'
+
+  # options for sfSyncContentPlugin, used to sync the database and also
+  # data files such as the media plugin's images and the search indexes. 
+  # You can extend this if you have more data file folders
+
+  sfSyncContent:
+    # The database is content, of course, but what else?
+    content:
+      # Almost always
+      - "web/uploads"
+      # If you use P'unk Avenue stuff
+      - "data/a_writable"
+
+  # For us this is the right place to find the netpbm utilities and ghostscript 
+  # (pnmtopng, gs, etc). Change it if your environment differs. Note that the
+  # default PATH is still searched too, so on most production servers you can 
+  # leave this setting alone and not break it out separately for prod
+
+  aimageconverter:
+    path: /opt/local/bin
+    # To force use of gd shut off netpbm
+    # netpbm: false
+    # To force use of netpbm set it to 'always'
+    # netpbm: always
+    # Default is to use gd for images under 1024x768 for performance reasons,
+    # and because most (though not all) images with alpha channels (preserved by gd) are
+    # that small or smaller
+
+  # You need to set this to your site's hostname to use a:refresh to update
+  # URLs in media slots etc
+
+#  cli:
+#    host: cmstest14
+
 # In the production environment, we minify CSS and JS by default.
 # We'd like to gzip them too, but a lot of people don't have the
 # zlib extension in PHP. We encourage you to turn that on and see.
@@ -281,5 +287,7 @@ all:
 prod:
   a:
     minify: true
-    minify_gzip: true
-  
+    # Disabled gzip for now to avoid problems for people who
+    # don't have the zlib extension or haven't set up Apache to
+    # know what to do with the gzipped files
+    minify_gzip: false
