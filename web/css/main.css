@@ -90,8 +90,11 @@ a:hover { text-decoration: underline; }
 .a-home .a-area-sidebar .a-slot { margin-bottom: 20px; }
 
 
+.a-area-home-banner { margin-bottom: 20px; }
+
 .a-area-home-banner .a-slideshow-controls { position: absolute; right: 0; bottom: 0; top: auto; width: 920px; padding: 10px 20px !important; background: rgba(0,0,0,0.25); }
-.a-area-home-banner .a-slideshow-controls li { float: right; clear: none; line-height: 20px; color: #fff; }
+.a-area-home-banner .a-slideshow-controls li { float: left; clear: none; line-height: 20px; color: #fff; left: 850px; position: relative; }
+.a-area-home-banner .a-slideshow-controls .a-slideshow-position { margin: 0 3px;}
 
 /* Top Navigation
 -------------------------------------*/
