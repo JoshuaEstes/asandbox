@@ -63,12 +63,7 @@ if (class_exists('PDO')) {
 check(function_exists('imagecreatefromjpeg'), 'Checking that gd is enabled in PHP', 'Enable the gd extension in PHP', true);
 check(strlen(`echo hello`), 'Checking that PHP is permitted to invoke the shell', 'Turn off so-called "safe" mode, which is both deprecated and ineffective', true);
 
-// Yes, include - we want a nonfatal error if it doesn't work
-@include 'Date.php';
-
-check(class_exists('Date'), 'Checking that the Date pear module is installed', 'Install Date via PEAR (pear install Date)', true);
-
-check(class_exists('DomDocument'), 'Checking that the PHP-XML module is installed', 'Install and enable the php-xml module', false);
+check(class_exists('DOMDocument'), 'Checking that the PHP-XML module is installed', 'Install and enable the php-xml module', true);
 
 check(false, 'memory_limit in php.ini must be at least 32M, recommend 64M', 'Cannot be checked automatically, verify this in your php.ini', false);
 
