@@ -17,7 +17,7 @@
  * @subpackage Filter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Priority.php 20260 2010-01-13 18:29:22Z ralph $
+ * @version    $Id: Priority.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 
 /** Zend_Log_Filter_Abstract */
@@ -29,7 +29,7 @@ require_once 'Zend/Log/Filter/Abstract.php';
  * @subpackage Filter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Priority.php 20260 2010-01-13 18:29:22Z ralph $
+ * @version    $Id: Priority.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 class Zend_Log_Filter_Priority extends Zend_Log_Filter_Abstract
 {
@@ -59,21 +59,21 @@ class Zend_Log_Filter_Priority extends Zend_Log_Filter_Abstract
         }
 
         $this->_priority = $priority;
-        $this->_operator = is_null($operator) ? '<=' : $operator;
+        $this->_operator = $operator === null ? '<=' : $operator;
     }
 
     /**
      * Create a new instance of Zend_Log_Filter_Priority
-     * 
+     *
      * @param  array|Zend_Config $config
      * @return Zend_Log_Filter_Priority
      * @throws Zend_Log_Exception
      */
-    static public function factory($config) 
+    static public function factory($config)
     {
         $config = self::_parseConfig($config);
         $config = array_merge(array(
-            'priority' => null, 
+            'priority' => null,
             'operator' => null,
         ), $config);
 
@@ -83,7 +83,7 @@ class Zend_Log_Filter_Priority extends Zend_Log_Filter_Abstract
         }
 
         return new self(
-            (int) $config['priority'], 
+            (int) $config['priority'],
             $config['operator']
         );
     }

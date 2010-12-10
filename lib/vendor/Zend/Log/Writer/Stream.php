@@ -17,7 +17,7 @@
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Stream.php 20096 2010-01-06 02:05:09Z bkarwin $
+ * @version    $Id: Stream.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 
 /** Zend_Log_Writer_Abstract */
@@ -32,7 +32,7 @@ require_once 'Zend/Log/Formatter/Simple.php';
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Stream.php 20096 2010-01-06 02:05:09Z bkarwin $
+ * @version    $Id: Stream.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 class Zend_Log_Writer_Stream extends Zend_Log_Writer_Abstract
 {
@@ -81,10 +81,10 @@ class Zend_Log_Writer_Stream extends Zend_Log_Writer_Abstract
 
         $this->_formatter = new Zend_Log_Formatter_Simple();
     }
-    
+
     /**
      * Create a new instance of Zend_Log_Writer_Mock
-     * 
+     *
      * @param  array|Zend_Config $config
      * @return Zend_Log_Writer_Mock
      * @throws Zend_Log_Exception
@@ -93,18 +93,18 @@ class Zend_Log_Writer_Stream extends Zend_Log_Writer_Abstract
     {
         $config = self::_parseConfig($config);
         $config = array_merge(array(
-            'stream' => null, 
+            'stream' => null,
             'mode'   => null,
         ), $config);
 
-        $streamOrUrl = isset($config['url']) ? $config['url'] : $config['stream']; 
-        
+        $streamOrUrl = isset($config['url']) ? $config['url'] : $config['stream'];
+
         return new self(
-            $streamOrUrl, 
+            $streamOrUrl,
             $config['mode']
         );
     }
-    
+
     /**
      * Close the stream resource.
      *

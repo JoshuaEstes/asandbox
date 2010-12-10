@@ -17,7 +17,7 @@
  * @subpackage Table
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Abstract.php 21079 2010-02-18 18:15:49Z tech13 $
+ * @version    $Id: Abstract.php 23470 2010-12-06 19:14:49Z mjh_ca $
  */
 
 /**
@@ -961,7 +961,7 @@ abstract class Zend_Db_Table_Abstract
      * You can elect to return only a part of this information by supplying its key name,
      * otherwise all information is returned as an array.
      *
-     * @param  $key The specific info part to return OPTIONAL
+     * @param  string $key The specific info part to return OPTIONAL
      * @return mixed
      */
     public function info($key = null)

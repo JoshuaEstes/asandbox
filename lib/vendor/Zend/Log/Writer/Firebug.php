@@ -17,7 +17,7 @@
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Firebug.php 23068 2010-10-10 00:00:43Z cadorn $
+ * @version    $Id: Firebug.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 
 /** Zend_Log */
@@ -80,10 +80,10 @@ class Zend_Log_Writer_Firebug extends Zend_Log_Writer_Abstract
 
         $this->_formatter = new Zend_Log_Formatter_Firebug();
     }
-   
+
     /**
      * Create a new instance of Zend_Log_Writer_Firebug
-     * 
+     *
      * @param  array|Zend_Config $config
      * @return Zend_Log_Writer_Firebug
      * @throws Zend_Log_Exception

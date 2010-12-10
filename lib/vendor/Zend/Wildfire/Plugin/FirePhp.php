@@ -17,7 +17,7 @@
  * @subpackage Plugin
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: FirePhp.php 23068 2010-10-10 00:00:43Z cadorn $
+ * @version    $Id: FirePhp.php 23484 2010-12-10 03:57:59Z mjh_ca $
  */
 
 /** Zend_Controller_Request_Abstract */
@@ -515,7 +515,7 @@ class Zend_Wildfire_Plugin_FirePhp implements Zend_Wildfire_Plugin_Interface
         $trace = debug_backtrace();
 
         $trace = array_splice($trace, $options['traceOffset']);
-        
+
         if (!count($trace)) {
             return $trace;
         }

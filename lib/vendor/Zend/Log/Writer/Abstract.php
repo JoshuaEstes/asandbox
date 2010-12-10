@@ -17,7 +17,7 @@
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Abstract.php 22632 2010-07-18 18:30:08Z ramon $
+ * @version    $Id: Abstract.php 23486 2010-12-10 04:05:30Z mjh_ca $
  */
 
 /** Zend_Log_Filter_Priority */
@@ -29,7 +29,7 @@ require_once 'Zend/Log/Filter/Priority.php';
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Abstract.php 22632 2010-07-18 18:30:08Z ramon $
+ * @version    $Id: Abstract.php 23486 2010-12-10 04:05:30Z mjh_ca $
  */
 abstract class Zend_Log_Writer_Abstract implements Zend_Log_FactoryInterface
 {
@@ -63,6 +63,7 @@ abstract class Zend_Log_Writer_Abstract implements Zend_Log_FactoryInterface
         }
 
         $this->_filters[] = $filter;
+        return $this;
     }
 
     /**
@@ -92,6 +93,7 @@ abstract class Zend_Log_Writer_Abstract implements Zend_Log_FactoryInterface
     public function setFormatter(Zend_Log_Formatter_Interface $formatter)
     {
         $this->_formatter = $formatter;
+        return $this;
     }
 
     /**
@@ -126,8 +128,8 @@ abstract class Zend_Log_Writer_Abstract implements Zend_Log_FactoryInterface
         if (!is_array($config)) {
             require_once 'Zend/Log/Exception.php';
             throw new Zend_Log_Exception(
-				'Configuration must be an array or instance of Zend_Config'
-			);
+                'Configuration must be an array or instance of Zend_Config'
+            );
         }
 
         return $config;
