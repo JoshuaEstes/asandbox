@@ -20,6 +20,7 @@
  * @property time $start_time
  * @property date $end_date
  * @property time $end_time
+ * @property string $location
  * @property sfGuardUser $Author
  * @property Doctrine_Collection $Editors
  * @property aPage $Page
@@ -42,6 +43,7 @@
  * @method time                getStartTime()          Returns the current record's "start_time" value
  * @method date                getEndDate()            Returns the current record's "end_date" value
  * @method time                getEndTime()            Returns the current record's "end_time" value
+ * @method string              getLocation()           Returns the current record's "location" value
  * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
  * @method Doctrine_Collection getEditors()            Returns the current record's "Editors" collection
  * @method aPage               getPage()               Returns the current record's "Page" value
@@ -63,6 +65,7 @@
  * @method aBlogItem           setStartTime()          Sets the current record's "start_time" value
  * @method aBlogItem           setEndDate()            Sets the current record's "end_date" value
  * @method aBlogItem           setEndTime()            Sets the current record's "end_time" value
+ * @method aBlogItem           setLocation()           Sets the current record's "location" value
  * @method aBlogItem           setAuthor()             Sets the current record's "Author" value
  * @method aBlogItem           setEditors()            Sets the current record's "Editors" collection
  * @method aBlogItem           setPage()               Sets the current record's "Page" value
@@ -142,6 +145,10 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              ));
         $this->hasColumn('end_time', 'time', null, array(
              'type' => 'time',
+             ));
+        $this->hasColumn('location', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
              ));
 
         $this->option('type', 'INNODB');
