@@ -19,6 +19,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'author_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'add_empty' => true)),
       'page_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Page'), 'add_empty' => true)),
       'title'           => new sfWidgetFormInputText(),
+      'slug'            => new sfWidgetFormInputText(),
       'slug_saved'      => new sfWidgetFormInputCheckbox(),
       'excerpt'         => new sfWidgetFormTextarea(),
       'status'          => new sfWidgetFormChoice(array('choices' => array('draft' => 'draft', 'pending review' => 'pending review', 'published' => 'published'))),
@@ -30,10 +31,9 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'start_time'      => new sfWidgetFormTime(),
       'end_date'        => new sfWidgetFormDate(),
       'end_time'        => new sfWidgetFormTime(),
-      'location'        => new sfWidgetFormInputText(),
+      'location'        => new sfWidgetFormTextarea(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
-      'slug'            => new sfWidgetFormInputText(),
       'editors_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),
       'categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aCategory')),
     ));
@@ -43,6 +43,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'author_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'required' => false)),
       'page_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Page'), 'required' => false)),
       'title'           => new sfValidatorString(array('max_length' => 255)),
+      'slug'            => new sfValidatorPass(),
       'slug_saved'      => new sfValidatorBoolean(array('required' => false)),
       'excerpt'         => new sfValidatorString(array('required' => false)),
       'status'          => new sfValidatorChoice(array('choices' => array(0 => 'draft', 1 => 'pending review', 2 => 'published'), 'required' => false)),
@@ -54,17 +55,12 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'start_time'      => new sfValidatorTime(array('required' => false)),
       'end_date'        => new sfValidatorDate(array('required' => false)),
       'end_time'        => new sfValidatorTime(array('required' => false)),
-      'location'        => new sfValidatorString(array('max_length' => 100, 'required' => false)),
+      'location'        => new sfValidatorString(array('max_length' => 300, 'required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
-      'slug'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'editors_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),
       'categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aCategory', 'required' => false)),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'aBlogItem', 'column' => array('slug')))
-    );
 
     $this->widgetSchema->setNameFormat('a_blog_item[%s]');
 

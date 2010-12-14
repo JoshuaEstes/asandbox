@@ -9,6 +9,7 @@
  * @property integer $author_id
  * @property integer $page_id
  * @property string $title
+ * @property varchar $slug
  * @property boolean $slug_saved
  * @property string $excerpt
  * @property enum $status
@@ -32,6 +33,7 @@
  * @method integer             getAuthorId()           Returns the current record's "author_id" value
  * @method integer             getPageId()             Returns the current record's "page_id" value
  * @method string              getTitle()              Returns the current record's "title" value
+ * @method varchar             getSlug()               Returns the current record's "slug" value
  * @method boolean             getSlugSaved()          Returns the current record's "slug_saved" value
  * @method string              getExcerpt()            Returns the current record's "excerpt" value
  * @method enum                getStatus()             Returns the current record's "status" value
@@ -54,6 +56,7 @@
  * @method aBlogItem           setAuthorId()           Sets the current record's "author_id" value
  * @method aBlogItem           setPageId()             Sets the current record's "page_id" value
  * @method aBlogItem           setTitle()              Sets the current record's "title" value
+ * @method aBlogItem           setSlug()               Sets the current record's "slug" value
  * @method aBlogItem           setSlugSaved()          Sets the current record's "slug_saved" value
  * @method aBlogItem           setExcerpt()            Sets the current record's "excerpt" value
  * @method aBlogItem           setStatus()             Sets the current record's "status" value
@@ -96,6 +99,11 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
+             'notnull' => true,
+             'length' => 255,
+             ));
+        $this->hasColumn('slug', 'varchar', 255, array(
+             'type' => 'varchar',
              'notnull' => true,
              'length' => 255,
              ));
@@ -146,9 +154,9 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
         $this->hasColumn('end_time', 'time', null, array(
              'type' => 'time',
              ));
-        $this->hasColumn('location', 'string', 100, array(
+        $this->hasColumn('location', 'string', 300, array(
              'type' => 'string',
-             'length' => 100,
+             'length' => 300,
              ));
 
         $this->option('type', 'INNODB');
@@ -198,19 +206,7 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $taggable0 = new Taggable();
-        $sluggable0 = new Doctrine_Template_Sluggable(array(
-             'fields' => 
-             array(
-              0 => 'title',
-             ),
-             'builder' => 
-             array(
-              0 => 'aTools',
-              1 => 'slugify',
-             ),
-             ));
         $this->actAs($timestampable0);
         $this->actAs($taggable0);
-        $this->actAs($sluggable0);
     }
 }
