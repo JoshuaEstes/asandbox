@@ -208,13 +208,16 @@ a:hover { text-decoration: underline; }
 -------------------------------------*/
 
 .a-blog-item-meta { float: left; font-size: 11px; color: #888; }
+.a-blog-item-meta li a.a-btn { font-size: 11px;}
+
 .a-blog-item-content { float: left; width: 480px;}
 
 .post .a-blog-item-meta li { float: left; padding-right: 5px; margin-right: 5px; border-right: 1px solid #ddd; }
 .post .a-blog-item-meta li:last-child { border-right: none; margin-right: 0;}
 
 .event .a-blog-item-meta { width: 160px; margin: 0 40px 0 0; list-style: none; list-style-position: outside;}
-.event .a-blog-item-meta li { clear: both; line-height: 20px; }
+.event .a-blog-item-meta li { float: left; clear: both; line-height: 20px; }
+.event .a-blog-item-meta .post-extra { margin-top: 10px; clear: both;}
 
 .a-blog-main hr
 {
@@ -226,6 +229,20 @@ a:hover { text-decoration: underline; }
 	background: #ddd;
 	background: rgba(0,0,0,0.125);
 }
+
+.addthis_toolbox
+{
+	float:left;
+	width: auto;
+	clear: both;
+	padding: 5px;
+	background: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;	
+}
+
+.aEvent .addthis_toolbox { margin-left: 140px; font-size: 11px; color: #999; }
 
 /* Events Calendar
 -------------------------------------*/
@@ -296,8 +313,6 @@ a:hover { text-decoration: underline; }
 }
 
 .a-slot.aSlideshow.compact .a-slideshow-title span { float: left;	padding: 8px 70px 8px 8px; }
-
-
 
 /* ASANDBOX aSlideshow Autoplay Variant 
 ------------------------------------------- */
