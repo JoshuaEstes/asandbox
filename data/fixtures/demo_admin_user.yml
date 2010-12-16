@@ -9,14 +9,14 @@ sfGuardUser:
     password: demo
     first_name: Super
     last_name: Admin
-    email_address: superadmin@notavalidaddress
+    email_address: superadmin@apostrophe
     is_super_admin: true
   sgu_admin:
     username: admin
     password: demo
     first_name: Normal
     last_name: Admin
-    email_address: admin@notavalidaddress
+    email_address: admin@apostrophe
 sfGuardUserGroup:
   sgug_admin_admin:
     User: sgu_admin
