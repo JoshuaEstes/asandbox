@@ -150,8 +150,20 @@ all:
     home_as_tab: false
 
     templates:
-      default: Default Page
-      home: Home Page
+      # "a:" contains "ordinary page templates"
+      a:
+        default: Default Page
+        home: Home Page
+      # This is how you enable engines as page type choices. If the 
+      # engine supports alternate page templates you can specify more 
+      # than one entry for an engine
+      aMedia:
+        default: Media
+      aBlog:
+        default: Standard Blog
+        alternate: Alternate Blog
+      aEvent:
+        default: Events
 
     # Disable ALL bundled CSS and JavaScript. Not recommended.
     # See below for a more selective approach
@@ -199,11 +211,6 @@ all:
            
     # We're using it as the sitewide layout instead (see view.yml)
     use_bundled_layout: false   
-    engines:
-      '': 'Template-Based'
-      aBlog: Blog
-      aEvent: Events
-      aMedia: Media
 
     # do_not_edit: true   # Quickly and easily display the 'Do Not Edit' message on staging sites after launch.
       
@@ -226,12 +233,23 @@ all:
   aEvents:
     display_calendar: true 
   
-  # Disqus Comments
-  # Once you have a Disqus account, enable comments and put in your Disqus shortname
-  
-  # aBlog:
-  #   disqus_enabled: true
-  #   disqus_shortname: yourshortnamehere
+  aBlog:
+    # Blog page templates load alternate templates for the index and show actions.
+    # The "default" template uses indexSuccess.php and showSuccess.php (per the Symfony standard and
+    # the behavior of Apostrophe 1.4). The "alternate" template loads
+    # indexAlternate.php and showAlternate.php. You may add as many alternative templates
+    # as you wish
+    page_templates: 
+      # You must have a blog page template named 'default'. It is used if
+      # an existing blog page has no template setting or has an obsolete
+      # template setting
+      default: 'Default'
+      alternate: 'Alternate'
+
+    # Disqus Comments
+    # Once you have a Disqus account, enable comments and put in your Disqus shortname
+    # disqus_enabled: true
+    # disqus_shortname: yourshortnamehere
       
   aToolkit:
     indexes:
