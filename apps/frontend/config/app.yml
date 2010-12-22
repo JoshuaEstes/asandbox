@@ -233,19 +233,7 @@ all:
   aEvents:
     display_calendar: true 
   
-  aBlog:
-    # Blog page templates load alternate templates for the index and show actions.
-    # The "default" template uses indexSuccess.php and showSuccess.php (per the Symfony standard and
-    # the behavior of Apostrophe 1.4). The "alternate" template loads
-    # indexAlternate.php and showAlternate.php. You may add as many alternative templates
-    # as you wish
-    page_templates: 
-      # You must have a blog page template named 'default'. It is used if
-      # an existing blog page has no template setting or has an obsolete
-      # template setting
-      default: 'Default'
-      alternate: 'Alternate'
-
+  # aBlog:
     # Disqus Comments
     # Once you have a Disqus account, enable comments and put in your Disqus shortname
     # disqus_enabled: true
