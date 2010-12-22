@@ -37,7 +37,6 @@
 		'aButton', 
 		'aBlog',
 		'aEvent',
-		'aEventSingle',
 		'aText',
 		'aRawHTML', 		
 	),
@@ -130,14 +129,6 @@
 				// 'position' => true, 						
 			),
 		),
-		'aEventSingle' => array(
-			'slideshowOptions' => array(
-				'width' => 720, 
-				'height' => 220,
-				'transition' => 'crossfade',
-				// 'position' => true, 				
-			),
-		),
     'aText' => array(
 			'multiline' => true
 		),
@@ -157,7 +148,6 @@
 		'aButton', 
 		'aBlog',
 		'aEvent',
-		'aEventSingle',
 		'aText',
 		'aRawHTML',	
 	),
@@ -239,13 +229,6 @@
 				'width' => 200, 
 				'height' => false, 
 				'resizeType' => 's',
-			),
-		),
-		'aEventSingle' => array(
-			'excerptLength' => 40, 
-			'slideshowOptions' => array(
-				'width' => 200, 
-				'flexHeight' => true,
 			),
 		),
     'aText' => array(
