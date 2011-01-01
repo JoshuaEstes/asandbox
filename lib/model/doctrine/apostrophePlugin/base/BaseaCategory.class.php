@@ -7,10 +7,7 @@
  * 
  * @property integer $id
  * @property string $name
- * @property boolean $media_items
  * @property string $description
- * @property boolean $posts
- * @property boolean $events
  * @property Doctrine_Collection $MediaItems
  * @property Doctrine_Collection $Pages
  * @property Doctrine_Collection $Users
@@ -24,10 +21,7 @@
  * 
  * @method integer             getId()                   Returns the current record's "id" value
  * @method string              getName()                 Returns the current record's "name" value
- * @method boolean             getMediaItems()           Returns the current record's "media_items" value
  * @method string              getDescription()          Returns the current record's "description" value
- * @method boolean             getPosts()                Returns the current record's "posts" value
- * @method boolean             getEvents()               Returns the current record's "events" value
  * @method Doctrine_Collection getMediaItems()           Returns the current record's "MediaItems" collection
  * @method Doctrine_Collection getPages()                Returns the current record's "Pages" collection
  * @method Doctrine_Collection getUsers()                Returns the current record's "Users" collection
@@ -40,10 +34,7 @@
  * @method Doctrine_Collection getBlogItemCategories()   Returns the current record's "BlogItemCategories" collection
  * @method aCategory           setId()                   Sets the current record's "id" value
  * @method aCategory           setName()                 Sets the current record's "name" value
- * @method aCategory           setMediaItems()           Sets the current record's "media_items" value
  * @method aCategory           setDescription()          Sets the current record's "description" value
- * @method aCategory           setPosts()                Sets the current record's "posts" value
- * @method aCategory           setEvents()               Sets the current record's "events" value
  * @method aCategory           setMediaItems()           Sets the current record's "MediaItems" collection
  * @method aCategory           setPages()                Sets the current record's "Pages" collection
  * @method aCategory           setUsers()                Sets the current record's "Users" collection
@@ -75,20 +66,8 @@ abstract class BaseaCategory extends sfDoctrineRecord
              'unique' => true,
              'length' => 255,
              ));
-        $this->hasColumn('media_items', 'boolean', null, array(
-             'type' => 'boolean',
-             'default' => false,
-             ));
         $this->hasColumn('description', 'string', null, array(
              'type' => 'string',
-             ));
-        $this->hasColumn('posts', 'boolean', null, array(
-             'type' => 'boolean',
-             'default' => false,
-             ));
-        $this->hasColumn('events', 'boolean', null, array(
-             'type' => 'boolean',
-             'default' => false,
              ));
 
         $this->option('type', 'INNODB');

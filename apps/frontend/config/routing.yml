@@ -44,7 +44,8 @@ homepage:
 # before the catch-all rule that routes URLs to the
 # CMS by default.
 
-# Must be the last rule
+# Must be the last rule. Note that you can change the URL to have
+# a prefix if you don't want the CMS pages at the root
 
 a_page:
   url:   /:slug

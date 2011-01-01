@@ -17,10 +17,7 @@ abstract class BaseaCategoryForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
       'name'             => new sfWidgetFormInputText(),
-      'media_items'      => new sfWidgetFormInputCheckbox(),
       'description'      => new sfWidgetFormTextarea(),
-      'posts'            => new sfWidgetFormInputCheckbox(),
-      'events'           => new sfWidgetFormInputCheckbox(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
       'slug'             => new sfWidgetFormInputText(),
@@ -34,10 +31,7 @@ abstract class BaseaCategoryForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'media_items'      => new sfValidatorBoolean(array('required' => false)),
       'description'      => new sfValidatorString(array('required' => false)),
-      'posts'            => new sfValidatorBoolean(array('required' => false)),
-      'events'           => new sfValidatorBoolean(array('required' => false)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
       'slug'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
