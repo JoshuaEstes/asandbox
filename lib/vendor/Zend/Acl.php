@@ -16,7 +16,7 @@
  * @package    Zend_Acl
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Acl.php 23484 2010-12-10 03:57:59Z mjh_ca $
+ * @version    $Id: Acl.php 23530 2010-12-17 12:31:24Z andries $
  */
 
 
@@ -1218,6 +1218,11 @@ class Zend_Acl
     }
 
     /**
+     * Returns an array of registered roles.
+     *
+     * Note that this method does not return instances of registered roles,
+     * but only the role identifiers.
+     *
      * @return array of registered roles
      */
     public function getRoles()

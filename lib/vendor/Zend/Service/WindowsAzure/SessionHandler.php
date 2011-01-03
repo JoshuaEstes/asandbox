@@ -17,7 +17,7 @@
  * @subpackage Session
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: SessionHandler.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: SessionHandler.php 23588 2010-12-28 23:06:39Z matthew $
  */
 
 /** Zend_Service_WindowsAzure_Storage_Table */
@@ -66,20 +66,20 @@ class Zend_Service_WindowsAzure_SessionHandler
      * @param string $sessionTablePartition Session table partition
      */
     public function __construct(Zend_Service_WindowsAzure_Storage_Table $tableStorage, $sessionTable = 'phpsessions', $sessionTablePartition = 'sessions')
-    {
-        // Set properties
-        $this->_tableStorage = $tableStorage;
-        $this->_sessionTable = $sessionTable;
-        $this->_sessionTablePartition = $sessionTablePartition;
-    }
-    
-    /**
-     * Registers the current session handler as PHP's session handler
-     *
-     * @return boolean
-     */
-    public function register()
-    {
+	{
+	    // Set properties
+		$this->_tableStorage = $tableStorage;
+		$this->_sessionTable = $sessionTable;
+		$this->_sessionTablePartition = $sessionTablePartition;
+	}
+	
+	/**
+	 * Registers the current session handler as PHP's session handler
+	 *
+	 * @return boolean
+	 */
+	public function register()
+	{
         return session_set_save_handler(array($this, 'open'),
                                         array($this, 'close'),
                                         array($this, 'read'),

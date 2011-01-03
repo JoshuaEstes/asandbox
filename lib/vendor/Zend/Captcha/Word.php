@@ -32,7 +32,7 @@ require_once 'Zend/Captcha/Base.php';
  * @subpackage Adapter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Word.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: Word.php 23588 2010-12-28 23:06:39Z matthew $
  */
 abstract class Zend_Captcha_Word extends Zend_Captcha_Base
 {
@@ -217,17 +217,17 @@ abstract class Zend_Captcha_Word extends Zend_Captcha_Base
         return $this->_timeout;
     }
 
-    /**
-     * Sets if session should be preserved on generate()
-     *
-     * @param $keepSession Should session be kept on generate()?
-     * @return Zend_Captcha_Word
-     */
-    public function setKeepSession($keepSession)
-    {
-        $this->_keepSession = $keepSession;
-        return $this;
-    }
+	/**
+	 * Sets if session should be preserved on generate()
+	 *
+	 * @param $keepSession Should session be kept on generate()?
+	 * @return Zend_Captcha_Word
+	 */
+	public function setKeepSession($keepSession)
+	{
+		$this->_keepSession = $keepSession;
+		return $this;
+	}
 
     /**
      * Numbers should be included in the pattern?
@@ -239,9 +239,9 @@ abstract class Zend_Captcha_Word extends Zend_Captcha_Base
         return $this->_useNumbers;
     }
 
-    /**
-     * Set if numbers should be included in the pattern
-     *
+	/**
+	 * Set if numbers should be included in the pattern
+	 *
      * @param $_useNumbers numbers should be included in the pattern?
      * @return Zend_Captcha_Word
      */

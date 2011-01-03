@@ -17,7 +17,7 @@
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: ZendMonitor.php 23484 2010-12-10 03:57:59Z mjh_ca $
+ * @version    $Id: ZendMonitor.php 23576 2010-12-23 23:25:44Z ramon $
  */
 
 /** Zend_Log_Writer_Abstract */
@@ -29,24 +29,26 @@ require_once 'Zend/Log/Writer/Abstract.php';
  * @subpackage Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: ZendMonitor.php 23484 2010-12-10 03:57:59Z mjh_ca $
+ * @version    $Id: ZendMonitor.php 23576 2010-12-23 23:25:44Z ramon $
  */
 class Zend_Log_Writer_ZendMonitor extends Zend_Log_Writer_Abstract
 {
     /**
      * Is Zend Monitor enabled?
-     * @var bool
+     *
+     * @var boolean
      */
     protected $_isEnabled = true;
 
     /**
      * Is this for a Zend Server intance?
-     * @var bool
+     *
+     * @var boolean
      */
     protected $_isZendServer = false;
 
     /**
-     * @throws Zend_Log_Exception if Zend Monitor extension not present
+     * @return void
      */
     public function __construct()
     {
@@ -62,8 +64,7 @@ class Zend_Log_Writer_ZendMonitor extends Zend_Log_Writer_Abstract
      * Create a new instance of Zend_Log_Writer_ZendMonitor
      *
      * @param  array|Zend_Config $config
-     * @return Zend_Log_Writer_Syslog
-     * @throws Zend_Log_Exception
+     * @return Zend_Log_Writer_ZendMonitor
      */
     static public function factory($config)
     {
@@ -77,7 +78,7 @@ class Zend_Log_Writer_ZendMonitor extends Zend_Log_Writer_Abstract
      * fail silently. You can query this method to determine if the log
      * writer is enabled.
      *
-     * @return bool
+     * @return boolean
      */
     public function isEnabled()
     {
@@ -87,7 +88,7 @@ class Zend_Log_Writer_ZendMonitor extends Zend_Log_Writer_Abstract
     /**
      * Log a message to this writer.
      *
-     * @param  array $event  log data event
+     * @param  array $event log data event
      * @return void
      */
     public function write($event)
@@ -102,7 +103,7 @@ class Zend_Log_Writer_ZendMonitor extends Zend_Log_Writer_Abstract
     /**
      * Write a message to the log.
      *
-     * @param  array  $event  log data event
+     * @param  array  $event log data event
      * @return void
      */
     protected function _write($event)

@@ -17,7 +17,7 @@
  * @subpackage Storage
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: BlobInstance.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: BlobInstance.php 23588 2010-12-28 23:06:39Z matthew $
  */
 
 /**
@@ -82,7 +82,7 @@ class Zend_Service_WindowsAzure_Storage_BlobInstance
      * @param array   $metadata        Key/value pairs of meta data
      */
     public function __construct($containerName, $name, $snapshotId, $etag, $lastModified, $url = '', $size = 0, $contentType = '', $contentEncoding = '', $contentLanguage = '', $cacheControl = '', $blobType = '', $leaseStatus = '', $isPrefix = false, $metadata = array())
-    {    
+    {	
         $this->_data = array(
             'container'        => $containerName,
             'name'             => $name,

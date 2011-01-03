@@ -17,7 +17,7 @@
  * @subpackage Storage
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: TableInstance.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: TableInstance.php 23588 2010-12-28 23:06:39Z matthew $
  */
 
 /**
@@ -54,7 +54,7 @@ class Zend_Service_WindowsAzure_Storage_TableInstance
      * @param string  $updated         Updated
      */
     public function __construct($id, $name, $href, $updated)
-    {    
+    {	
         $this->_data = array(
             'id'               => $id,
             'name'             => $name,

@@ -18,7 +18,7 @@
  * @subpackage Amazon
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Item.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: Item.php 23588 2010-12-28 23:06:39Z matthew $
  */
 
 
@@ -114,7 +114,7 @@ class Zend_Service_Amazon_Item
      *
      * @param  null|DOMElement $dom
      * @return void
-     * @throws    Zend_Service_Amazon_Exception
+     * @throws Zend_Service_Amazon_Exception
      *
      * @group ZF-9547
      */

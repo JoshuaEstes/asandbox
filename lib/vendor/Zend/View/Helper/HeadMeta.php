@@ -16,7 +16,7 @@
  * @package    Zend_View
  * @subpackage Helper
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
- * @version    $Id: HeadMeta.php 23486 2010-12-10 04:05:30Z mjh_ca $
+ * @version    $Id: HeadMeta.php 23588 2010-12-28 23:06:39Z matthew $
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
@@ -162,14 +162,14 @@ class Zend_View_Helper_HeadMeta extends Zend_View_Helper_Placeholder_Container_S
         return parent::__call($method, $args);
     }
 
-    /**
-     * Create an HTML5-style meta charset tag. Something like <meta charset="utf-8">
-     *
-     * Not valid in a non-HTML5 doctype
-     *
-     * @param string $charset
-     * @return Zend_View_Helper_HeadMeta Provides a fluent interface
-     */
+	/**
+	 * Create an HTML5-style meta charset tag. Something like <meta charset="utf-8">
+	 *
+	 * Not valid in a non-HTML5 doctype
+	 *
+	 * @param string $charset
+	 * @return Zend_View_Helper_HeadMeta Provides a fluent interface
+	 */
     public function setCharset($charset)
     {
         $item = new stdClass;
