@@ -163,7 +163,6 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       $values = array();
     }
 
-    error_log("Our list is " . implode(',', $values));
     $unlink = array_diff($existing, $values);
     if (count($unlink))
     {
@@ -173,7 +172,6 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
     $link = array_diff($values, $existing);
     if (count($link))
     {
-      error_log("link is " . implode(',', $link));
       $this->object->link('Categories', array_values($link));
     }
   }
