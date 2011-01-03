@@ -12,8 +12,8 @@ all:
     vimeo:
       # We use this to bring in our own vimeo key, you need to go get your own:
       # http://vimeo.com/api/applications/new
-      # You can remove this line:
-      <?php if (file_exists(dirname(__FILE__) . '/punk-demo-vimeo.yml')) require dirname(__FILE__) . '/punk-demo-vimeo.yml' ?>
+      # You can remove this line (P'unks, DO NOT indent this line):
+<?php if (file_exists(dirname(__FILE__) . '/punk-demo-vimeo.yml')) require dirname(__FILE__) . '/punk-demo-vimeo.yml' ?>
       # Uncomment these and plug in your information after you get your key from vimeo
       # oauthConsumerKey: your_key_from_vimeo
       # oauthConsumerSecret: your_secret_from_vimeo
