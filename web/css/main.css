@@ -400,7 +400,7 @@ text-shadow: 0 0 6px rgba(0,0,0,0.80);
 .a-signin .a-forgot-password { display: block; font-size: 11px; margin: -10px 20px 10px; float: left; color: #999; }
 .a-signin.forgot .message { width: 440px; }
 .a-signin.forgot .help { margin: 5px 0 0;}
-.a-signin .a-form-row .a-btn { font-size: 18px; width: 185px; height: 30px;}
+.a-signin.page .a-form-row .a-btn { font-size: 18px; width: 185px; height: 30px;}
 
 
 /* ASANDBOX Staging - Do Not Edit Message
