@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
 
 .a-header { clear: both; position: relative; margin: 20px 0; float: left; width: 100%;}
 
-.a-content { float: left; position: relative; display: inline; clear: none; width: 720px; }
+.a-content { float: left; clear: none; width: 720px; }
 
 .a-search.global { width: auto; clear: both; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1);}
@@ -68,9 +68,9 @@ a:hover { text-decoration: underline; }
 
 .a-area-body { width:480px; float:left; }
 
-.a-area-sidebar { width:200px; float:left; display:inline; position:relative; margin-left: 40px; }
+.a-area-sidebar { width:200px; float:left; margin-left: 40px; }
 
-.a-area-footer { position: relative; display: inline; clear: both; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 20px; font-size: 11px; color: #999; }
+.a-area-footer { position: relative; clear: both; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 20px; font-size: 11px; color: #999; }
 
 .a-blog-posts .a-content,
 .a-blog-events .a-content { clear: none; width: 720px; }
@@ -171,7 +171,7 @@ a:hover { text-decoration: underline; }
 
 /* Subnavigation
 -------------------------------------*/
-.a-subnav-wrapper {
+.a-ui.a-subnav-wrapper {
 	margin: 0 40px 20px -1px;
 	width: 198px;
 	background-color: #EFEFEF;
@@ -194,11 +194,10 @@ a:hover { text-decoration: underline; }
 .a-nav-subnav .a-nav-item a { float: left; display: inline; clear: both; color: #222; width: 155px; height: 100%; padding: 0 20px 0 5px; }
 .a-nav-subnav .a-nav-item a:hover { color: #333; background: #fff; text-decoration: none; }
 
-.a-subnav-wrapper h4 { float: left; width: 100%; display: inline; position: relative; font-size: 14px; margin: 0 0 5px 0;}
-.a-subnav-wrapper.blog .a-blog-filter-options { float: left; width: 100%; clear: both; display: inline; position: relative; line-height: 20px; }
-.a-subnav-wrapper.blog .a-blog-filter-options a,
-.a-subnav-wrapper.media .a-media-filter-options a { float: left; clear: both; display: inline; width: auto; padding: 0 5px; }
-
+.a-ui.a-subnav-wrapper h4 { float: left; width: 100%; display: inline; position: relative; font-size: 14px; margin: 0 0 5px 0;}
+.a-ui.a-subnav-wrapper.blog .a-blog-filter-options { float: left; width: 100%; clear: both; display: inline; position: relative; line-height: 20px; }
+.a-ui.a-subnav-wrapper.blog .a-blog-filter-options a,
+.a-ui.a-subnav-wrapper.media .a-media-filter-options a { float: left; clear: both; display: inline; width: auto; padding: 0 5px; }
 
 /* Breadcrumb Navigation
 -------------------------------------*/

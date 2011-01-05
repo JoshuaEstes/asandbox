@@ -68,7 +68,8 @@
 			'description' => false,
 			'credit' => false,
 			'position' => false,
-			'itemTemplate' => 'slideshowItem',       			
+			// 'transition' => 'crossfade',
+			// 'itemTemplate' => 'slideshowItem',
 		),
 		'aSmartSlideshow' => array(
 			'width' => 720, 
@@ -83,7 +84,8 @@
 			'description' => false,
 			'credit' => false,
 			'position' => false,
-			'itemTemplate' => 'slideshowItem',       			
+			// 'transition' => 'crossfade', 			
+			// 'itemTemplate' => 'slideshowItem',
 		),
 		'aFile' => array(
 		), 
@@ -168,7 +170,8 @@
 			'description' => false,
 			'credit' => false,
 			'position' => false,
-			'itemTemplate' => 'slideshowItem',
+			'transition' => 'crossfade',
+			// 'itemTemplate' => 'slideshowItem',
 		),		
 		'aSmartSlideshow' => array(
 			'width' => 200, 
@@ -183,7 +186,8 @@
 			'description' => false,
 			'credit' => false,
 			'position' => false,
-			'itemTemplate' => 'slideshowItem',
+			// 'transition' => 'crossfade',			
+			// 'itemTemplate' => 'slideshowItem',
 		),		
 		'aVideo' => array(
 			'width' => 200, 
