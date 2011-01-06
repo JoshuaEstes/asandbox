@@ -238,9 +238,15 @@ class Zend_Barcode_Object_Code128 extends Zend_Barcode_Object_ObjectAbstract
     /**
      * Checks if the next $length chars of $string starting at $pos are numeric.
      * Returns false if the end of the string is reached.
+<<<<<<< HEAD
      * @param string $string String to search
      * @param int    $pos Starting position
      * @param int    $length Length to search
+=======
+     * @param $string String to search
+     * @param $pos Starting position
+     * @param $length Length to search
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return bool
      */
     protected static function _isDigit($string, $pos, $length = 2)
@@ -388,4 +394,8 @@ class Zend_Barcode_Object_Code128 extends Zend_Barcode_Object_ObjectAbstract
         // @TODO: add code128 validator
         return true;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> added Zend Framework library (1.11 branch)

@@ -16,7 +16,11 @@
  * @category   Zend
  * @package    Zend_TimeSync
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+<<<<<<< HEAD
  * @version    $Id: TimeSync.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: TimeSync.php 20096 2010-01-06 02:05:09Z bkarwin $
+>>>>>>> added Zend Framework library (1.11 branch)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
@@ -233,7 +237,11 @@ class Zend_TimeSync implements IteratorAggregate
      * facade and will try to return the date from the first server that
      * returns a valid result.
      *
+<<<<<<< HEAD
      * @param   Zend_Locale $locale - OPTIONAL locale
+=======
+     * @param   $locale - OPTIONAL locale
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return  object
      * @throws  Zend_TimeSync_Exception
      */

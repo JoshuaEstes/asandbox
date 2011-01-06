@@ -17,7 +17,11 @@
  * @subpackage Zend_Cache_Backend
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Test.php 23671 2011-01-23 19:11:46Z mabe $
+=======
+ * @version    $Id: Test.php 23051 2010-10-07 17:01:21Z mabe $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 
@@ -164,7 +168,11 @@ class Zend_Cache_Backend_Test extends Zend_Cache_Backend implements Zend_Cache_B
     public function save($data, $id, $tags = array(), $specificLifetime = false)
     {
         $this->_addLog('save', array($data, $id, $tags));
+<<<<<<< HEAD
         if (substr($id,-5)=='false') {
+=======
+        if ($id=='false') {
+>>>>>>> added Zend Framework library (1.11 branch)
             return false;
         }
         return true;
@@ -182,7 +190,11 @@ class Zend_Cache_Backend_Test extends Zend_Cache_Backend implements Zend_Cache_B
     public function remove($id)
     {
         $this->_addLog('remove', array($id));
+<<<<<<< HEAD
         if (substr($id,-5)=='false') {
+=======
+        if ($id=='false') {
+>>>>>>> added Zend Framework library (1.11 branch)
             return false;
         }
         return true;

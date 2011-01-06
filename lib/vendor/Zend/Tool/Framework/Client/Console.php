@@ -17,7 +17,11 @@
  * @subpackage Framework
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Console.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Console.php 23484 2010-12-10 03:57:59Z mjh_ca $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -42,8 +46,11 @@ require_once 'Zend/Tool/Framework/Client/Interactive/OutputInterface.php';
  * @package    Zend_Tool
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  *
  * @todo methods need more API documentation.
+=======
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 class Zend_Tool_Framework_Client_Console
     extends Zend_Tool_Framework_Client_Abstract
@@ -100,7 +107,11 @@ class Zend_Tool_Framework_Client_Console
     /**
      * setConfigOptions()
      *
+<<<<<<< HEAD
      * @param array $configOptions
+=======
+     * @param $configOptions
+>>>>>>> added Zend Framework library (1.11 branch)
      */
     public function setConfigOptions($configOptions)
     {
@@ -111,7 +122,11 @@ class Zend_Tool_Framework_Client_Console
     /**
      * setStorageOptions()
      *
+<<<<<<< HEAD
      * @param array $storageOptions
+=======
+     * @param $storageOptions
+>>>>>>> added Zend Framework library (1.11 branch)
      */
     public function setStorageOptions($storageOptions)
     {
@@ -119,9 +134,12 @@ class Zend_Tool_Framework_Client_Console
         return $this;
     }
 
+<<<<<<< HEAD
     /**
 		 * @param array $classesToLoad
 		 */
+=======
+>>>>>>> added Zend Framework library (1.11 branch)
     public function setClassesToLoad($classesToLoad)
     {
         $this->_classesToLoad = $classesToLoad;

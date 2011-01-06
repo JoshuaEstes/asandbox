@@ -17,7 +17,11 @@
  * @subpackage LiveDocx
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: LiveDocx.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: LiveDocx.php 23484 2010-12-10 03:57:59Z mjh_ca $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -147,7 +151,11 @@ class Zend_Service_LiveDocx
      * Set options
      * One or more of username, password, soapClient
      *
+<<<<<<< HEAD
      * @param  array $options
+=======
+     * @param  $options
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Service_LiveDocx
      * @since  LiveDocx 1.2
      */
@@ -412,4 +420,8 @@ class Zend_Service_LiveDocx
     {
         return version_compare($version, $this->getVersion());
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> added Zend Framework library (1.11 branch)

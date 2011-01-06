@@ -17,7 +17,11 @@
  * @subpackage Actions
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: NameTree.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: NameTree.php 20096 2010-01-06 02:05:09Z bkarwin $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /** Internally used classes */
@@ -46,7 +50,11 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     /**
      * Object constructor
      *
+<<<<<<< HEAD
      * @param Zend_Pdf_Element $rootDictionary root of name dictionary
+=======
+     * @param $rootDictionary root of name dictionary
+>>>>>>> added Zend Framework library (1.11 branch)
      */
     public function __construct(Zend_Pdf_Element $rootDictionary)
     {

@@ -17,7 +17,11 @@
  * @subpackage PHPUnit
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Truncate.php 23656 2011-01-22 14:15:50Z ramon $
+=======
+ * @version    $Id: Truncate.php 20096 2010-01-06 02:05:09Z bkarwin $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -89,7 +93,11 @@ class Zend_Test_PHPUnit_Db_Operation_Truncate implements PHPUnit_Extensions_Data
      */
     protected function _truncate(Zend_Db_Adapter_Abstract $db, $tableName)
     {
+<<<<<<< HEAD
         $tableName = $db->quoteIdentifier($tableName, true);
+=======
+        $tableName = $db->quoteIdentifier($tableName);
+>>>>>>> added Zend Framework library (1.11 branch)
         if($db instanceof Zend_Db_Adapter_Pdo_Sqlite) {
             $db->query('DELETE FROM '.$tableName);
         } else if($db instanceof Zend_Db_Adapter_Db2) {

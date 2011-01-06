@@ -16,7 +16,11 @@
  * @package    Zend_Feed_Writer
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Feed.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Feed.php 23486 2010-12-10 04:05:30Z mjh_ca $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -258,8 +262,12 @@ implements Iterator, Countable
     /**
      * Attempt to build and return the feed resulting from the data set
      *
+<<<<<<< HEAD
      * @param string $type             The feed type "rss" or "atom" to export as
 		 * @param bool   $ignoreExceptions
+=======
+     * @param $type The feed type "rss" or "atom" to export as
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string
      */
     public function export($type, $ignoreExceptions = false)

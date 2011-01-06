@@ -17,7 +17,11 @@
  * @subpackage Client
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Client.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Client.php 20096 2010-01-06 02:05:09Z bkarwin $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 
@@ -211,7 +215,11 @@ class Zend_XmlRpc_Client
     /**
      * Returns a proxy object for more convenient method calls
      *
+<<<<<<< HEAD
      * @param string $namespace  Namespace to proxy or empty string for none
+=======
+     * @param $namespace  Namespace to proxy or empty string for none
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_XmlRpc_Client_ServerProxy
      */
     public function getProxy($namespace = '')

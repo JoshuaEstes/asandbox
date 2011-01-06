@@ -16,7 +16,11 @@
  * @package    Zend_Log
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Log.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Log.php 23576 2010-12-23 23:25:44Z ramon $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -24,7 +28,11 @@
  * @package    Zend_Log
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Log.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Log.php 23576 2010-12-23 23:25:44Z ramon $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 class Zend_Log
 {
@@ -72,12 +80,15 @@ class Zend_Log
 
     /**
      *
+<<<<<<< HEAD
      * @var string
      */
     protected $_defaultFormatterNamespace = 'Zend_Log_Formatter';
 
     /**
      *
+=======
+>>>>>>> added Zend Framework library (1.11 branch)
      * @var callback
      */
     protected $_origErrorHandler       = null;
@@ -175,11 +186,14 @@ class Zend_Log
             $writer->addFilter($filter);
         }
 
+<<<<<<< HEAD
         if (isset($config['formatterName'])) {
             $formatter = $this->_constructFormatterFromConfig($config);
             $writer->setFormatter($formatter);
         }
 
+=======
+>>>>>>> added Zend Framework library (1.11 branch)
         return $writer;
     }
 
@@ -206,6 +220,7 @@ class Zend_Log
         return $filter;
     }
 
+<<<<<<< HEAD
    /**
      * Construct formatter object from configuration array or Zend_Config object
      *
@@ -229,6 +244,8 @@ class Zend_Log
         return $formatter;
     }
 
+=======
+>>>>>>> added Zend Framework library (1.11 branch)
     /**
      * Construct a filter or writer from config
      *
@@ -262,7 +279,11 @@ class Zend_Log
         if (!$reflection->implementsInterface('Zend_Log_FactoryInterface')) {
             require_once 'Zend/Log/Exception.php';
             throw new Zend_Log_Exception(
+<<<<<<< HEAD
                 $className . ' does not implement Zend_Log_FactoryInterface and can not be constructed from config.'
+=======
+                'Driver does not implement Zend_Log_FactoryInterface and can not be constructed from config.'
+>>>>>>> added Zend Framework library (1.11 branch)
             );
         }
 
@@ -503,8 +524,13 @@ class Zend_Log
     /**
      * Set an extra item to pass to the log writers.
      *
+<<<<<<< HEAD
      * @param  string $name    Name of the field
      * @param  string $value   Value of the field
+=======
+     * @param  $name    Name of the field
+     * @param  $value   Value of the field
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Log
      */
     public function setEventItem($name, $value)

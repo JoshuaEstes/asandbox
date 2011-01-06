@@ -171,12 +171,20 @@ class Zend_Http_UserAgent implements Serializable
      */
     public function serialize()
     {
+<<<<<<< HEAD
         $device = $this->getDevice();
         $spec = array(
             'browser_type' => $this->_browserType,
             'config'       => $this->_config,
             'device_class' => get_class($device),
             'device'       => $device->serialize(),
+=======
+        $spec = array(
+            'browser_type' => $this->_browserType,
+            'config'       => $this->_config,
+            'device_class' => get_class($this->_device),
+            'device'       => $this->_device->serialize(),
+>>>>>>> added Zend Framework library (1.11 branch)
             'user_agent'   => $this->getServerValue('http_user_agent'),
             'http_accept'  => $this->getServerValue('http_accept'),
         );

@@ -16,7 +16,11 @@
  * @package    Zend_View
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Abstract.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Abstract.php 22446 2010-06-18 12:11:43Z matthew $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /** @see Zend_Loader */
@@ -948,7 +952,11 @@ abstract class Zend_View_Abstract implements Zend_View_Interface
     /**
      * Finds a view script from the available directories.
      *
+<<<<<<< HEAD
      * @param string $name The base name of the script.
+=======
+     * @param $name string The base name of the script.
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return void
      */
     protected function _script($name)

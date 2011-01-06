@@ -17,11 +17,19 @@
  * @subpackage Formatter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Firebug.php 23648 2011-01-21 19:04:20Z intiilapa $
  */
 
 /** Zend_Log_Formatter_Abstract */
 require_once 'Zend/Log/Formatter/Abstract.php';
+=======
+ * @version    $Id: Firebug.php 20096 2010-01-06 02:05:09Z bkarwin $
+ */
+
+/** Zend_Log_Formatter_Interface */
+require_once 'Zend/Log/Formatter/Interface.php';
+>>>>>>> added Zend Framework library (1.11 branch)
 
 /**
  * @category   Zend
@@ -30,6 +38,7 @@ require_once 'Zend/Log/Formatter/Abstract.php';
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
+<<<<<<< HEAD
 class Zend_Log_Formatter_Firebug extends Zend_Log_Formatter_Abstract
 {
     /**
@@ -44,6 +53,11 @@ class Zend_Log_Formatter_Firebug extends Zend_Log_Formatter_Abstract
     }
 
     /**
+=======
+class Zend_Log_Formatter_Firebug implements Zend_Log_Formatter_Interface
+{
+    /**
+>>>>>>> added Zend Framework library (1.11 branch)
      * This method formats the event for the firebug writer.
      *
      * The default is to just send the message parameter, but through
@@ -58,4 +72,8 @@ class Zend_Log_Formatter_Firebug extends Zend_Log_Formatter_Abstract
     {
         return $event['message'];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> added Zend Framework library (1.11 branch)

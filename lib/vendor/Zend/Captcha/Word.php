@@ -32,7 +32,11 @@ require_once 'Zend/Captcha/Base.php';
  * @subpackage Adapter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Word.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Word.php 23588 2010-12-28 23:06:39Z matthew $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 abstract class Zend_Captcha_Word extends Zend_Captcha_Base
 {
@@ -217,6 +221,7 @@ abstract class Zend_Captcha_Word extends Zend_Captcha_Base
         return $this->_timeout;
     }
 
+<<<<<<< HEAD
     /**
      * Sets if session should be preserved on generate()
      *
@@ -228,6 +233,19 @@ abstract class Zend_Captcha_Word extends Zend_Captcha_Base
         $this->_keepSession = $keepSession;
         return $this;
     }
+=======
+	/**
+	 * Sets if session should be preserved on generate()
+	 *
+	 * @param $keepSession Should session be kept on generate()?
+	 * @return Zend_Captcha_Word
+	 */
+	public function setKeepSession($keepSession)
+	{
+		$this->_keepSession = $keepSession;
+		return $this;
+	}
+>>>>>>> added Zend Framework library (1.11 branch)
 
     /**
      * Numbers should be included in the pattern?
@@ -239,10 +257,17 @@ abstract class Zend_Captcha_Word extends Zend_Captcha_Base
         return $this->_useNumbers;
     }
 
+<<<<<<< HEAD
     /**
      * Set if numbers should be included in the pattern
      *
      * @param bool $_useNumbers numbers should be included in the pattern?
+=======
+	/**
+	 * Set if numbers should be included in the pattern
+	 *
+     * @param $_useNumbers numbers should be included in the pattern?
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Captcha_Word
      */
     public function setUseNumbers($_useNumbers)

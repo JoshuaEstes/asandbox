@@ -283,8 +283,13 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
     /**
      * List domains
      *
+<<<<<<< HEAD
      * @param int $maxNumberOfDomains
      * @param int $nextToken
+=======
+     * @param $maxNumberOfDomains int
+     * @param $nextToken          int
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return array              0 or more domain names
      */
     public function listDomains($maxNumberOfDomains = 100, $nextToken = null)
@@ -315,7 +320,11 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
     /**
      * Retrieve domain metadata
      *
+<<<<<<< HEAD
      * @param string $domainName Name of the domain for which metadata will be requested
+=======
+     * @param $domainName string Name of the domain for which metadata will be requested
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return array Key/value array of metadatum names and values.
      */
     public function domainMetadata($domainName)
@@ -340,8 +349,13 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
     /**
      * Create a new domain
      *
+<<<<<<< HEAD
      * @param string $domainName Valid domain name of the domain to create
      * @return boolean True if successful, false if not
+=======
+     * @param $domainName    string    Valid domain name of the domain to create
+     * @return                 boolean True if successful, false if not
+>>>>>>> added Zend Framework library (1.11 branch)
      */
 	public function createDomain($domainName)
 	{
@@ -355,8 +369,13 @@ class Zend_Service_Amazon_SimpleDb extends Zend_Service_Amazon_Abstract
     /**
      * Delete a domain
      *
+<<<<<<< HEAD
      * @param string $domainName Valid domain name of the domain to delete
      * @return boolean True if successful, false if not
+=======
+     * @param     $domainName string  Valid domain name of the domain to delete
+     * @return                 boolean True if successful, false if not
+>>>>>>> added Zend Framework library (1.11 branch)
      */
 	public function deleteDomain($domainName)
 	{

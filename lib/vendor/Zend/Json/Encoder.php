@@ -16,7 +16,11 @@
  * @package    Zend_Json
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
+<<<<<<< HEAD
  * @version    $Id: Encoder.php 23651 2011-01-21 21:51:00Z mikaelkael $
+=======
+ * @version    $Id: Encoder.php 22452 2010-06-18 18:13:23Z ralph $
+>>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -85,7 +89,11 @@ class Zend_Json_Encoder
      *    - arrays (returns from {@link _encodeArray()})
      *    - basic datums (e.g. numbers or strings) (returns from {@link _encodeDatum()})
      *
+<<<<<<< HEAD
      * @param mixed $value The value to be encoded
+=======
+     * @param $value mixed The value to be encoded
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string Encoded value
      */
     protected function _encodeValue(&$value)
@@ -108,7 +116,11 @@ class Zend_Json_Encoder
      * that contains the name of the class of $value. This is used to decode
      * the object on the client into a specific class.
      *
+<<<<<<< HEAD
      * @param object $value
+=======
+     * @param $value object
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string
      * @throws Zend_Json_Exception If recursive checks are enabled and the object has been serialized previously
      */
@@ -182,7 +194,11 @@ class Zend_Json_Encoder
      * the last index is (count($array) -1); any deviation from that is
      * considered an associative array, and will be encoded as such.
      *
+<<<<<<< HEAD
      * @param array& $array
+=======
+     * @param $array array
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string
      */
     protected function _encodeArray(&$array)
@@ -222,7 +238,11 @@ class Zend_Json_Encoder
      * If value type is not a string, number, boolean, or null, the string
      * 'null' is returned.
      *
+<<<<<<< HEAD
      * @param mixed& $value
+=======
+     * @param $value mixed
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string
      */
     protected function _encodeDatum(&$value)
@@ -245,7 +265,11 @@ class Zend_Json_Encoder
     /**
      * JSON encode a string value by escaping characters as necessary
      *
+<<<<<<< HEAD
      * @param string& $value
+=======
+     * @param $value string
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string
      */
     protected function _encodeString(&$string)
@@ -270,7 +294,11 @@ class Zend_Json_Encoder
      * Encode the constants associated with the ReflectionClass
      * parameter. The encoding format is based on the class2 format
      *
+<<<<<<< HEAD
      * @param ReflectionClass $cls
+=======
+     * @param $cls ReflectionClass
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string Encoded constant block in class2 format
      */
     private static function _encodeConstants(ReflectionClass $cls)
@@ -295,7 +323,11 @@ class Zend_Json_Encoder
      * Encode the public methods of the ReflectionClass in the
      * class2 format
      *
+<<<<<<< HEAD
      * @param ReflectionClass $cls
+=======
+     * @param $cls ReflectionClass
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string Encoded method fragment
      *
      */
@@ -359,7 +391,11 @@ class Zend_Json_Encoder
      * Encode the public properties of the ReflectionClass in the class2
      * format.
      *
+<<<<<<< HEAD
      * @param ReflectionClass $cls
+=======
+     * @param $cls ReflectionClass
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string Encode properties list
      *
      */
@@ -391,10 +427,17 @@ class Zend_Json_Encoder
      * NOTE: Currently only public methods and variables are proxied onto
      * the client machine
      *
+<<<<<<< HEAD
      * @param string $className The name of the class, the class must be
      *  instantiable using a null constructor
      * @param string $package Optional package name appended to JavaScript
      *  proxy class name
+=======
+     * @param $className string The name of the class, the class must be
+     * instantiable using a null constructor
+     * @param $package string Optional package name appended to JavaScript
+     * proxy class name
+>>>>>>> added Zend Framework library (1.11 branch)
      * @return string The class2 (JavaScript) encoding of the class
      * @throws Zend_Json_Exception
      */
