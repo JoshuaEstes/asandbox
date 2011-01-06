@@ -8,8 +8,8 @@ git pull origin master
 
 cd ../sfDoctrineGuardPlugin/
 git fetch origin
-git checkout master
-git pull origin master
+git checkout 1.3
+git pull origin 1.3
 
 cd ../sfDoctrineActAsTaggablePlugin
 git fetch origin
