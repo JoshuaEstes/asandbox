@@ -1,7 +1,7 @@
 #/bin/bash
 cd plugins
 
-cd ../sfDoctrineGuardPlugin/
+cd sfDoctrineGuardPlugin/
 git fetch origin
 git checkout master
 git pull origin master
