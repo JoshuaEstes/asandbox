@@ -226,6 +226,39 @@ aPage:
                         Slot:
                           type: aText 
                           value: "Média"
+          error404:
+            slug: "/admin/error404"
+            template: error404
+            # The default media engine page is not visible to logged-out users. You can
+            # introduce other instances of it that are
+            admin: true
+            Areas:
+              error404_en_title:
+                name: title
+                culture: en
+                latest_version: 1
+                AreaVersions:
+                  error404_en_title_version_1:
+                    version: 1
+                    AreaVersionSlots:
+                      error404_en_title_version_1_permid_1:
+                        permid: 1
+                        Slot:
+                          type: aText 
+                          value: Page Not Found!
+              error404_en_body:
+                name: body
+                culture: en
+                latest_version: 1
+                AreaVersions:
+                  error404_en_body_version_1:
+                    version: 1
+                    AreaVersionSlots:
+                      error404_en_body_version_1_permid_1:
+                        permid: 1
+                        Slot:
+                          type: aRichText
+                          value: '<h2>Error 404 &mdash; The page you are looking for could not be found.</h2><h3><a href="/">Go Home.</a></h3>'
       contact:
         slug: "/contact"
         template: default
