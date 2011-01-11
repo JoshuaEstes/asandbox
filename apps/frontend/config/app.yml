@@ -164,8 +164,7 @@ all:
       aMedia:
         default: Media
       aBlog:
-        default: Standard Blog
-        alternate: Alternate Blog
+        default: Blog
       aEvent:
         default: Events
 
