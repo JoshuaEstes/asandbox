@@ -20,7 +20,7 @@
 	<div class="a-blog-heading a-ui"> 
 	  <?php a_area('blog-heading', array('area_add_content_label' => a_('Add Heading Content'), 'allowed_types' => array('aRichText', 'aSlideshow', 'aSmartSlideshow'))) ?>
 	  <?php if ($page->userHasPrivilege('edit')): ?>
-	    <div class="a-help">
+	    <div class="a-help a-blog">
 	      The heading appears before the blog posts. Use the "New Post" button to add blog posts.
 	    </div>
 	  <?php endif ?>
