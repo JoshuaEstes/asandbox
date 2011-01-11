@@ -82,7 +82,6 @@ a:hover { text-decoration: underline; }
 .a-error404 .a-area-body { width: auto; float: none; clear: both; }
 .a-error404 .a-help { font-size: 14px; float: none; clear: both; margin: 0 0 10px 0; width: auto; }
 
-
 /* ASANDBOX Default Template
 -------------------------------------*/
 .a-default .a-content { clear: none; float: left; width: auto; }
@@ -92,11 +91,10 @@ a:hover { text-decoration: underline; }
 
 /* ASANDBOX Home Template
 -------------------------------------*/
-.a-home .a-content { width: 100%; }
+.a-home .a-content { width: 100%; clear: both; }
 .a-home .a-area-body { width: 720px; }
 .a-home .a-area-body .a-slot,
 .a-home .a-area-sidebar .a-slot { margin-bottom: 20px; }
-
 
 .a-area-home-banner { margin-bottom: 20px; }
 
@@ -113,7 +111,7 @@ a:hover { text-decoration: underline; }
 	display: inline;
 	width: 958px;
 	clear: both;
-	margin: 20px 0;
+	margin: 0 0 20px 0;
 	padding: 0;
 	background-color: #EFEFEF;
 	border: 1px solid #DDDDDD;
@@ -174,7 +172,6 @@ a:hover { text-decoration: underline; }
 }
 
 .a-nav-main .a-nav-item.a-current-page a { background-color: #ddd; color:#000; }
-
 
 /* Subnavigation
 -------------------------------------*/
@@ -279,7 +276,6 @@ a:hover { text-decoration: underline; }
 /* ASANDBOX aRichtext Slot
 -------------------------------------*/
 .a-slot.aRichText .a-slot-content p { margin-bottom: 10px; }
-
 
 /* ASANDBOX aSlideshow Slot -- Compact Variant 
 -------------------------------------*/
