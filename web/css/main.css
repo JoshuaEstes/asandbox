@@ -203,6 +203,9 @@ a:hover { text-decoration: underline; }
 .a-ui.a-subnav-wrapper.blog .a-blog-filter-options a,
 .a-ui.a-subnav-wrapper.media .a-media-filter-options a { float: left; clear: both; display: inline; width: auto; padding: 0 5px; }
 
+.a-ui.a-subnav-wrapper .a-btn.a-drag { display: block; position: absolute; right: 0; }
+
+
 /* Breadcrumb Navigation
 -------------------------------------*/
 #a-breadcrumb-component { float: left; width: 100%; font-size: 18px; margin: 0 0 20px 0; list-style: none; padding: 0; }
