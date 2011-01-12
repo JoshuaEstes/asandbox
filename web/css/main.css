@@ -56,7 +56,7 @@ a:hover { text-decoration: underline; }
 
 .a-content { }
 
-.a-footer { clear: both; margin: 20px 0; }
+.a-footer { clear: both; float: left; width: 100%; margin: 20px 0; }
 
 .a-search.global { width: auto; clear: both; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1); }	
