@@ -322,23 +322,3 @@ aPage:
                         <h3>Pour plus d'informations ou obtenir de l'aide au sujet 
                         d'<a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>, 
                         contactez <a href="mailto:apostrophe@punkave.com">apostrophe@punkave.com</a></h3>                        
-  # This is a virtual page that contains the default error message for media when there are no media items.
-  # The message is an admin editable richtext slot.  
-  a_errors_media:
-    slug: "aErrors:aMedia"
-    admin: true
-    Areas:
-      a_errors_media_en_body:
-        name: body 
-        culture: en
-        latest_version: 1
-        AreaVersions:
-          a_errors_media_en_body_version_1:
-            version: 1
-            AreaVersionSlots:
-              a_errors_media_en_body_version_1_permid_1:
-                permid: 1
-                Slot:
-                  type: aRichText 
-                  value: >
-                    <h3> Oops! You do not have anything in your media library.<br /> Do you want to <a id="a-upload-some-images" href="#upload-images">add some media?</a></h3>
