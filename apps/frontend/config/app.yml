@@ -21,6 +21,13 @@ all:
       # You can remove this line (P'unks, DO NOT indent this line):
 <?php if (file_exists(dirname(__FILE__) . '/punk-demo-viddler.yml')) require dirname(__FILE__) . '/punk-demo-viddler.yml' ?>
       # Uncomment these and plug in your information after you get your key from viddler
+    slideshare:
+      # We use this to bring in our own slideshare key, you need to go get your own
+      # You can remove this line (P'unks, DO NOT indent this line):
+<?php if (file_exists(dirname(__FILE__) . '/punk-demo-slideshare.yml')) require dirname(__FILE__) . '/punk-demo-slideshare.yml' ?>
+      # Uncomment these and plug in your information after you get your key from slideshare
+      # apiKey: your_key_from_slideshare
+      # sharedSecret: your_secret_from_slideshare
 
     # includes apostrophe css into the project
     use_bundled_stylesheet: true
