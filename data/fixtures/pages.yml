@@ -237,41 +237,58 @@ aPage:
                         Slot:
                           type: aText 
                           value: "Média"
-          error404:
+          error_404:
             slug: "/admin/error404"
             published_at: '<?php echo $now ?>'
             template: error404
-            # The default media engine page is not visible to logged-out users. You can
-            # introduce other instances of it that are
             admin: true
             Areas:
-              error404_en_title:
+              error_404_en_title:
                 name: title
                 culture: en
                 latest_version: 1
                 AreaVersions:
-                  error404_en_title_version_1:
+                  error_404_en_title_version_1:
                     version: 1
                     AreaVersionSlots:
-                      error404_en_title_version_1_permid_1:
+                      error_404_en_title_version_1_permid_1:
                         permid: 1
                         Slot:
                           type: aText 
                           value: Page Not Found!
-              error404_en_body:
+              error_404_en_body:
                 name: body
                 culture: en
                 latest_version: 1
                 AreaVersions:
-                  error404_en_body_version_1:
+                  error_404_en_body_version_1:
                     version: 1
                     AreaVersionSlots:
-                      error404_en_body_version_1_permid_1:
+                      error_404_en_body_version_1_permid_1:
                         permid: 1
                         Slot:
                           type: aRichText
                           value: >
                             <h2>Error 404 &mdash; The page you are looking for could not be found.</h2><h3><a href="/">Go Home.</a></h3>
+          error_a_media:
+            slug: "/admin/error-a-media"
+            template: default
+            admin: true
+            Areas:
+             error_a_media_en_body:
+               name: body 
+               culture: en
+               latest_version: 1
+               AreaVersions:
+                 error_a_media_en_body_version_1:
+                   version: 1
+                   AreaVersionSlots:
+                     error_a_media_en_body_version_1_permid_1:
+                       permid: 1
+                       Slot:
+                         type: aRichText 
+                         value: >
+                           <h3> Oops! You do not have anything in your media library.<br />Do you want to <a href="#upload-images" class="a-add-media-toggle">add some media?</a></h3>
       contact:
         slug: "/contact"
         published_at: '<?php echo $now ?>'
@@ -332,4 +349,4 @@ aPage:
                       value: >
                         <h3>Pour plus d'informations ou obtenir de l'aide au sujet 
                         d'<a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>, 
-                        contactez <a href="mailto:apostrophe@punkave.com">apostrophe@punkave.com</a></h3>                        
+                        contactez <a href="mailto:apostrophe@punkave.com">apostrophe@punkave.com</a></h3>
