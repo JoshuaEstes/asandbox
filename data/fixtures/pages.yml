@@ -1,6 +1,10 @@
+# We need published_at to have a reasonable default setting otherwise everything is hidden
+# <?php $now = date('Y-m-d H:i:s') ?>
+
 aPage:
   home:
     slug: "/"
+    published_at: '<?php echo $now ?>'
     template: home
     Areas:
       home_en_title:
@@ -65,6 +69,7 @@ aPage:
     children:
       about:
         slug: "/about"
+        published_at: '<?php echo $now ?>'
         template: default
         Areas:
           about_en_title:
@@ -124,6 +129,7 @@ aPage:
                         Une solution open source, robuste et extrêmement simple à utiliser!
       blog:
         slug: "/blog"
+        published_at: '<?php echo $now ?>'
         engine: aBlog
         Areas:
           blog_en_title:
@@ -142,6 +148,7 @@ aPage:
       
       events:
         slug: "/events"
+        published_at: '<?php echo $now ?>'
         engine: aEvent
         Areas:
           events_en_title:
@@ -162,6 +169,7 @@ aPage:
         # By convention this page is the parent of all admin pages. Admin pages are
         # hidden from all normal navigation
         slug: "/admin"
+        published_at: '<?php echo $now ?>'
         template: default
         admin: true
         # The admin engine has an index action that redirects to the home page, for now
@@ -196,6 +204,7 @@ aPage:
         children:          
           media:
             slug: "/admin/media"
+            published_at: '<?php echo $now ?>'
             template: default
             engine: aMedia
             # The default media engine page is not visible to logged-out users. You can
@@ -230,6 +239,7 @@ aPage:
                           value: "Média"
           error404:
             slug: "/admin/error404"
+            published_at: '<?php echo $now ?>'
             template: error404
             # The default media engine page is not visible to logged-out users. You can
             # introduce other instances of it that are
@@ -264,6 +274,7 @@ aPage:
                             <h2>Error 404 &mdash; The page you are looking for could not be found.</h2><h3><a href="/">Go Home.</a></h3>
       contact:
         slug: "/contact"
+        published_at: '<?php echo $now ?>'
         template: default
         Areas:
           contact_en_title:
