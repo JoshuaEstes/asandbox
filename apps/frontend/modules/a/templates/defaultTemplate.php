@@ -15,7 +15,8 @@
 		'aEvent',
 		'aEventSingle',
 		'aText',
-		'aRawHTML', 		
+		'aRawHTML',
+		'aImage',
 	),
   'type_options' => array(
 		'aRichText' => array(
@@ -24,6 +25,14 @@
 			// 'allowed-attributes' => array('a' => array('href', 'name', 'target'),'img' => array('src')),
 			// 'allowed-styles' => array('color','font-weight','font-style'), 
 		), 	
+		'aImage' => array(
+			'width' => 480, 
+			'height' => false, 
+			'resizeType' => 's',
+			'flexHeight' => true, 
+			'title' => false,
+			'description' => false,			
+		),
 		'aVideo' => array(
 			'width' => 480, 
 			'height' => false, 

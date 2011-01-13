@@ -81,6 +81,7 @@ all:
       aBlogSingle: Blog Post
       aEvent: Events
       aEventSingle: Event
+      aImage: Image
 
       # The following slot types are always enabled (meaning only that you can include them in
       # individual templates if you wish, so you still have control over what your end users do):

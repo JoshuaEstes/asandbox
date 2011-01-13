@@ -50,13 +50,14 @@ a:hover { text-decoration: underline; }
 /* Global Layout
 -------------------------------------*/
 
-.a-wrapper { width: 960px; margin: 20px auto; position: relative; clear: both; }
+.a-wrapper { width: 960px; margin: 0 auto; position: relative; clear: both; }
 
 .a-header { clear: both; position: relative; margin: 20px 0; float: left; width: 100%;}
 
 .a-content { }
 
-.a-footer { clear: both; margin: 20px 0; }
+.a-footer-wrapper { clear: both; border-top: 1px solid #ddd; }
+.a-footer { clear: both; width: 960px; margin: 0 auto; padding: 10px 0; }
 
 .a-search.global { width: auto; clear: both; float: right; position: absolute; top: 20px; right: 20px; z-index: 3;}
 .a-search.global form { border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.1); }	
@@ -72,7 +73,7 @@ a:hover { text-decoration: underline; }
 
 .a-area-sidebar { width:200px; float:left; margin-left: 40px; }
 
-.a-area-footer { position: relative; clear: both; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 20px; font-size: 11px; color: #999; }
+.a-area-footer { position: relative; clear: both; font-size: 11px; color: #999; }
 
 .a-blog-posts .a-content,
 .a-blog-events .a-content { clear: none; width: 720px; }

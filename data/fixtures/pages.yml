@@ -1,6 +1,10 @@
+# We need published_at to have a reasonable default setting otherwise everything is hidden
+# <?php $now = date('Y-m-d H:i:s') ?>
+
 aPage:
   home:
     slug: "/"
+    published_at: '<?php echo $now ?>'
     template: home
     Areas:
       home_en_title:
@@ -41,7 +45,8 @@ aPage:
                 permid: 1
                 Slot:
                   type: aRichText 
-                  value: '<h3>Welcome to aSandbox, a sample site built using <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>.</h3> <p>You can edit this text by clicking the Edit button. You can also add additional slots to this area, such as video and slideshow slots, via the Add Slot button.</p>'
+                  value: >
+                    <h3>Welcome to aSandbox, a sample site built using <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>.</h3> <p>You can edit this text by clicking the Edit button. You can also add additional slots to this area, such as video and slideshow slots, via the Add Slot button.</p>
       home_fr_body:
         name: body 
         culture: fr
@@ -64,6 +69,7 @@ aPage:
     children:
       about:
         slug: "/about"
+        published_at: '<?php echo $now ?>'
         template: default
         Areas:
           about_en_title:
@@ -104,7 +110,8 @@ aPage:
                     permid: 1
                     Slot:
                       type: aRichText 
-                      value: '<h3>Learn more about <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>.</h3> It is open source, robust, &amp; super easy to use!'
+                      value: >
+                        <h3>Learn more about <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>.</h3> It is open source, robust, &amp; super easy to use!
           about_fr_body:
             name: body 
             culture: fr
@@ -122,6 +129,7 @@ aPage:
                         Une solution open source, robuste et extrêmement simple à utiliser!
       blog:
         slug: "/blog"
+        published_at: '<?php echo $now ?>'
         engine: aBlog
         Areas:
           blog_en_title:
@@ -140,6 +148,7 @@ aPage:
       
       events:
         slug: "/events"
+        published_at: '<?php echo $now ?>'
         engine: aEvent
         Areas:
           events_en_title:
@@ -160,6 +169,7 @@ aPage:
         # By convention this page is the parent of all admin pages. Admin pages are
         # hidden from all normal navigation
         slug: "/admin"
+        published_at: '<?php echo $now ?>'
         template: default
         admin: true
         # The admin engine has an index action that redirects to the home page, for now
@@ -194,6 +204,7 @@ aPage:
         children:          
           media:
             slug: "/admin/media"
+            published_at: '<?php echo $now ?>'
             template: default
             engine: aMedia
             # The default media engine page is not visible to logged-out users. You can
@@ -226,8 +237,61 @@ aPage:
                         Slot:
                           type: aText 
                           value: "Média"
+          error_404:
+            slug: "/admin/error404"
+            published_at: '<?php echo $now ?>'
+            template: error404
+            admin: true
+            Areas:
+              error_404_en_title:
+                name: title
+                culture: en
+                latest_version: 1
+                AreaVersions:
+                  error_404_en_title_version_1:
+                    version: 1
+                    AreaVersionSlots:
+                      error_404_en_title_version_1_permid_1:
+                        permid: 1
+                        Slot:
+                          type: aText 
+                          value: Page Not Found!
+              error_404_en_body:
+                name: body
+                culture: en
+                latest_version: 1
+                AreaVersions:
+                  error_404_en_body_version_1:
+                    version: 1
+                    AreaVersionSlots:
+                      error_404_en_body_version_1_permid_1:
+                        permid: 1
+                        Slot:
+                          type: aRichText
+                          value: >
+                            <h2>Error 404 &mdash; The page you are looking for could not be found.</h2><h3><a href="/">Go Home.</a></h3>
+          error_a_media:
+            slug: "/admin/error-a-media"
+            template: default
+            admin: true
+            Areas:
+             error_a_media_en_body:
+               name: body 
+               culture: en
+               latest_version: 1
+               AreaVersions:
+                 error_a_media_en_body_version_1:
+                   version: 1
+                   AreaVersionSlots:
+                     error_a_media_en_body_version_1_permid_1:
+                       permid: 1
+                       Slot:
+                         type: aRichText 
+                         value: >
+                           <h3> Oops! You do not have anything in your media library.<br />Do you want to <a href="#upload-images" class="a-add-media-toggle">add some media?</a></h3>
       contact:
         slug: "/contact"
+        published_at: '<?php echo $now ?>'
         template: default
         Areas:
           contact_en_title:
@@ -268,7 +332,8 @@ aPage:
                     permid: 1
                     Slot:
                       type: aRichText 
-                      value: '<h3>For more information or help with <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>, contact <a href="mailto:apostrophe@punkave.com">apostrophe@punkave.com</a></h3>'
+                      value: >
+                        <h3>For more information or help with <a href="http://www.apostrophenow.com" target="_new">Apostrophe</a>, contact <a href="mailto:apostrophe@punkave.com">apostrophe@punkave.com</a></h3>
           contact_fr_body:
             name: body 
             culture: fr
