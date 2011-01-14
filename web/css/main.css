@@ -404,7 +404,7 @@ text-shadow: 0 0 6px rgba(0,0,0,0.80);
 .a-signin label { display: block; width: 100% !important; float: none; font-size: 16px; width: auto; margin-bottom: 2px; }
 .a-signin .a-form-row input[type="text"],
 .a-signin .a-form-row input[type="password"] { width: 175px; padding: 4px; }
-.a-signin .a-form-row {	float: none; width: auto; clear: both; overflow: hidden; display: block; margin: 20px 20px -10px; }
+.a-signin .a-form-row {	float: none; width: auto; clear: both; display: block; margin: 20px 20px -10px; }
 .a-signin .a-form-row.submit { margin: 30px 20px 20px; }
 .a-signin .a-forgot-password { display: block; font-size: 11px; margin: -10px 20px 10px; float: left; color: #999; }
 .a-signin.forgot .message { width: 440px; }
