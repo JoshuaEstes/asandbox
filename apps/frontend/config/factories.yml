@@ -1,6 +1,31 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/05-Factories
 
+all:
+  user:
+    param:
+      timeout: 43200
+
+  mailer:
+    param:
+      delivery_strategy: realtime
+      transport:
+        # If you are not on Unix or do not have a sendmail utility that works then
+        # you will need to configure a different transport here
+        class: Swift_MailTransport
+
+  routing:
+    class: sfPatternRouting
+    param:
+      generate_shortest_url:            true
+      extra_parameters_as_query_string: true
+
+  view_cache_manager:
+    class: sfViewCacheManager
+    param:
+      cache_key_use_vary_headers: true
+      cache_key_use_host_name:    true
+
 prod:
   logger:
     class:   sfNoLogger
@@ -18,25 +43,3 @@ test:
     class: sfWebResponse
     param:
       send_http_headers: false
-
-  mailer:
-    param:
-      delivery_strategy: none
-
-dev:
-  mailer:
-    param:
-      delivery_strategy: none
-
-all:
-  routing:
-    class: sfPatternRouting
-    param:
-      generate_shortest_url:            true
-      extra_parameters_as_query_string: true
-
-  view_cache_manager:
-    class: sfViewCacheManager
-    param:
-      cache_key_use_vary_headers: true
-      cache_key_use_host_name:    true
