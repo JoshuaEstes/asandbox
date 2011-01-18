@@ -6,7 +6,7 @@ all:
     # (Apostrophe comes with a more convenient set)
     routes_register: false
   a:
-    
+
     pager_nb_links: 5
     
     vimeo:
@@ -309,8 +309,7 @@ all:
 prod:
   a:
     minify: true
-    # Disabled gzip for now to avoid problems for people who
-    # don't have the zlib extension or haven't set up Apache to
-    # know what to do with the gzipped files
-    minify_gzip: false
+    # If you don't have the gzip extension in PHP or you don't have Apache configured
+    # to cope with gzipped files, just set this false
+    minify_gzip: true
   
