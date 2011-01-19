@@ -31,10 +31,9 @@ all:
     soundcloud:
       # We use this to bring in our own SoundCloud key, you need to go get your own
       # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-soundclous.yml')) require dirname(__FILE__) . '/punk-demo-soundcloud.yml' ?>
+<?php if (file_exists(dirname(__FILE__) . '/punk-demo-soundcloud.yml')) require dirname(__FILE__) . '/punk-demo-soundcloud.yml' ?>
       # Uncomment these and plug in your information after you get your key from SoundCloud
       # consumerKey: your_key_from_soundcloud
-      # consumerSecret: your_secret_from_soundcloud
 
     # includes apostrophe css into the project
     use_bundled_stylesheet: true
