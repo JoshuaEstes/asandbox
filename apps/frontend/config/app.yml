@@ -314,4 +314,13 @@ prod:
     # If you don't have the gzip extension in PHP or you don't have Apache configured
     # to cope with gzipped files, just set this false
     minify_gzip: true
-  
+    googleAnalytics:
+      # We use this to bring in our own Google Analytics settings, you need to go get your own
+      # You can remove this line (P'unks, DO NOT indent this line):
+<?php if (file_exists(dirname(__FILE__) . '/punk-demo-google-analytics.yml')) require dirname(__FILE__) . '/punk-demo-google-analytics.yml' ?>
+      # Uncomment these and plug in your information after you get your own info from Google Analytics
+      # This is from the _setAccount line in Google's suggested embed code
+      # account: XX-888888-1
+      # DO NOT specify domainName at all unless Google includes _setDomainName in their suggested embed code
+      # domainName: .apostrophenow.com
+
