@@ -9,31 +9,8 @@ all:
 
     pager_nb_links: 5
     
-    vimeo:
-      # We use this to bring in our own vimeo key, you need to go get your own
-      # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-vimeo.yml')) require dirname(__FILE__) . '/punk-demo-vimeo.yml' ?>
-      # Uncomment these and plug in your information after you get your key from vimeo
-      # oauthConsumerKey: your_key_from_vimeo
-      # oauthConsumerSecret: your_secret_from_vimeo
-    viddler:
-      # We use this to bring in our own viddler key, you need to go get your own
-      # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-viddler.yml')) require dirname(__FILE__) . '/punk-demo-viddler.yml' ?>
-      # Uncomment these and plug in your information after you get your key from viddler
-    slideshare:
-      # We use this to bring in our own SlideShare key, you need to go get your own
-      # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-slideshare.yml')) require dirname(__FILE__) . '/punk-demo-slideshare.yml' ?>
-      # Uncomment these and plug in your information after you get your key from SlideShare
-      # apiKey: your_key_from_slideshare
-      # sharedSecret: your_secret_from_slideshare
-    soundcloud:
-      # We use this to bring in our own SoundCloud key, you need to go get your own
-      # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-soundcloud.yml')) require dirname(__FILE__) . '/punk-demo-soundcloud.yml' ?>
-      # Uncomment these and plug in your information after you get your key from SoundCloud
-      # consumerKey: your_key_from_soundcloud
+    # We use this to bring in our own API keys and such, you need to go get your own
+    <?php if (file_exists(dirname(__FILE__) . '/punk-demo-app.yml')) require dirname(__FILE__) . '/punk-demo-app.yml' ?>
 
     # includes apostrophe css into the project
     use_bundled_stylesheet: true
@@ -314,13 +291,4 @@ prod:
     # If you don't have the gzip extension in PHP or you don't have Apache configured
     # to cope with gzipped files, just set this false
     minify_gzip: true
-    googleAnalytics:
-      # We use this to bring in our own Google Analytics settings, you need to go get your own
-      # You can remove this line (P'unks, DO NOT indent this line):
-<?php if (file_exists(dirname(__FILE__) . '/punk-demo-google-analytics.yml')) require dirname(__FILE__) . '/punk-demo-google-analytics.yml' ?>
-      # Uncomment these and plug in your information after you get your own info from Google Analytics
-      # This is from the _setAccount line in Google's suggested embed code
-      # account: XX-888888-1
-      # DO NOT specify domainName at all unless Google includes _setDomainName in their suggested embed code
-      # domainName: .apostrophenow.com
 
