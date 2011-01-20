@@ -252,7 +252,10 @@ all:
     # Disqus Comments
     # Once you have a Disqus account, enable comments and put in your Disqus shortname
     # disqus_enabled: true
-    # disqus_shortname: yourshortnamehere
+    # disqus_shortname: yourdisqusshortname
+
+    # enable this if you are developing locally to see comments
+    # disqus_developer: true
       
   aToolkit:
     indexes:
