@@ -13,6 +13,8 @@ default:
     - main.css: { position: last }
   
   javascripts:
+    # Required for blog slots
+    - /apostropheBlogPlugin/js/aBlog.js
     - site.js: { position: last }
 
   has_layout:     true

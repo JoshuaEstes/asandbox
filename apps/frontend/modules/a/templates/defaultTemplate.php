@@ -13,10 +13,8 @@
 		'aButton', 
 		'aBlog',
 		'aEvent',
-		'aEventSingle',
 		'aText',
 		'aRawHTML',
-		'aImage',
 	),
   'type_options' => array(
 		'aRichText' => array(
@@ -25,14 +23,6 @@
 			// 'allowed-attributes' => array('a' => array('href', 'name', 'target'),'img' => array('src')),
 			// 'allowed-styles' => array('color','font-weight','font-style'), 
 		), 	
-		'aImage' => array(
-			'width' => 480, 
-			'height' => false, 
-			'resizeType' => 's',
-			'flexHeight' => true, 
-			'title' => false,
-			'description' => false,			
-		),
 		'aVideo' => array(
 			'width' => 480, 
 			'height' => false, 
@@ -110,12 +100,6 @@
 				'height' => 220
 			),
 		),
-		'aEventSingle' => array(
-			'slideshowOptions' => array(
-				'width' => 340, 
-				'height' => 220
-			),
-		),
     'aText' => array(
 			'multiline' => true
 		),
@@ -135,7 +119,6 @@
 		'aButton', 
 		'aBlog',
 		'aEvent',
-		'aEventSingle',
 		'aText',
 		'aRawHTML',	
 	),
@@ -216,13 +199,6 @@
 				'width' => 200, 
 				'height' => 130, 
 				'resizeType' => 'c',
-			)
-		),
-		'aEventSingle' => array(
-			'excerptLength' => 40, 
-			'slideshowOptions' => array(
-				'width' => 200, 
-				'flexHeight' => true,
 			)
 		),
     'aText' => array(
