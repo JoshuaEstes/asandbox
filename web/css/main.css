@@ -215,6 +215,8 @@ a:hover { text-decoration: underline; }
 /* Blog Templates
 -------------------------------------*/
 
+.a-ui .a-area-blog-heading { margin: 0 0 10px 0; }
+
 .a-blog-item-meta { float: left; font-size: 11px; color: #888; }
 .a-blog-item-meta li a.a-btn { font-size: 11px;}
 
