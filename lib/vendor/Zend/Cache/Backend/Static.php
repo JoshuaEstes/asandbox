@@ -17,7 +17,7 @@
  * @subpackage Zend_Cache_Backend
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Static.php 23606 2011-01-02 02:45:35Z ramon $
+ * @version    $Id: Static.php 23651 2011-01-21 21:51:00Z mikaelkael $
  */
 
 /**
@@ -540,7 +540,7 @@ class Zend_Cache_Backend_Static
      * Detect an octal string and return its octal value for file permission ops
      * otherwise return the non-string (assumed octal or decimal int already)
      *
-     * @param $val The potential octal in need of conversion
+     * @param string $val The potential octal in need of conversion
      * @return int
      */
     protected function _octdec($val)
