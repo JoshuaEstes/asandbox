@@ -17,11 +17,7 @@
  * @subpackage Storage
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Mbox.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Mbox.php 20096 2010-01-06 02:05:09Z bkarwin $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 
@@ -77,11 +73,7 @@ class Zend_Mail_Storage_Folder_Mbox extends Zend_Mail_Storage_Mbox implements Ze
      *   - dirname rootdir of mbox structure
      *   - folder intial selected folder, default is 'INBOX'
      *
-<<<<<<< HEAD
      * @param array $params mail reader specific parameters
-=======
-     * @param  $params array mail reader specific parameters
->>>>>>> added Zend Framework library (1.11 branch)
      * @throws Zend_Mail_Storage_Exception
      */
     public function __construct($params)

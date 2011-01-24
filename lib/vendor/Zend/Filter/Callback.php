@@ -16,11 +16,7 @@
  * @package    Zend_Filter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Callback.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Callback.php 20096 2010-01-06 02:05:09Z bkarwin $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -134,11 +130,7 @@ class Zend_Filter_Callback implements Zend_Filter_Interface
     /**
      * Calls the filter per callback
      *
-<<<<<<< HEAD
      * @param mixed $value Options for the set callback
-=======
-     * @param $value mixed Options for the set callback
->>>>>>> added Zend Framework library (1.11 branch)
      * @return mixed       Result from the filter which was callbacked
      */
     public function filter($value)
@@ -157,8 +149,4 @@ class Zend_Filter_Callback implements Zend_Filter_Interface
 
         return call_user_func_array($this->_callback, $options);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> added Zend Framework library (1.11 branch)

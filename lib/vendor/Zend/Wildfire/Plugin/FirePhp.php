@@ -17,11 +17,7 @@
  * @subpackage Plugin
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: FirePhp.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: FirePhp.php 23532 2010-12-17 18:36:35Z cadorn $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /** Zend_Controller_Request_Abstract */
@@ -218,11 +214,7 @@ class Zend_Wildfire_Plugin_FirePhp implements Zend_Wildfire_Plugin_Interface
     /**
      * Get or create singleton instance
      *
-<<<<<<< HEAD
      * @param bool $skipCreate True if an instance should not be created
-=======
-     * @param $skipCreate boolean True if an instance should not be created
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Wildfire_Plugin_FirePhp
      */
     public static function getInstance($skipCreate=false)

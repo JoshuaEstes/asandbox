@@ -17,19 +17,11 @@
  * @subpackage Formatter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Xml.php 23648 2011-01-21 19:04:20Z intiilapa $
  */
 
 /** Zend_Log_Formatter_Abstract */
 require_once 'Zend/Log/Formatter/Abstract.php';
-=======
- * @version    $Id: Xml.php 23576 2010-12-23 23:25:44Z ramon $
- */
-
-/** Zend_Log_Formatter_Interface */
-require_once 'Zend/Log/Formatter/Interface.php';
->>>>>>> added Zend Framework library (1.11 branch)
 
 /**
  * @category   Zend
@@ -37,15 +29,9 @@ require_once 'Zend/Log/Formatter/Interface.php';
  * @subpackage Formatter
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Xml.php 23648 2011-01-21 19:04:20Z intiilapa $
  */
 class Zend_Log_Formatter_Xml extends Zend_Log_Formatter_Abstract
-=======
- * @version    $Id: Xml.php 23576 2010-12-23 23:25:44Z ramon $
- */
-class Zend_Log_Formatter_Xml implements Zend_Log_Formatter_Interface
->>>>>>> added Zend Framework library (1.11 branch)
 {
     /**
      * @var string Name of root element
@@ -64,7 +50,6 @@ class Zend_Log_Formatter_Xml implements Zend_Log_Formatter_Interface
 
     /**
      * Class constructor
-<<<<<<< HEAD
      * (the default encoding is UTF-8)
      *
      * @param array|Zend_Config $options
@@ -115,19 +100,6 @@ class Zend_Log_Formatter_Xml implements Zend_Log_Formatter_Interface
     public static function factory($options)
     {
         return new self($options);
-=======
-     *
-     * @param string $rootElement Name of root element
-     * @param array $elementMap Relates XML elements to log data field keys
-     * @param string $encoding Encoding to use (defaults to UTF-8)
-     * @return void
-     */
-    public function __construct($rootElement = 'logEntry', $elementMap = null, $encoding = 'UTF-8')
-    {
-        $this->_rootElement = $rootElement;
-        $this->_elementMap  = $elementMap;
-        $this->setEncoding($encoding);
->>>>>>> added Zend Framework library (1.11 branch)
     }
 
     /**
@@ -185,9 +157,4 @@ class Zend_Log_Formatter_Xml implements Zend_Log_Formatter_Interface
 
         return $xml . PHP_EOL;
     }
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> added Zend Framework library (1.11 branch)

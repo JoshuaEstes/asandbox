@@ -17,11 +17,7 @@
  * @subpackage DeveloperGarden
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: GetConferenceListRequest.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: GetConferenceListRequest.php 20166 2010-01-09 19:00:17Z bkarwin $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -97,11 +93,7 @@ class Zend_Service_DeveloperGarden_Request_ConferenceCall_GetConferenceListReque
     /**
      * sets $ownerId
      *
-<<<<<<< HEAD
      * @param int $ownerId
-=======
-     * @param $ownerId
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Service_DeveloperGarden_Request_ConferenceCall_GetConferenceListRequest
      */
     public function setOwnerId($ownerId)

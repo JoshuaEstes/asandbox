@@ -244,15 +244,9 @@ class Zend_Cloud_StorageService_Adapter_Nirvanix
      * WARNING: This operation overwrites any metadata that is located at
      * $destinationPath.
      *
-<<<<<<< HEAD
      * @param string $destinationPath
      * @param array  $metadata        associative array specifying the key/value pairs for the metadata.
      * @param array  $options
-=======
-     * @param array $metadata - An associative array specifying the key/value pairs for the metadata.
-     * @param $destinationPath
-     * @param  array $options
->>>>>>> added Zend Framework library (1.11 branch)
      * @return void
      */
     public function storeMetadata($destinationPath, $metadata, $options = null)
@@ -306,15 +300,9 @@ class Zend_Cloud_StorageService_Adapter_Nirvanix
      * Recursively traverse all the folders and build an array that contains
      * the path names for each folder.
      *
-<<<<<<< HEAD
      * @param string $path        folder path to get the list of folders from.
      * @param array& $resultArray reference to the array that contains the path names
      *                             for each folder.
-=======
-     * @param $path - The folder path to get the list of folders from.
-     * @param &$resultArray - reference to the array that contains the path names
-     *                           for each folder.
->>>>>>> added Zend Framework library (1.11 branch)
      */
     private function getAllFolders($path, &$resultArray)
     {

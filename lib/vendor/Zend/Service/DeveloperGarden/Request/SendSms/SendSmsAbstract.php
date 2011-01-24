@@ -18,11 +18,7 @@
  * @subpackage DeveloperGarden
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: SendSmsAbstract.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: SendSmsAbstract.php 23484 2010-12-10 03:57:59Z mjh_ca $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -211,11 +207,7 @@ abstract class Zend_Service_DeveloperGarden_Request_SendSms_SendSmsAbstract
     /**
      * sets a new accounts
      *
-<<<<<<< HEAD
      * @param int $account the $account to set
-=======
-     * @param $account the $account to set
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Service_DeveloperGarden_Request_SendSms_SendSmsAbstract
      */
     public function setAccount($account)

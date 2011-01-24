@@ -17,11 +17,7 @@
  * @subpackage Framework
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Dynamic.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Dynamic.php 23484 2010-12-10 03:57:59Z mjh_ca $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -82,11 +78,7 @@ class Zend_Tool_Framework_Metadata_Dynamic
     /**
      * setType()
      *
-<<<<<<< HEAD
      * @param string $type
-=======
-     * @param $type
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Tool_Framework_Metadata_Dynamic
      */
     public function setType($type)
@@ -110,11 +102,7 @@ class Zend_Tool_Framework_Metadata_Dynamic
     /**
      * setName()
      *
-<<<<<<< HEAD
      * @param string $name
-=======
-     * @param $name
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Tool_Framework_Metadata_Dynamic
      */
     public function setName($name)
@@ -138,11 +126,7 @@ class Zend_Tool_Framework_Metadata_Dynamic
     /**
      * setValue()
      *
-<<<<<<< HEAD
      * @param mixed $value
-=======
-     * @param $value
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Tool_Framework_Metadata_Dynamic
      */
     public function setValue($value)

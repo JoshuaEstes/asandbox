@@ -17,11 +17,7 @@
  * @package    Zend_Session
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Session.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Session.php 23484 2010-12-10 03:57:59Z mjh_ca $
->>>>>>> added Zend Framework library (1.11 branch)
  * @since      Preview Release 0.2
  */
 
@@ -339,11 +335,7 @@ class Zend_Session extends Zend_Session_Abstract
      * seconds is specified, then this defaults to self::$_rememberMeSeconds.  Due to clock errors on end users' systems,
      * large values are recommended to avoid undesirable expiration of session cookies.
      *
-<<<<<<< HEAD
      * @param int $seconds OPTIONAL specifies TTL for cookie in seconds from present time
-=======
-     * @param $seconds integer - OPTIONAL specifies TTL for cookie in seconds from present time
->>>>>>> added Zend Framework library (1.11 branch)
      * @return void
      */
     public static function rememberMe($seconds = null)

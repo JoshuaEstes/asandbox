@@ -33,11 +33,7 @@ class Zend_Cloud_QueueService_Message
 
     /**
      * @param string $body Message text
-<<<<<<< HEAD
      * @param string $message Original message
-=======
-     * @param $message Original message
->>>>>>> added Zend Framework library (1.11 branch)
      */
     function __construct($body, $message)
     {

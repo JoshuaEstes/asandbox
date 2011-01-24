@@ -17,11 +17,7 @@
  * @subpackage Resource
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Db.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Db.php 23484 2010-12-10 03:57:59Z mjh_ca $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -70,11 +66,7 @@ class Zend_Application_Resource_Db extends Zend_Application_Resource_ResourceAbs
     /**
      * Set the adapter
      *
-<<<<<<< HEAD
      * @param  string $adapter
-=======
-     * @param  $adapter string
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Application_Resource_Db
      */
     public function setAdapter($adapter)
@@ -96,11 +88,7 @@ class Zend_Application_Resource_Db extends Zend_Application_Resource_ResourceAbs
     /**
      * Set the adapter params
      *
-<<<<<<< HEAD
      * @param  string $adapter
-=======
-     * @param  $adapter string
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Application_Resource_Db
      */
     public function setParams(array $params)

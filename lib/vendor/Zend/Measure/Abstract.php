@@ -16,11 +16,7 @@
  * @package   Zend_Measure
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version   $Id: Abstract.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version   $Id: Abstract.php 21329 2010-03-04 22:06:08Z thomas $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -78,15 +74,9 @@ abstract class Zend_Measure_Abstract
     /**
      * Zend_Measure_Abstract is an abstract class for the different measurement types
      *
-<<<<<<< HEAD
      * @param  mixed       $value  Value as string, integer, real or float
      * @param  int         $type   OPTIONAL a measure type f.e. Zend_Measure_Length::METER
      * @param  Zend_Locale $locale OPTIONAL a Zend_Locale Type
-=======
-     * @param  $value  mixed  - Value as string, integer, real or float
-     * @param  $type   type   - OPTIONAL a measure type f.e. Zend_Measure_Length::METER
-     * @param  $locale locale - OPTIONAL a Zend_Locale Type
->>>>>>> added Zend Framework library (1.11 branch)
      * @throws Zend_Measure_Exception
      */
     public function __construct($value, $type = null, $locale = null)

@@ -16,11 +16,7 @@
  * @package    Zend_Config
  * @copyright  Copyright (c) 2005-2009 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Yaml.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Yaml.php 23294 2010-11-05 00:27:34Z ramon $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -61,11 +57,7 @@ class Zend_Config_Writer_Yaml extends Zend_Config_Writer_FileAbstract
     /**
      * Set callback for decoding YAML
      *
-<<<<<<< HEAD
      * @param  callable $yamlEncoder the decoder to set
-=======
-     * @param  $yamlEncoder the decoder to set
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Config_Yaml
      */
     public function setYamlEncoder($yamlEncoder)

@@ -17,11 +17,7 @@
  * @subpackage Storage
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: Abstract.php 23651 2011-01-21 21:51:00Z mikaelkael $
-=======
- * @version    $Id: Abstract.php 20096 2010-01-06 02:05:09Z bkarwin $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 
@@ -123,11 +119,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
     /**
      * Get a message with headers and body
      *
-<<<<<<< HEAD
      * @param int $id number of message
-=======
-     * @param  $id int number of message
->>>>>>> added Zend Framework library (1.11 branch)
      * @return Zend_Mail_Message
      */
     abstract public function getMessage($id);

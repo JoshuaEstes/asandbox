@@ -17,11 +17,7 @@
  * @subpackage Framework
  * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
-<<<<<<< HEAD
  * @version    $Id: ApplicationConfigFile.php 23623 2011-01-08 16:05:31Z ramon $
-=======
- * @version    $Id: ApplicationConfigFile.php 23484 2010-12-10 03:57:59Z mjh_ca $
->>>>>>> added Zend Framework library (1.11 branch)
  */
 
 /**
@@ -140,7 +136,6 @@ class Zend_Tool_Project_Context_Zf_ApplicationConfigFile extends Zend_Tool_Proje
                 $insideSection = true;
             }
 
-<<<<<<< HEAD
             $newLines[] = $contentLine;
             if ($insideSection) {
                 // if its blank, or a section heading
@@ -148,20 +143,10 @@ class Zend_Tool_Project_Context_Zf_ApplicationConfigFile extends Zend_Tool_Proje
                     $newLines[] = $key . ' = ' . $value;
                     $insideSection = null;
                 } else if (!isset($contentLines[$contentLineIndex + 1])){
-=======
-            if ($insideSection) {
-                // if its blank, or a section heading
-                if ((trim($contentLine) == null) || (isset($contentLines[$contentLineIndex + 1]{0}) && $contentLines[$contentLineIndex + 1]{0} == '[')) {
->>>>>>> added Zend Framework library (1.11 branch)
                     $newLines[] = $key . ' = ' . $value;
                     $insideSection = null;
                 }
             }
-<<<<<<< HEAD
-=======
-
-            $newLines[] = $contentLine;
->>>>>>> added Zend Framework library (1.11 branch)
         }
 
         $this->_content = implode("\n", $newLines);
