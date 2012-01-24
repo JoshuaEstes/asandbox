@@ -9,7 +9,7 @@
 	url = git://github.com/annismckenzie/apostropheFeedbackPlugin.git
 [submodule "plugins/sfDoctrineGuardPlugin"]
 	path = plugins/sfDoctrineGuardPlugin
-	url = git://github.com/annismckenzie/sfDoctrineGuardPlugin.git
+	url = git://github.com/JoshuaEstes/sfDoctrineGuardPlugin.git
 [submodule "plugins/sfDoctrineActAsTaggablePlugin"]
 	path = plugins/sfDoctrineActAsTaggablePlugin
 	url = git://github.com/annismckenzie/sfDoctrineActAsTaggablePlugin.git
@@ -18,7 +18,7 @@
 	url = git://github.com/annismckenzie/sfSyncContentPlugin.git
 [submodule "plugins/sfTaskExtraPlugin"]
 	path = plugins/sfTaskExtraPlugin
-	url = git://github.com/annismckenzie/sfTaskExtraPlugin.git
+	url = git://github.com/JoshuaEstes/sfTaskExtraPlugin.git
 [submodule "plugins/sfFeed2Plugin"]
 	path = plugins/sfFeed2Plugin
 	url = git://github.com/annismckenzie/sfFeed2Plugin.git
@@ -27,4 +27,4 @@
 	url = git://github.com/annismckenzie/sfWebBrowserPlugin.git
 [submodule "lib/vendor/symfony"]
 	path = lib/vendor/symfony
-	url = git://github.com/vjousse/symfony-1.4.git
+	url = git://github.com/symfony/symfony1.git
