@@ -25,3 +25,6 @@
 [submodule "plugins/sfWebBrowserPlugin"]
 	path = plugins/sfWebBrowserPlugin
 	url = git://github.com/annismckenzie/sfWebBrowserPlugin.git
+[submodule "lib/vendor/zend"]
+	path = lib/vendor/zend
+	url = git://github.com/JoshuaEstes/Zend.git
