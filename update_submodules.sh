@@ -43,7 +43,7 @@ git pull origin master
 
 cd ../../lib/vendor/symfony
 git fetch origin
-git checkout master
-git pull origin master
+git checkout 1.4
+git pull origin 1.4
 
 cd ../../../

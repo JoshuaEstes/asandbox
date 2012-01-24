@@ -12,6 +12,6 @@ class aEmbedMediaAccountForm extends PluginaEmbedMediaAccountForm
 {
   public function configure()
   {
-    parent::configure();
+      parent::configure();
   }
 }
