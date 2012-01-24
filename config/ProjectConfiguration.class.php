@@ -25,7 +25,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     // enable Zend Search
     set_include_path(
       sfConfig::get('sf_lib_dir') .
-        '/vendor' . PATH_SEPARATOR . get_include_path());
+        '/vendor/zend/library' . PATH_SEPARATOR . get_include_path());
     // ORDER IS SIGNIFICANT. sfDoctrinePlugin logically comes first followed by sfDoctrineGuardPlugin.
     // apostrophePlugin must precede apostropheBlogPlugin. 
     $this->enablePlugins(array(

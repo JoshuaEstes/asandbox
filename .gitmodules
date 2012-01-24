@@ -28,3 +28,6 @@
 [submodule "lib/vendor/symfony"]
 	path = lib/vendor/symfony
 	url = git://github.com/symfony/symfony1.git
+[submodule "lib/vendor/zend"]
+	path = lib/vendor/zend
+	url = git://github.com/JoshuaEstes/Zend.git
