@@ -6,6 +6,8 @@ all:
     # (Apostrophe comes with a more convenient set)
     routes_register: false
   a:
+    credit: false
+    servergroveCredit: false
 
     pager_nb_links: 5
     
@@ -25,10 +27,10 @@ all:
       - users   
       - reorganize
     
-    persistent_global_toolbar: true # false if you want to hide the global toolbar to logged-out visitors
+    persistent_global_toolbar: false # false if you want to hide the global toolbar to logged-out visitors
     
     # If true, there will be a language switcher next to the login/logout button
-    i18n_switch: true
+    i18n_switch: false
     i18n_languages: [en, fr, de, es, ru]
 
     # By default new slots in an area go to the top, you can change that here
@@ -290,5 +292,5 @@ prod:
     minify: true
     # If you don't have the gzip extension in PHP or you don't have Apache configured
     # to cope with gzipped files, just set this false
-    minify_gzip: true
+    minify_gzip: false
 
